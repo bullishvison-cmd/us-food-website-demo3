@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tacos T — Reno, NV | Website Concept</title>
+<style>
+:root{--ink:#2b1d12;--paper:#fdf6ec;--red:#b3402a;--gold:#e8a33d;--green:#3f6b4f;--radius:10px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
+header{padding:56px 24px 32px;max-width:1080px;margin:auto}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--red)}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;margin:12px 0}
+h1 span{color:var(--red)}
+.lede{font-size:clamp(1.05rem,2.4vw,1.4rem);max-width:620px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;max-width:1080px;margin:0 auto;padding:0 24px 40px;align-items:end}
+.hero img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius);display:block}
+.hero figcaption{font-family:Arial,sans-serif;font-size:12px;color:#6b5a49;margin-top:8px}
+.hero aside{background:var(--red);color:#fff;padding:28px;border-radius:var(--radius)}
+.hero aside h2{font-size:1.4rem;margin-bottom:8px}
+section{max-width:1080px;margin:auto;padding:32px 24px}
+h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:16px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.menu div{border-top:3px solid var(--gold);padding-top:12px}
+.menu h3{font-size:1.1rem}
+.menu p{font-family:Arial,sans-serif;font-size:.95rem;color:#5c4a3a}
+.hours{background:var(--green);color:#fff;border-radius:var(--radius);padding:28px}
+.hours p{font-family:Arial,sans-serif}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.cta a{font-family:Arial,sans-serif;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--gold);color:var(--ink)}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.note{font-family:Arial,sans-serif;font-size:.85rem;color:#6b5a49;border-left:4px solid var(--gold);padding-left:12px;margin-top:20px}
+footer{padding:32px 24px;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:700px){.hero,.menu{grid-template-columns:1fr}.hero img{height:280px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header class="reveal">
+<p class="eyebrow">Food truck · Reno, Nevada · Family-owned</p>
+<h1>Tacos <span>T</span></h1>
+<p class="lede">Authentic Mexican food from a family-owned truck serving Reno for over 15 years — street tacos, big burritos, and quesabirria made to order.</p>
+</header>
+<div class="hero">
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47" alt="Tacos on a plate"><figcaption>Stock photo for illustration only — not a photo of this business.</figcaption></figure>
+<aside class="reveal"><h2>Find the truck</h2><p>8995 Lemmon Drive<br>Reno, NV 89506</p><div class="cta"><a href="tel:+17753576465">Call (775) 357-6465</a><a class="alt" href="mailto:officialtacot2018@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Tacos+T%2C+8995+Lemmon+Drive%2C+Reno%2C+NV+89506">Get directions</a></div></aside>
+</div>
+<section class="reveal">
+<h2>Visitor favourites</h2>
+<div class="menu">
+<div><h3>Street Tacos</h3><p>The truck's signature, made with authentic Mexican flavour.</p></div>
+<div><h3>Quesabirria Tacos</h3><p>Slow-cooked birria with melted cheese, a visitor favourite.</p></div>
+<div><h3>Big Burritos</h3><p>Generously filled burritos, built to order.</p></div>
+<div><h3>Carne Asada Fries</h3><p>Loaded fries topped with grilled carne asada.</p></div>
+<div><h3>Shrimp Tacos</h3><p>A seafood option alongside the classic meat fillings.</p></div>
+<div><h3>Nachos &amp; Tamales</h3><p>Classic truck staples, plus burgers on the menu.</p></div>
+</div>
+<p class="note">Menu items are visitor-reported favourites. No prices are shown here — ask the truck for the day's menu.</p>
+</section>
+<section class="reveal">
+<div class="hours">
+<h2>Hours</h2>
+<p>Tuesday – Sunday: 4:30 pm – 10:30 pm<br>Monday: Closed</p>
+<p class="note" style="color:#e8e0d2;border-color:var(--gold)">Location note: directory listings describe the truck as serving from a 7-Eleven location on Lemmon Drive. Check the truck's Facebook page before visiting, as food-truck spots can change.</p>
+</div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-family:Arial,sans-serif;font-size:.85rem;margin-top:16px">Tacos T · 8995 Lemmon Drive, Reno, NV 89506 · (775) 357-6465 · officialtacot2018@gmail.com</p></footer>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
