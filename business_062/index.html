@@ -6,76 +6,83 @@
 <title>Nacho Bangers — Baltimore, MD | Nachos, Wraps &amp; Bowls Since 2017</title>
 <meta name="description" content="Nacho Bangers in Baltimore, Maryland. Food truck and restaurant serving nachos, wraps, Cuffie bowls, tacos and subs since 2017.">
 <style>
-:root{--ink:#141414;--paper:#FFF9EC;--hot:#E63B1F;--gold:#FFC53D;--line:#E8DCC0;--r:6px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:var(--body);line-height:1.6}
-a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
-header{background:var(--ink);color:var(--paper)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;flex-wrap:wrap}
-.brand{font-size:1.7rem;font-weight:900;letter-spacing:-.02em;text-transform:uppercase}.brand span{color:var(--gold)}
-nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.1em;font-weight:700}nav a{text-decoration:none}nav a:hover{color:var(--gold)}
-.hero{background:var(--hot);color:#fff;padding:64px 0 56px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.16em;font-weight:800}
-h1{font-size:clamp(3.2rem,8vw,5.6rem);line-height:.95;letter-spacing:-.03em;margin:14px 0 18px;text-transform:uppercase}
-.hero p.lede{font-size:clamp(1.1rem,2vw,1.35rem);max-width:52ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:14px 22px;border-radius:var(--r);text-decoration:none;font-weight:800;font-size:1rem}.btn.solid{background:var(--gold);color:var(--ink)}.btn.line{border:2px solid #fff;color:#fff}
-figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}figcaption{font-size:var(--label);color:#FFE9C9;margin-top:8px}
-.strip{background:var(--gold);color:var(--ink);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:var(--label);padding:12px 0;text-align:center}
-.menu{padding:56px 0}.menu h2,.visit h2{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;text-transform:uppercase;letter-spacing:-.02em;margin:0 0 14px}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.menu-item{border:2px solid var(--ink);border-radius:var(--r);padding:20px;background:#fff}.menu-item h3{margin:0 0 4px;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.01em}.menu-item p{margin:0;color:#3D3D3D}.menu-note{font-size:var(--label);color:#5A5A5A;margin-top:22px}
-.visit{border-top:2px solid var(--ink);padding:56px 0}.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}.visit h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.14em;color:var(--hot)}address{font-style:normal}
-.flag{background:#FFF1D6;border-left:5px solid var(--hot);padding:16px 20px;margin-top:30px;font-size:.98rem}
-footer{background:var(--ink);color:var(--paper);padding:30px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:var(--label);color:#D8D8D8}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.hero-grid,.menu-grid,.visit-grid{grid-template-columns:1fr}.hero{padding:44px 0 36px}nav{gap:14px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-</style>
+:root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;--bg:var(--color-secondary);--ink:var(--color-primary);--accent:var(--color-accent);--accent2:var(--color-accent);--card:#FFFFFF;--muted:var(--color-primary);--r:12px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.02rem;line-height:1.65;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;height:auto;display:block}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 40px}.hero-grid>*,.about-grid>*,.grid>*,.gal>*,.visit-grid>*{min-width:0}
+.disclaimer{background:var(--ink);color:var(--bg);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--bg);box-shadow:0 2px 12px rgba(0,0,0,.18)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px 32px;padding:14px 40px;flex-wrap:wrap}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+nav{display:flex;gap:32px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+nav a{text-decoration:none;padding:6px 2px}nav a:hover,nav a:focus-visible{color:var(--color-secondary);outline:2px solid var(--accent2);outline-offset:3px}
+.hero{padding:96px 0} .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.kicker{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--accent)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.05;letter-spacing:-.02em;margin:16px 0 16px}
+.lede{font-size:clamp(1.05rem,2vw,1.3rem);max-width:54ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18);outline:2px solid var(--accent2);outline-offset:3px}
+.btn.solid{background:var(--accent);color:#fff} .btn.line{border:2px solid var(--ink);color:var(--ink)}
+.hero figure,.gal figure{margin:0} .hero img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:16/9;object-fit:cover;object-position:center;transition:transform .4s ease}
+.hero img:hover{transform:scale(1.02)} figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.strip{background:var(--accent2);color:var(--ink);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;padding:12px 16px;text-align:center}
+section{padding:96px 0} h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.01em}
+.sec-lede{max-width:62ch;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.card,.why{background:var(--card);border:1px solid rgba(0,0,0,.1);border-top:4px solid var(--accent);border-radius:var(--r);padding:24px;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.why:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.card h3,.why h3{margin:0 0 6px;font-size:1.15rem} .card p,.why p{margin:0;color:var(--muted)}
+.about{background:var(--card);border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.1)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;margin-top:32px;align-items:start}.about-grid figure{margin:0}.about-grid img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:var(--r)}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px}.gal figure:first-child{grid-column:span 2;grid-row:span 2}.gal figure:first-child img{height:100%;aspect-ratio:auto}
+.gal img{width:100%;max-width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);transition:transform .35s ease} .gal img:hover{transform:scale(1.04)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:32px}
+.visit-grid h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin:0 0 10px}
+address{font-style:normal} .visit-grid p{margin:0 0 8px}
+.flag{background:var(--card);border-left:5px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:18px 22px;margin-top:48px}
+footer{background:var(--ink);color:var(--bg);padding:30px 0 16px} footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.9rem;opacity:.92}
+.foot nav{gap:14px} .foot a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease} .reveal.in{opacity:1;transform:none}
+@media(max-width:1024px){.wrap{padding:0 28px}header .wrap{padding:14px 28px}.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gal figure:first-child{grid-column:auto;grid-row:auto}.gal figure:first-child img{height:auto;aspect-ratio:1/1}.hero{padding:72px 0}section{padding:72px 0}}
+@media(max-width:768px){.wrap{padding:0 20px}header .wrap{padding:14px 20px}.grid,.gal,.visit-grid{grid-template-columns:minmax(0,1fr)}.hero{padding:56px 0}section{padding:56px 0}.cta-band .cta-inner{padding:32px}}@media(max-width:480px){.wrap{padding:0 16px}header .wrap{padding:14px 16px}nav{gap:12px}.hero{padding:44px 0}section{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.card,.why,.gal img,.hero img{transition:none;transform:none}}
+@media(min-width:1440px){.wrap{max-width:1320px}}section#why{background:var(--ink);color:var(--bg)}.break{padding:0}.break figure{margin:0}.break img{width:100%;height:auto;display:block;object-fit:cover;object-position:center;aspect-ratio:16/9}.final-cta{padding:96px 0}.cta-band{position:relative;overflow:hidden;border-radius:16px}.cta-band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.cta-band .cta-inner{position:relative;padding:48px;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35));color:#fff}.cta-band h2{color:#fff;margin:0 0 16px}.cta-band p{margin:0;max-width:52ch}.cta-band .btn.solid{margin-top:24px}</style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="wrap"><div class="brand">Nacho <span>Bangers</span></div>
-<nav><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></div></header>
-<main>
+<header><div class="wrap"><a class="brand" href="#top">Nacho Bangers</a>
+<nav aria-label="Main navigation"><a href="#top">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav></div></header>
+<main id="top">
 <section class="hero"><div class="wrap hero-grid"><div class="reveal">
-<p class="kicker">Baltimore, Maryland &middot; Since 2017</p>
+<p class="kicker">Baltimore, Maryland · Since 2017</p>
 <h1>Nachos, loaded. Late night, every night.</h1>
 <p class="lede">Nacho Bangers started in 2017 as a Baltimore food truck and restaurant built around one idea: nachos done properly, plus wraps, bowls, tacos and subs for the late-night crowd.</p>
-<div class="cta-row">
-<a class="btn solid" href="tel:+14102044490">Call (410) 204-4490</a>
-<a class="btn line" href="mailto:nachobangersllc@gmail.com">Email the shop</a>
-<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Nacho+Bangers%2C+210+South+Central+Avenue%2C+Baltimore%2C+MD+21202">Get directions</a>
-</div></div>
-<div class="reveal"><figure><img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=1600&auto=format&fit=crop" alt="A loaded plate of nachos" loading="lazy">
-<figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure></div></div></section>
-<div class="strip">Nachos &middot; Wraps &middot; Cuffie Bowls &middot; Tacos &middot; Subs &middot; Open Late</div>
-
-<section class="menu wrap" id="menu"><div class="reveal">
-<h2>What they bang out</h2>
-<div class="menu-grid">
-<div class="menu-item"><h3>Nachos</h3><p>The namesake. Loaded nachos, built to share or demolish solo.</p></div>
-<div class="menu-item"><h3>Wraps</h3><p>Wrapped and ready to go, from the truck and the counter.</p></div>
-<div class="menu-item"><h3>Cuffie bowls</h3><p>The house bowl format, named in the shop's own listings.</p></div>
-<div class="menu-item"><h3>Tacos</h3><p>Tacos alongside the nacho-first menu.</p></div>
-<div class="menu-item"><h3>Subs</h3><p>Sub sandwiches for the bigger appetite.</p></div>
-<div class="menu-item"><h3>Late-night hours</h3><p>Open until midnight, Tuesday through Sunday.</p></div>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div>
 </div>
-<p class="menu-note">Menu items are drawn from the shop's published listings. The shop also appears on third-party delivery and directory pages; it does not run its own website.</p>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" fetchpriority="high"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
 </div></section>
-
-<section class="visit wrap" id="visit"><div class="reveal">
-<h2>Visit</h2>
+<div class="strip">Baltimore, Maryland · Call (410) 204-4490</div>
+<section id="menu"><div class="wrap reveal"><h2>Featured Menu</h2>
+<p class="sec-lede">Menu items are drawn from the shop&#x27;s published listings.</p>
+<div class="grid"><article class="card reveal"><h3>Nachos</h3><p>The namesake. Loaded nachos, built to share or demolish solo.</p></article><article class="card reveal"><h3>Wraps</h3><p>Wrapped and ready to go, from the truck and the counter.</p></article><article class="card reveal"><h3>Cuffie Bowls</h3><p>The house bowl format, named in the shop&#x27;s own listings.</p></article><article class="card reveal"><h3>Tacos</h3><p>Tacos alongside the nacho-first menu.</p></article><article class="card reveal"><h3>Subs</h3><p>Sub sandwiches for the bigger appetite.</p></article><article class="card reveal"><h3>Late-Night Hours</h3><p>Open until midnight, Tuesday through Sunday.</p></article></div></div></section>
+<section class="about" id="about"><div class="wrap"><h2 class="reveal">About Nacho Bangers</h2><div class="about-grid reveal"><figure class="reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of a restaurant interior" loading="lazy"><figcaption>Illustrative stock photo, not a photo of this business.</figcaption></figure><div><p>Nacho Bangers started in 2017 as a Baltimore food truck and restaurant built around one idea: nachos done properly, plus wraps, bowls, tacos and subs for the late-night crowd.</p><p>The shop also appears on third-party delivery and directory pages; it does not run its own website.</p></div></div></div></section>
+<section id="gallery"><div class="wrap"><h2 class="reveal">Gallery</h2><p class="sec-lede reveal">Photos shown are illustrative stock images, not photos of this business.</p><div class="gal"><figure class="reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure></div></div></section>
+<section class="break"><figure><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative food photograph" loading="lazy"></figure></section><section id="why"><div class="wrap"><h2 class="reveal">Why Choose Us</h2><div class="grid"><article class="why reveal"><h3>Nacho-first</h3><p>A menu built around loaded nachos, with wraps, bowls, tacos and subs beside them.</p></article><article class="why reveal"><h3>Since 2017</h3><p>A Baltimore food truck and restaurant serving since 2017.</p></article><article class="why reveal"><h3>Open late</h3><p>Open until midnight, Tuesday through Sunday.</p></article></div></div></section>
+<section id="visit"><div class="wrap reveal"><h2>Visit &amp; Contact</h2>
 <div class="visit-grid">
-<div><h3>Find us</h3><address>210 South Central Avenue<br>Baltimore, MD 21202</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Nacho+Bangers%2C+210+South+Central+Avenue%2C+Baltimore%2C+MD+21202">Open in Google Maps</a></p></div>
-<div><h3>Hours</h3><p>Tuesday and Wednesday: 2pm to 12am<br>Thursday to Sunday: 2:15pm to 12am<br>Monday: closed</p></div>
-<div><h3>Contact</h3><p><a href="tel:+14102044490">(410) 204-4490</a><br><a href="mailto:nachobangersllc@gmail.com">nachobangersllc@gmail.com</a></p></div>
+<div><h3>Find us</h3><address>210 South Central Avenue<br>Baltimore, MD 21202</address><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Nacho+Bangers%2C+210+South+Central+Avenue%2C+Baltimore%2C+MD+21202">Get Directions</a></p></div>
+<div><h3>Opening Hours</h3><p>Tuesday and Wednesday: 2pm to 12am<br>Thursday to Sunday: 2:15pm to 12am<br>Monday: Closed</p></div>
+<div><h3>Contact Us</h3><p><a href="tel:+14102044490">Call (410) 204-4490</a><br><a href="mailto:nachobangersllc@gmail.com">nachobangersllc@gmail.com</a></p><p><a class="btn solid" href="tel:+14102044490">Contact Us</a></p></div>
 </div>
-<div class="flag"><strong>Good to know before you visit:</strong> one directory page lists a second address (2420 E Monument Street, Baltimore) and a different phone number for the business. The address and number above follow the main listing. Please call ahead to confirm the current location and hours.</div>
+<div class="flag"><p>Good to know before you visit: one directory page lists a second address (2420 E Monument Street, Baltimore) and a different phone number for the business. The address and number above follow the main listing. Please call ahead to confirm the current location and hours.</p></div>
 </div></section>
-</main>
-<footer><div class="wrap foot"><span>Nacho Bangers &middot; 210 South Central Avenue, Baltimore, MD 21202</span><span>Website concept demo — not the official website</span></div></footer>
+<section class="final-cta"><div class="wrap"><div class="cta-band"><img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="" loading="lazy"><div class="cta-inner"><h2>Come taste it for yourself.</h2><p>Come by and taste what the counter is serving.</p><a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Nacho+Bangers%2C+210+South+Central+Avenue%2C+Baltimore%2C+MD+21202">Get Directions</a></div></div></div></section></main>
+<footer><div class="wrap foot"><span>Nacho Bangers · 210 South Central Avenue, Baltimore, MD 21202</span><nav aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Contact</a></nav><span>nachobangersllc@gmail.com · (410) 204-4490</span><span>Website concept demo — not the official website</span></div></footer>
 <script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*60)+'ms';io.observe(el);});})();
 </script>
 </body>
 </html>
