@@ -4,130 +4,190 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arai Pastry — Tempe, AZ | Website Concept Demo</title>
+<meta name="description" content="Arai Pastry is a family-owned, Japanese-inspired bakery in Tempe, serving light cakes, breads, and pastries baked daily.">
 <style>
-:root{--ink:#33302b;--paper:#fbf7f0;--rose:#c96f5e;--sage:#7d8b6f;--butter:#f2dfae;--line:#e5dccb;--r:18px}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6}
-.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
-.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
-.intro{text-align:center;padding:44px 0 8px}
-.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--rose);font-weight:800}
-h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;font-weight:400}
-h1 b{color:var(--rose);font-weight:400}
-.sub{max-width:620px;margin:14px auto 0;font-size:clamp(1rem,2vw,1.2rem);color:#6b6257}
-.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px}
-.btn{font-family:Arial,sans-serif;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:999px;font-size:14px}
-.btn-call{background:var(--rose);color:#fff}
-.btn-mail{background:var(--ink);color:#fff}
-.btn-map{background:#fff;color:var(--ink);border:2px solid var(--ink)}
-.bento{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:28px}
-.cell{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
-.cell img{width:100%;height:100%;object-fit:cover;display:block}
-.cell.big{grid-row:span 2;min-height:420px}
-.cell.txt{padding:26px}
-.cell.txt h2{font-size:1.6rem;font-weight:400;margin-bottom:10px}
-.cell.txt h2 i{color:var(--rose)}
-.cap{font-family:Arial,sans-serif;font-size:12px;color:#7a7263;padding:8px 2px}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
-.tile h3{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:10px}
-.tile ul{list-style:none;font-size:16px}
-.tile li{padding:7px 0;border-bottom:1px dashed var(--line)}
-.tile li:last-child{border-bottom:0}
-.visit{margin-top:18px;background:var(--butter);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.hours{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:15px}
-.hours td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.12)}
-.hours td:last-child{text-align:right;font-weight:800}
-.note{font-family:Arial,sans-serif;font-size:13px;color:#6b6257;margin-top:12px}
-footer{background:var(--ink);color:#fff;text-align:center;padding:28px 16px;margin-top:40px;font-family:Arial,sans-serif;font-size:13px}
-footer a{color:var(--butter)}
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
-.reveal.on{opacity:1;transform:none}
-@media(max-width:760px){.bento,.tiles,.visit{grid-template-columns:1fr}.cell.big{min-height:300px;grid-row:auto}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+:root{--color-primary:#202321;--color-secondary:#F1EBDD;--color-accent:#A43A35;--ink:var(--color-primary);--paper:var(--color-secondary);--accent:var(--color-accent);--accent2:var(--color-primary);--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}img{max-width:100%;height:auto;display:block}
+html{scroll-behavior:smooth}
+body{font-family:Arial, Helvetica, sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;animation:pagein .5s ease both}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+a{color:inherit}
+.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.03em}
+nav{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:1px solid var(--color-primary)}
+.nav-in{width:100%;max-width:1200px;margin-inline:auto;padding:12px 40px;display:flex;flex-wrap:wrap;gap:32px;align-items:center}
+@media(min-width:1440px){.nav-in{max-width:1320px}}
+.brand{font-family:Georgia, 'Times New Roman', serif;font-weight:700;font-size:1.25rem;text-decoration:none;margin-right:auto}
+.brand span{color:var(--color-primary)}
+.nav-in a.nl{text-decoration:none;font-weight:600;font-size:15px;padding:6px 2px}
+.nav-in a.nl:hover,.nav-in a.nl:focus-visible{text-decoration:underline}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;font-size:15px;min-height:48px;line-height:1.25;border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.btn-p{background:var(--accent);color:var(--color-primary)}
+.btn-s{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn-nav{background:var(--accent);color:var(--color-primary);padding:10px 18px;min-height:44px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:24px;align-items:center;padding:96px 0 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--color-primary);font-weight:800;margin:0 0 16px}
+h1{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.1;margin:0 0 16px}
+.hero h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;color:var(--color-primary);margin:0 0 16px}
+.lede{font-size:clamp(1rem,2vw,1.2rem);max-width:560px;line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero figure img,.g-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease}
+.hero figure{border-radius:var(--r);overflow:hidden;aspect-ratio:16/9}
+.hero figure:hover img,.g-item:hover img{transform:scale(1.04)}
+.cap{font-size:12px;color:var(--color-primary);padding:8px 2px}
+section{padding:96px 0;scroll-margin-top:84px}
+section h2.sec{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.15;margin:0 0 32px}
+.sub{color:var(--color-primary);margin:0 0 32px;max-width:680px;line-height:1.6}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dish{background:#fff;border:1px solid var(--color-primary);border-radius:var(--r);overflow:hidden;padding:0;transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.dish .card-body{padding:24px}
+.dish h3{font-family:Georgia, 'Times New Roman', serif;font-size:1.2rem;line-height:1.2;margin:0 0 6px;color:var(--color-primary)}
+.dish p{font-size:15px;line-height:1.6;color:var(--color-primary)}
+.menu-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.group{background:#fff;border:1px solid var(--color-primary);border-top:4px solid var(--accent);border-radius:var(--r);overflow:hidden;padding:0}
+.group img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.group .card-body{padding:24px}
+.group h3{font-family:Georgia, 'Times New Roman', serif;font-size:1.25rem;line-height:1.2;margin-bottom:10px}
+.group ul{list-style:none}
+.group li{padding:8px 0;border-bottom:1px dashed var(--color-primary);font-size:15px}
+.group li:last-child{border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--accent2);background:#fff;border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600}
+.note{font-size:14px;color:var(--color-primary);border-left:4px solid var(--accent2);padding-left:14px;margin-top:24px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.about-grid figure{border-radius:var(--r);overflow:hidden}.about-grid figure img{aspect-ratio:4/3;object-fit:cover;object-position:center}
+.about-grid p{font-size:1.05rem;line-height:1.6;margin:0 0 16px}.about-grid p:last-child{margin-bottom:0}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:0}
+.why-item{background:var(--accent);color:var(--color-primary);border-radius:var(--r);padding:24px}
+.why-item h3{font-size:1.05rem;line-height:1.35}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g-item{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--color-primary)}
+.g-item img{aspect-ratio:4/3;object-position:center}
+.g-item figcaption{font-size:12px;color:var(--color-primary);padding:8px 12px}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--color-primary);vertical-align:top}
+.hours td:last-child{text-align:right;font-weight:700;padding-left:12px}
+.contact-cards{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+section#contact{background:var(--ink);color:#fff}
+section#contact h2.sec{color:#fff}section#contact .sub{color:#fff}
+section#contact .contact-cta-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+section#contact figure{border-radius:var(--r);overflow:hidden}section#contact figure img{aspect-ratio:16/9;object-fit:cover;object-position:center}
+section#about{background:#fff}
+footer{background:var(--ink);color:#fff;text-align:center;padding:30px 0;margin-top:0;font-size:13px}
+footer a{color:#fff}
+footer nav{position:static;background:transparent;border-bottom:0;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;margin:12px 0;color:#fff}
+footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+@media(max-width:1024px){.wrap{padding-inline:28px}.nav-in{padding:12px 28px}.menu-grid,.menu-groups,.why-grid,.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:72px 0}.hero{padding:72px 0 0}}
+@media(max-width:768px){.wrap{padding-inline:20px}.nav-in{padding:12px 20px}.hero,.about-grid,.visit-grid,section#contact .contact-cta-grid,.menu-grid,.menu-groups,.why-grid,.gallery{grid-template-columns:minmax(0,1fr)}.hero figure{aspect-ratio:16/9}section{padding:56px 0}.hero{padding:56px 0 0}}
+@media(max-width:480px){.wrap{padding-inline:16px}.nav-in{padding:12px 16px}section{padding:44px 0}.hero{padding:44px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.dish:hover,.hero figure:hover img,.g-item:hover img{transform:none;box-shadow:none}}
 </style>
 </head>
 <body>
 <div class="topbar">Website concept demo — not the official website</div>
-<div class="wrap">
-<div class="intro">
-<p class="eyebrow">Family-owned bakery · Japanese-inspired · Tempe</p>
-<h1>Arai <b>Pastry</b></h1>
-<p class="sub">Light, delicate Japanese-style cakes, breads, and pastries — baked daily and gone fast. Come early for the best selection.</p>
-<div class="cta">
-<a class="btn btn-call" href="tel:+14809669002">Call (480) 966-9002</a>
-<a class="btn btn-mail" href="mailto:taku.arai@gmail.com">Email Arai Pastry</a>
-<a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&query=Arai+Pastry+1335+West+University+Drive+Suite+4+Tempe+AZ+85281" target="_blank" rel="noopener">Find us</a>
-</div>
-<p style="font-family:Arial,sans-serif;font-size:14px">1335 West University Drive, Suite 4 · Tempe, AZ 85281</p>
-</div>
-<div class="bento">
-<div class="cell big reveal">
-<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&q=80&auto=format&fit=crop" alt="Freshly baked pastries">
-</div>
-<div class="cell txt reveal">
-<h2>Light cakes, <i>tender breads</i></h2>
-<p>Airy sponge, tea-infused icing, buttery milk bread — Arai's cakes favor lightness over sweetness, and the breads are baked to a soft, rich crumb.</p>
-</div>
-<div class="cell txt reveal">
-<h2>Custom cakes, <i>made to order</i></h2>
-<p>Special celebration cakes are available — please order ahead. Call the bakery to talk through your date and design.</p>
-</div>
-</div>
-<p class="cap">Illustrative stock photo — not the business's own photography.</p>
-<div class="tiles">
-<div class="tile reveal">
-<h3>Cakes</h3>
-<ul>
-<li>Earl Grey cake</li>
-<li>Strawberry shortcake</li>
-<li>Japanese cheesecake</li>
-<li>Green tea mousse cake</li>
-</ul>
-</div>
-<div class="tile reveal">
-<h3>Breads</h3>
-<ul>
-<li>Milk bread (shokupan)</li>
-<li>Cinnamon raisin bread</li>
-<li>Melon pan</li>
-<li>Butter loaf bread</li>
-</ul>
-</div>
-<div class="tile reveal">
-<h3>Pastries</h3>
-<ul>
-<li>Curry pan</li>
-<li>Custard buns</li>
-<li>Flan</li>
-<li>Cream-filled pastries</li>
-</ul>
-</div>
-</div>
-<div class="visit reveal">
+<nav aria-label="Main navigation"><div class="nav-in">
+<a class="brand" href="#top">Arai Pastry</a>
+<a class="nl" href="#menu">Menu</a>
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#gallery">Gallery</a>
+<a class="nl" href="#visit">Visit</a>
+<a class="nl" href="#contact">Contact</a>
+<a class="btn btn-nav" href="tel:+14809669002">Call</a>
+</div></nav>
+<div class="wrap" id="top">
+<header class="hero">
 <div>
-<h2 style="font-weight:400;font-size:1.6rem;margin-bottom:10px">Visit the bakery</h2>
+<p class="eyebrow">Family-owned bakery · Japanese-inspired · Tempe</p>
+<h1>Arai Pastry</h1>
+<h2>Light cakes, tender breads, baked fresh every day.</h2>
+<p class="lede">Light, delicate Japanese-style cakes, breads, and pastries — baked daily and gone fast. Come early for the best selection.</p>
+<div class="cta">
+<a class="btn btn-p" href="#menu">Explore Our Menu</a>
+<a class="btn btn-s" href="#visit">Find Us</a>
+</div>
+</div>
+<figure>
+<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of freshly baked pastries">
+<figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption>
+</figure>
+</header>
+<main>
+<section id="menu">
+<h2 class="sec">Featured menu</h2>
+<p class="sub">Dishes and categories from the business's current menu listing.</p>
+<div class="menu-groups"><div class="group reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo — not the business’s own photography." loading="lazy"><div class="card-body"><h3>Cakes</h3><ul><li>Earl Grey cake</li><li>Strawberry shortcake</li><li>Japanese cheesecake</li><li>Green tea mousse cake</li></ul></div></div><div class="group reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo — not the business’s own photography." loading="lazy"><div class="card-body"><h3>Breads</h3><ul><li>Milk bread (shokupan)</li><li>Cinnamon raisin bread</li><li>Melon pan</li><li>Butter loaf bread</li></ul></div></div><div class="group reveal"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo — not the business’s own photography." loading="lazy"><div class="card-body"><h3>Pastries</h3><ul><li>Curry pan</li><li>Custard buns</li><li>Flan</li><li>Cream-filled pastries</li></ul></div></div></div>
+<p class="note">No prices shown here. Special celebration cakes are available — please order ahead.</p>
+</section>
+<section id="about">
+<h2 class="sec">About Arai Pastry</h2>
+<div class="about-grid">
+<figure><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative restaurant interior — not the business’s own photography." loading="lazy"><figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<div><p>Airy sponge, tea-infused icing, buttery milk bread — Arai’s cakes favor lightness over sweetness, and the breads are baked to a soft, rich crumb. Custom cakes are made to order: call the bakery to talk through your date and design.</p><p>See the menu above for what is on offer, and the visit section for the address and opening hours.</p></div>
+</div>
+</section>
+<section id="gallery">
+<h2 class="sec">Gallery</h2>
+<p class="sub">A look at the kind of food on offer. Photos are illustrative stock images, not the business's own photography.</p>
+<div class="gallery">
+<figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of fresh bread loaves" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a cake" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a strawberry dessert" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+</div>
+</section>
+<section id="why">
+<h2 class="sec">Why choose us</h2>
+<div class="why-grid">
+<div class="why-item reveal"><h3>Family-owned bakery</h3></div><div class="why-item reveal"><h3>Baked daily</h3></div><div class="why-item reveal"><h3>Light Japanese-style cakes and breads</h3></div><div class="why-item reveal"><h3>Custom celebration cakes, made to order</h3></div>
+</div>
+</section>
+<section id="visit">
+<h2 class="sec">Location and opening hours</h2>
+<div class="visit-grid">
+<div>
+<p><strong>1335 West University Drive, Suite 4, Tempe, AZ 85281</strong></p>
+<p style="margin-top:10px">(480) 966-9002 · <a href="mailto:taku.arai@gmail.com">taku.arai@gmail.com</a></p>
+<div class="cta"><a class="btn btn-p" href="https://www.google.com/maps/search/?api=1&amp;query=Arai+Pastry+1335+West+University+Drive+Suite+4+Tempe+AZ+85281" target="_blank" rel="noopener">Get Directions</a></div>
+
+</div>
+<div>
 <table class="hours">
-<tr><td>Tuesday – Saturday</td><td>12:00pm – 6:00pm</td></tr>
-<tr><td>Sunday</td><td>12:00pm – 6:00pm</td></tr>
-<tr><td>Monday</td><td>Closed</td></tr>
+<tr><td>Tuesday – Saturday</td><td>12:00pm – 6:00pm</td></tr><tr><td>Sunday</td><td>12:00pm – 6:00pm</td></tr><tr><td>Monday</td><td>Closed</td></tr>
 </table>
 <p class="note">One listing shows Sunday closing at 5:00pm instead of 6:00pm — call (480) 966-9002 to confirm Sunday hours.</p>
 </div>
+</div>
+</section>
+<section id="contact">
+<div class="contact-cta-grid">
+<figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative food photo — not the business’s own photography." loading="lazy"></figure>
 <div>
-<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=80&auto=format&fit=crop" alt="Fresh bread loaves" style="width:100%;height:220px;object-fit:cover;border-radius:12px">
-<p class="cap">Illustrative stock photo — not the business's own photography.</p>
+<h2 class="sec">Contact us</h2>
+<p class="sub">Call or email to ask about the day's menu, or get directions to find the business.</p>
+<div class="contact-cards">
+<a class="btn btn-p" href="tel:+14809669002">Call (480) 966-9002</a>
+<a class="btn btn-s" href="mailto:taku.arai@gmail.com">Email Us</a>
+<a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&amp;query=Arai+Pastry+1335+West+University+Drive+Suite+4+Tempe+AZ+85281" target="_blank" rel="noopener">Get Directions</a>
 </div>
 </div>
 </div>
-<footer>
+</section>
+</main>
+</div>
+<footer><div class="wrap">
 <p>Website concept demo — not the official website</p>
-<p style="margin-top:8px">Arai Pastry · 1335 West University Drive, Suite 4, Tempe, AZ 85281 · <a href="tel:+14809669002">(480) 966-9002</a> · <a href="mailto:taku.arai@gmail.com">taku.arai@gmail.com</a></p>
+<nav aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a href="#contact">Contact</a></nav>
+<p>Arai Pastry · 1335 West University Drive, Suite 4, Tempe, AZ 85281 · <a href="tel:+14809669002">(480) 966-9002</a> · <a href="mailto:taku.arai@gmail.com">taku.arai@gmail.com</a></p></div>
 </footer>
 <script>
 var els=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
-else{els.forEach(function(el){el.classList.add('on');});}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
+else{els.forEach(function(el){el.classList.add('visible');});}
 </script>
 </body>
 </html>
