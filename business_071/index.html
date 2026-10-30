@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Columbus Baking Company — Syracuse, NY</title>
+<style>
+  :root{
+    --paper:#faf5ec; --ink:#262019; --accent:#9a2b1e; --olive:#6b6b3f; --cream:#fffdf6;
+    --line:#e3d9c6; --muted:#6f6252;
+    --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    --r:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+  .disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:13px;letter-spacing:.04em;padding:10px 16px}
+  header{max-width:1100px;margin:0 auto;padding:32px 24px 8px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;letter-spacing:-.01em}
+  h1 em{color:var(--accent);font-style:italic}
+  .est{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:clamp(1rem,2vw,1.25rem);max-width:340px}
+  .hero{max-width:1100px;margin:24px auto;padding:0 24px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px}
+  .hero img{width:100%;height:420px;object-fit:cover;border-radius:var(--r);display:block}
+  .hero-side{background:var(--accent);color:var(--paper);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+  .hero-side h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15}
+  .hero-side p{opacity:.92}
+  .btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+  .btn-light{background:var(--paper);color:var(--ink)}
+  .btn-outline{border:2px solid var(--paper);color:var(--paper)}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-accent{background:var(--accent);color:var(--paper)}
+  section{max-width:1100px;margin:0 auto;padding:40px 24px}
+  h2.sec{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:8px}
+  .lede{color:var(--muted);max-width:640px;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .card h3{font-family:var(--serif);font-size:1.25rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+  .story img{width:100%;height:320px;object-fit:cover;border-radius:var(--r)}
+  .story p{margin-bottom:16px}
+  .visit{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+  .visit p{opacity:.88;margin-bottom:8px}
+  .visit a{color:var(--paper)}
+  .note{font-size:13px;color:var(--muted);margin-top:16px}
+  .cap{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+  footer{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media(max-width:760px){
+    .hero,.story,.visit{grid-template-columns:1fr}
+    .grid{grid-template-columns:1fr}
+    .hero img{height:280px}
+  }
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<header>
+  <div>
+    <p class="eyebrow">Italian Bakery &middot; Syracuse, New York</p>
+    <h1>Columbus<br>Baking <em>Company</em></h1>
+  </div>
+  <p class="est">Baking in Syracuse since 1895, by the old-fashioned method.</p>
+</header>
+
+<div class="hero">
+  <div class="reveal">
+    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80" alt="Freshly baked bread loaves">
+    <p class="cap">Stock photo for illustration only — not a photo of this bakery.</p>
+  </div>
+  <div class="hero-side reveal">
+    <h2>The signature sourdough, baked the slow way.</h2>
+    <p>Columbus Baking Company is known for its sourdough, made by the old-fashioned method, alongside cakes, breads, filled rolls, baguettes, pastries, sausage rolls, and meatballs in a heel.</p>
+    <div class="btnrow">
+      <a class="btn btn-light" href="tel:+13154222913">Call (315) 422-2913</a>
+      <a class="btn btn-outline" href="mailto:columbusbakingco@gmail.com">Email us</a>
+    </div>
+  </div>
+</div>
+
+<section class="reveal">
+  <h2 class="sec">From the bakery case</h2>
+  <p class="lede">Visitor-reported specialties from the bakery. No prices are listed here — ask in store or by phone for the day's selection.</p>
+  <div class="grid">
+    <div class="card"><h3>Signature Sourdough</h3><p>The loaf the bakery is known for, made by the old-fashioned method.</p></div>
+    <div class="card"><h3>Breads &amp; Rolls</h3><p>Freshly baked bread, filled rolls, and baguettes, baked daily.</p></div>
+    <div class="card"><h3>Cakes &amp; Pastries</h3><p>Freshly baked cakes and pastries, plus sausage rolls.</p></div>
+    <div class="card"><h3>Meatballs in a Heel</h3><p>A bakery-counter favorite, reported by visitors.</p></div>
+    <div class="card"><h3>Since 1895</h3><p>A Syracuse bakery with more than a century of baking behind it.</p></div>
+    <div class="card"><h3>Walk In</h3><p>Find the bakery on Pearl Street, Syracuse. Hours below — please confirm by phone before a special trip.</p></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="story">
+    <div>
+      <h2 class="sec">An old Syracuse bakery</h2>
+      <p>Columbus Baking Company has been part of Syracuse's bakery tradition since 1895. Its public web presence is its Instagram page; this concept shows what a simple, warm online home for the bakery could look like.</p>
+      <p>The bakery's listed hours are Monday through Sunday, 9am to 5pm, as published in a single directory listing — please call ahead to confirm.</p>
+      <a class="btn btn-accent" href="https://www.google.com/maps/search/?api=1&query=Columbus%20Baking%20Company%20502%20Pearl%20St%2C%20Syracuse%2C%20NY%2013203">Find us on Maps</a>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1600&q=80" alt="Assorted baked pastries">
+      <p class="cap">Stock photo for illustration only — not a photo of this bakery.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="visit">
+    <div>
+      <h2>Visit</h2>
+      <p>502 Pearl St<br>Syracuse, NY 13203</p>
+      <p><a href="tel:+13154222913">(315) 422-2913</a><br><a href="mailto:columbusbakingco@gmail.com">columbusbakingco@gmail.com</a></p>
+    </div>
+    <div>
+      <h2>Hours</h2>
+      <p>Monday – Sunday: 9am – 5pm</p>
+      <p class="note">Hours come from a single directory listing. They are shown here as published and are not independently confirmed — please call ahead.</p>
+    </div>
+  </div>
+  <p class="note">Photos on this page are stock photos for illustration only and are not photos of Columbus Baking Company. Menu items are visitor-reported specialties; no prices are shown.</p>
+</section>
+
+<footer>
+  <div class="disclaimer">Website concept demo — not the official website</div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
