@@ -6,83 +6,122 @@
 <title>Rock Pho'd — Rockford, IL | Asian Fusion</title>
 <meta name="description" content="Rock Pho'd in Rockford, Illinois. Husband-and-wife Asian fusion restaurant since 2017 serving pho, banh mi, pad thai, crab rangoons, peppered steak and Lao, Thai and Chinese dishes.">
 <style>
-:root{--paper:#1E1A17;--ink:#F5EFE6;--accent:#E8A33D;--card:#2B251F;--line:#4A4136;--r:2px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;font-size:var(--body);line-height:1.65}
-a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--accent);color:#1E1A17;text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px;font-weight:700}
-header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
-.brand{font-size:1.7rem;font-weight:800}.brand span{color:var(--accent)}
-nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.08em;font-weight:700}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
-.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
-.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800}
-h1{font-size:clamp(3rem,8vw,5.4rem);line-height:.98;letter-spacing:-.02em;margin:16px 0 18px;max-width:16ch}
-.lede{font-size:clamp(1.1rem,2vw,1.3rem);max-width:56ch;color:#D8CFC0}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:13px 20px;border-radius:var(--r);text-decoration:none;font-weight:800;font-size:1rem}.btn.solid{background:var(--accent);color:#1E1A17}.btn.line{border:1.5px solid var(--ink)}
-.editorial{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:52px 0}
-figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}figcaption{font-size:var(--label);color:#A89C8A;margin-top:8px}
-h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.08;margin:0 0 14px}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;margin-top:20px}.menu-item{border-top:1px solid var(--line);padding:14px 0}.menu-item h3{margin:0 0 4px;font-size:1.15rem}.menu-item p{margin:0;color:#D8CFC0}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}.visit-grid h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}address{font-style:normal}
-.flag{background:var(--card);border-left:4px solid var(--accent);padding:16px 20px;margin-top:28px;font-size:.98rem}
-footer{border-top:1px solid var(--line);padding:28px 0 14px}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:var(--label);color:#A89C8A}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.editorial,.menu-grid,.visit-grid{grid-template-columns:1fr}.hero{padding:44px 0 32px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;--bg:var(--color-primary);--surface:rgba(255,255,255,.06);--ink:var(--color-secondary);--muted:rgba(240,229,210,.78);--accent:var(--color-accent);--accentink:#FFFFFF;--line:rgba(240,229,210,.22);--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;font-size:clamp(1rem,1.1vw,1.08rem);line-height:1.65}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.disclaimer{background:var(--accent);color:var(--accentink);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px;font-weight:700}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} .skip:focus{left:12px;top:12px;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;background:var(--surface);padding:10px 14px;z-index:50}
+header.site{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 24px;flex-wrap:wrap}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;font-weight:700;line-height:1.1;text-decoration:none}
+.brand small{display:block;font-family:"Segoe UI",system-ui,sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+nav.main a{text-decoration:none;padding:6px 2px}nav.main a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;border:2px solid transparent}
+.btn.solid{background:var(--accent);color:var(--accentink)}.btn.line{border-color:var(--ink);color:var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.hero{padding:44px 0 36px}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;align-items:center;animation:rise .7s ease both}
+.kicker{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800;margin:0 0 10px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.05;margin:0 0 16px;letter-spacing:-.01em}
+.lede{font-size:clamp(1.05rem,1.8vw,1.25rem);color:var(--muted);max-width:56ch;margin:0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero figure{margin:0}.hero img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+section{padding:52px 0}h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;margin:0 0 12px}
+.section-lede{color:var(--muted);max-width:64ch;margin:0 0 28px}
+.about-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.menu-card,.why-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;transition:transform .25s ease,box-shadow .25s ease}
+.menu-card:hover,.why-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.menu-card h3,.why-card h3{margin:0 0 6px;font-size:1.15rem}.menu-card p,.why-card p{margin:0;color:var(--muted)}
+.menu-note{color:var(--muted);font-size:.95rem;margin:22px 0 0;max-width:72ch}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gallery-grid figure{margin:0}.gallery-grid img{width:100%;height:100%;display:block;border-radius:12px;aspect-ratio:4/3;object-fit:cover;transition:transform .35s ease}
+.gallery-grid figure:hover img{transform:scale(1.04)}
+.why-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.visit-grid h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:0 0 10px}
+.visit-grid p{margin:0}address{font-style:normal}
+.flag{background:var(--surface);border-left:5px solid var(--accent);border-radius:0 12px 12px 0;padding:18px 22px;margin-top:24px;font-size:.98rem}
+footer{border-top:1px solid var(--line);padding:28px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem;color:var(--muted)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){.hero-inner,.about-grid,.menu-grid,.why-grid,.visit-grid{grid-template-columns:minmax(0,1fr)}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:32px 0 24px}section{padding:38px 0}}
+@media(max-width:520px){.gallery-grid{grid-template-columns:minmax(0,1fr)}nav.main{gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-inner,.reveal{animation:none;opacity:1;transform:none;transition:none}.btn:hover,.menu-card:hover,.why-card:hover{transform:none;box-shadow:none}.gallery-grid figure:hover img{transform:none}}
+/* §14 layout alignment: single centred grid (superseded by §16) */img{max-width:100%;height:auto;display:block}.hero-inner>*,.about-grid>*,.menu-grid>*,.gallery-grid>*,.why-grid>*,.visit-grid>*{min-width:0}.menu-card,.why-card{overflow-wrap:break-word}@media(max-width:768px){.wrap{padding-left:16px;padding-right:16px}header.site .wrap{padding-left:16px;padding-right:16px}}
+
+/* §16 spacing + §17 art direction (2026-10-30): supersedes the §14 container. Palette variables untouched; dark template kept dark. */
+html,body{overflow-x:clip}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:40px;box-sizing:border-box}
+header.site .wrap{padding-inline:40px}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+nav.main{gap:32px}
+section{padding:96px 0}
+.hero{padding:96px 0}
+.hero-inner{gap:24px;align-items:center}
+.hero img{aspect-ratio:3/2;object-fit:cover;object-position:center}
+.kicker{margin:0 0 16px}
+h1{line-height:1.1;margin:0 0 16px}
+.lede{line-height:1.6}
+.cta-row{margin-top:24px;gap:16px}
+h2{line-height:1.15;margin:0 0 32px}
+h2:has(+.section-lede){margin-bottom:16px}
+.section-lede{margin:0 0 24px;line-height:1.6}
+.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.why-grid{gap:24px}
+.gallery-grid{gap:24px}
+.gallery-grid img{object-position:center}
+.gallery-grid figure:nth-child(2) img{aspect-ratio:1/1}
+.gallery-grid figure:nth-child(4) img{aspect-ratio:3/2}
+.menu-card,.why-card{padding:24px}
+.menu-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:12px;margin:0 0 16px}
+.about-grid{gap:24px;align-items:center}
+.about-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:14px}
+.editorial-break-section{padding:48px 0}
+.editorial-break{margin:0}
+.editorial-break img{width:100%;height:420px;object-fit:cover;object-position:center;border-radius:14px}
+.editorial-break figcaption{padding:12px 14px;text-align:center}
+.visit-grid{padding:24px;gap:24px}
+.flag{margin-top:48px}
+.final-cta{background:var(--color-accent);color:#fff}
+.final-cta h2{color:#fff}
+.final-cta .section-lede{color:rgba(255,255,255,.9)}
+.final-cta .btn.line{border-color:#fff;color:#fff}
+.final-cta-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.final-cta-inner img{width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px}
+footer{padding:48px 0 16px}
+@media(max-width:1024px){.wrap{padding-inline:28px}header.site .wrap{padding-inline:28px}section{padding:72px 0}.hero{padding:72px 0}.hero-inner,.about-grid,.menu-grid,.why-grid{grid-template-columns:minmax(0,1fr)}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visit-grid{grid-template-columns:minmax(0,1fr)}.final-cta-inner{grid-template-columns:minmax(0,1fr)}.editorial-break img{height:300px}}
+@media(max-width:768px){.wrap{padding-inline:20px}header.site .wrap{padding-inline:20px}section{padding:56px 0}.hero{padding:56px 0}.menu-grid,.gallery-grid,.why-grid{grid-template-columns:minmax(0,1fr)}.final-cta-inner img{height:260px}}
+@media(max-width:480px){.wrap{padding-inline:16px}header.site .wrap{padding-inline:16px}section{padding:44px 0}.hero{padding:44px 0}.editorial-break img{height:240px}.final-cta-inner img{height:240px}}
 </style>
 </head>
 <body>
+<a class="skip" href="#menu">Skip to menu</a>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="wrap"><div class="brand">Rock <span>Pho'd</span></div>
-<nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></div></header>
-<main>
-<section class="hero wrap">
+<header class="site"><div class="wrap"><a class="brand" href="#top">Rock Pho'd<small>Asian Fusion</small></a>
+<nav class="main" aria-label="Main"><a href="#top">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<a class="btn solid" href="tel:+17797744146">Call (779) 774-4146</a></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-inner"><div>
 <p class="kicker">Rockford, Illinois &middot; Since 2017</p>
-<h1>One kitchen, three traditions: Lao, Thai &amp; Vietnamese.</h1>
+<h1>Three traditions, one neighbourhood kitchen.</h1>
 <p class="lede">Rock Pho'd is a husband-and-wife Asian fusion restaurant on East Riverside Boulevard — pho and banh mi beside spicy Thai curries, Lao sausage and Chinese stir-fries, every dish cooked fresh to order.</p>
-<div class="cta-row">
-<a class="btn solid" href="tel:+17797744146">Call (779) 774-4146</a>
-<a class="btn line" href="mailto:rockphod@gmail.com">Email the restaurant</a>
-<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Rock%20Pho%27d%2C%206551%20East%20Riverside%20Boulevard%2C%20Rockford%2C%20IL%2061114">Get directions</a>
-</div></section>
-
-<section class="wrap editorial" id="about"><div class="reveal">
-<h2>Cooked fresh, by the owners, to order.</h2>
-<p>Rock Pho'd was built by husband-and-wife team Souky and Bonnie as a neighbourhood restaurant with a wide menu: Vietnamese favourites like pho and banh mi, Thai curries and noodle dishes, Lao plates and Chinese stir-fries, with vegetarian-friendly choices among them.</p>
-<p>Visitors praise the generous portions, fast service and the signature rice paper rolls and fragrant pho.</p>
-</div><div class="reveal">
-<figure><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="A noodle bowl with fresh toppings" loading="lazy">
-<figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
-<figure style="margin-top:24px"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="A bowl of noodle soup with herbs" loading="lazy">
-<figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
-</div></section>
-
-<section class="wrap reveal" id="menu" style="padding-bottom:48px"><h2>From the menu</h2>
-<div class="menu-grid">
-<div class="menu-item"><h3>ROCK-PHO'D Special Pho</h3><p>The signature pho bowl, per visitor reports.</p></div>
-<div class="menu-item"><h3>Crab rangoons</h3><p>A popular starter for the table.</p></div>
-<div class="menu-item"><h3>Peppered steak</h3><p>A visitor favourite main.</p></div>
-<div class="menu-item"><h3>Pad thai &amp; drunken noodles</h3><p>Thai noodle dishes, often recommended.</p></div>
-<div class="menu-item"><h3>Pad see ew</h3><p>Another Thai noodle favourite.</p></div>
-<div class="menu-item"><h3>Banh mi &amp; spring rolls</h3><p>Vietnamese sandwiches and rolls.</p></div>
-<div class="menu-item"><h3>Fried rice</h3><p>Beef basil, chicken and house fried rice.</p></div>
-<div class="menu-item"><h3>Panang curry with tofu</h3><p>A vegetarian-friendly curry option.</p></div>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div>
 </div>
-<p style="font-size:var(--label);color:#A89C8A">Menu items are drawn from the restaurant's published listings and visitor reports. Availability can change, so please call ahead if you are coming for one dish in particular.</p></section>
-
-<section class="wrap reveal" id="visit" style="padding-bottom:48px"><h2>Visit</h2>
-<div class="visit-grid">
-<div><h3>Find us</h3><address>6551 East Riverside Boulevard, Suite 109<br>Rockford, IL 61114</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Rock%20Pho%27d%2C%206551%20East%20Riverside%20Boulevard%2C%20Rockford%2C%20IL%2061114">Open in Google Maps</a></p></div>
-<div><h3>Hours</h3><p>Tuesday to Sunday: 11am to 2:30pm and 5pm to 8:30pm<br>Monday: Closed</p></div>
-<div><h3>Contact</h3><p><a href="tel:+17797744146">(779) 774-4146</a><br><a href="mailto:rockphod@gmail.com">rockphod@gmail.com</a></p></div>
-</div>
-<div class="flag"><strong>Good to know:</strong> listings disagree on the suite number (Suite 109, Suite 114, and no suite all appear) and slightly on closing times (some show 2:15pm / 8:15pm instead of 2:30pm / 8:30pm). This demo uses Suite 109 and the majority hours — call ahead to confirm. The restaurant's published contact email is a personal-format address, listed publicly as the business contact.</div></section>
+<figure><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" fetchpriority="high"><figcaption>Illustrative stock photo — not a photo of this business.</figcaption></figure>
+</div></section>
+<section id="menu"><div class="wrap"><h2 class="reveal">From the menu</h2><p class="section-lede reveal">Dishes and categories from the shop's published listings and visitor mentions.</p><div class="menu-grid"><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>ROCK-PHO'D Special Pho</h3><p>The signature pho bowl, per visitor reports.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Crab rangoons</h3><p>A popular starter for the table.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Peppered steak</h3><p>A visitor favourite main.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Pad thai &amp; drunken noodles</h3><p>Thai noodle dishes, often recommended.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Pad see ew</h3><p>Another Thai noodle favourite.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Banh mi &amp; spring rolls</h3><p>Vietnamese sandwiches and rolls.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Fried rice</h3><p>Beef basil, chicken and house fried rice.</p></article><article class="menu-card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><h3>Panang curry with tofu</h3><p>A vegetarian-friendly curry option.</p></article></div><p class="menu-note reveal">Menu items are drawn from the restaurant's published listings and visitor reports. Availability can change, so please call ahead if you are coming for one dish in particular.</p></div></section>
+<section id="about"><div class="wrap reveal"><h2>About Rock Pho'd</h2><div class="about-grid"><div><p>Rock Pho'd was built by husband-and-wife team Souky and Bonnie as a neighbourhood restaurant with a wide menu: Vietnamese favourites like pho and banh mi, Thai curries and noodle dishes, Lao plates and Chinese stir-fries, with vegetarian-friendly choices among them.</p><p>Visitors praise the generous portions, fast service and the signature rice paper rolls and fragrant pho.</p></div><figure style="margin:0"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative restaurant seating" loading="lazy"><figcaption>Illustrative stock photo — not a photo of this business.</figcaption></figure></div></div></section>
+<section class="editorial-break-section"><div class="wrap"><figure class="editorial-break"><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food close-up" loading="lazy"><figcaption>Illustrative stock photo — not a photo of this business.</figcaption></figure></div></section>
+<section id="gallery"><div class="wrap"><h2 class="reveal">Gallery</h2><p class="section-lede reveal">Photos shown are illustrative stock images, not photos of this business.</p><div class="gallery-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of noodle soup" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of an Asian-style dish" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of a noodle bowl" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of an Asian-style plate" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure></div></div></section>
+<section id="why"><div class="wrap"><h2 class="reveal">Why visit Rock Pho'd</h2><div class="why-grid"><article class="why-card reveal"><h3>Cooked fresh to order</h3><p>Every dish is cooked fresh to order.</p></article><article class="why-card reveal"><h3>Built by the owners</h3><p>A husband-and-wife team, Souky and Bonnie.</p></article><article class="why-card reveal"><h3>Generous portions, fast service</h3><p>What visitors praise most, alongside the signature rice paper rolls and fragrant pho.</p></article><article class="why-card reveal"><h3>Vegetarian-friendly choices</h3><p>Vegetarian-friendly choices among the wide menu.</p></article></div></div></section>
+<section id="visit"><div class="wrap"><h2 class="reveal">Visit us</h2><div class="visit-grid reveal"><div><h3>Find us</h3><address>6551 East Riverside Boulevard, Suite 109<br>Rockford, IL 61114</address><p><a href="https://www.google.com/maps/search/?api=1&query=Rock%20Pho%27d%2C%206551%20East%20Riverside%20Boulevard%2C%20Rockford%2C%20IL%2061114">Get Directions</a></p></div><div><h3>Opening hours</h3><p>Tuesday to Sunday: 11am to 2:30pm and 5pm to 8:30pm<br>Monday: Closed</p></div><div><h3>Contact us</h3><p><a href="tel:+17797744146">(779) 774-4146</a><br><a href="mailto:rockphod@gmail.com">rockphod@gmail.com</a></p><p style="margin-top:14px"><a class="btn solid" href="tel:+17797744146">Call Us</a></p></div></div><aside class="flag reveal"><strong>Good to know before you visit:</strong> Good to know: listings disagree on the suite number (Suite 109, Suite 114, and no suite all appear) and slightly on closing times (some show 2:15pm / 8:15pm instead of 2:30pm / 8:30pm). This demo uses Suite 109 and the majority hours — call ahead to confirm. The restaurant's published contact email is a personal-format address, listed publicly as the business contact.</aside></div></section>
+<section class="final-cta"><div class="wrap final-cta-inner"><div><h2>Visit us</h2><p class="section-lede">Call ahead to confirm today's hours before visiting.</p><div class="cta-row"><a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Rock%20Pho%27d%2C%206551%20East%20Riverside%20Boulevard%2C%20Rockford%2C%20IL%2061114">Get Directions</a><a class="btn line" href="tel:+17797744146">Call (779) 774-4146</a></div></div><div><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><figcaption>Illustrative stock photo — not a photo of this business.</figcaption></div></div></section>
 </main>
-<footer><div class="wrap foot"><span>Rock Pho'd &middot; 6551 East Riverside Boulevard, Suite 109, Rockford, IL 61114</span><span>Website concept demo — not the official website</span></div></footer>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
-</script>
-</body>
-</html>
+<footer><div class="wrap"><div class="foot"><span>Rock Pho'd &middot; 6551 East Riverside Boulevard, Suite 109 Rockford, IL 61114</span><nav aria-label="Footer"><a href="#top">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Contact</a></nav><span>(779) 774-4146 &middot; rockphod@gmail.com</span></div><p style="text-align:center;color:var(--muted);font-size:.88rem;margin:18px 0 0">Website concept demo — not the official website</p></div></footer>
+<script>(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*60)+'ms';io.observe(el);});})();</script>
+</body></html>
