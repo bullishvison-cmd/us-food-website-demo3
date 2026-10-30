@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smashed N' Stacked — Little Rock, AR | Website Concept</title>
+<style>
+  :root{
+    --ink:#191512; --paper:#f6f1e8; --card:#fffdf7; --flame:#e4572e; --gold:#f2a007; --muted:#6f6259; --r:8px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .disclaimer{background:var(--ink);color:var(--paper);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+  .disclaimer span{color:var(--gold)}
+  .hero-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+  .hero-copy{background:var(--ink);color:var(--paper);padding:56px 40px;display:flex;flex-direction:column;justify-content:center}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--gold);font-weight:700}
+  h1{font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.98;font-weight:900;letter-spacing:-.02em;margin:16px 0}
+  h1 span{color:var(--flame)}
+  .lede{font-size:clamp(1.05rem,2vw,1.3rem);color:#d8cfc2;max-width:520px}
+  .hero-img{overflow:hidden}
+  .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .caption{font-size:12px;color:var(--muted);padding:8px 24px}
+  .strip{background:var(--flame);color:#fff;padding:14px 24px;text-align:center;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+  .main{max-width:1080px;margin:0 auto;padding:40px 24px 16px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:28px}
+  .card h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:12px;letter-spacing:-.01em}
+  .card p{color:var(--muted);margin-bottom:14px}
+  .facts{list-style:none;font-size:15px}
+  .facts li{padding:9px 0;border-top:1px solid #ece4d3}
+  .facts li:first-child{border-top:0}
+  .facts b{color:var(--ink)}
+  .menu{max-width:1080px;margin:0 auto;padding:16px 24px 40px}
+  .menu h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:8px}
+  .menu .sub{color:var(--muted);margin-bottom:20px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .dish{border:2px solid var(--ink);border-radius:var(--r);padding:20px;background:var(--card)}
+  .dish h3{font-size:1.05rem;margin-bottom:6px}
+  .dish h3 span{color:var(--flame)}
+  .dish p{font-size:14px;color:var(--muted)}
+  .note{max-width:1080px;margin:0 auto;padding:0 24px 32px;color:var(--muted);font-size:14px}
+  .cta{max-width:1080px;margin:0 auto;padding:0 24px 48px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;font-size:15px;padding:14px 22px;border-radius:var(--r)}
+  .btn-primary{background:var(--flame);color:#fff}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{border:2px solid var(--ink);color:var(--ink)}
+  footer{border-top:2px solid var(--ink);padding:28px 24px;text-align:center;color:var(--muted);font-size:13px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:760px){.hero-wrap{grid-template-columns:1fr}.hero-img{min-height:280px}.main{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.hero-copy{padding:40px 24px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<section class="hero-wrap">
+  <div class="hero-copy reveal">
+    <p class="eyebrow">Little Rock, Arkansas · Since 2023</p>
+    <h1>SMASHED<br><span>N' STACKED</span></h1>
+    <p class="lede">A Little Rock burger destination built on maximalist smash burgers: a signature bacon-infused crust, house-made sauces, and toppings you choose yourself.</p>
+  </div>
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop" alt="Smash burger with toppings"></div>
+</section>
+<p class="caption">Stock photo, illustrative only — not a photo of this business.</p>
+
+<div class="strip">Smash burgers · House-made sauces · Custom toppings</div>
+
+<section class="main">
+  <div class="card reveal">
+    <h2>Visit</h2>
+    <ul class="facts">
+      <li><b>Address:</b> 1020 E 6th St, Little Rock, AR 72202</li>
+      <li><b>Hours:</b> Tuesday–Saturday, 11am–9pm; Sunday &amp; Monday closed</li>
+      <li><b>Phone:</b> (501) 291-2353</li>
+      <li><b>Email:</b> smashednstacked@gmail.com</li>
+      <li><b>Seating:</b> Indoor seating, plus takeout</li>
+    </ul>
+  </div>
+  <div class="card reveal">
+    <h2>Why people come</h2>
+    <p>Big, bold burgers with a bacon-infused crust, sauces made in house, and a build-your-own approach to toppings — including a gluten-free bun option and vegetarian selections.</p>
+    <div style="overflow:hidden;border-radius:var(--r)"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1600&auto=format&fit=crop" alt="Burger and fries" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover"></div>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Stock photo, illustrative only — not a photo of this business.</p>
+  </div>
+</section>
+
+<section class="menu reveal">
+  <h2>The line-up</h2>
+  <p class="sub">From the shop's published description. No prices shown here.</p>
+  <div class="grid2">
+    <div class="dish"><h3><span>01</span> Maximalist smash burgers</h3><p>Smashed patties stacked high, cooked to order.</p></div>
+    <div class="dish"><h3><span>02</span> Bacon-infused crust</h3><p>The shop's signature crust on its smash burgers.</p></div>
+    <div class="dish"><h3><span>03</span> House-made sauces</h3><p>Sauces made in house to finish each burger.</p></div>
+    <div class="dish"><h3><span>04</span> Custom toppings</h3><p>Build it your way from the toppings list.</p></div>
+    <div class="dish"><h3><span>05</span> Gluten-free bun option</h3><p>A gluten-free bun choice, noted by visitors.</p></div>
+    <div class="dish"><h3><span>06</span> Vegetarian selections</h3><p>Meat-free options on the menu.</p></div>
+  </div>
+</section>
+
+<p class="note">Delivery is available through third-party delivery platforms. This demo does not link to an ordering page, because no direct ordering destination was verified.</p>
+
+<section class="cta reveal">
+  <a class="btn btn-primary" href="tel:+15012912353">Call (501) 291-2353</a>
+  <a class="btn btn-dark" href="mailto:smashednstacked@gmail.com">Email the shop</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Smashed+N%27+Stacked%2C+1020+E+6th+St%2C+Little+Rock%2C+AR+72202">Get directions</a>
+</section>
+
+<footer>
+  <p>Website concept demo — not the official website</p>
+  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
