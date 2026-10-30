@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arai Pastry — Tempe, AZ | Website Concept Demo</title>
+<style>
+:root{--ink:#33302b;--paper:#fbf7f0;--rose:#c96f5e;--sage:#7d8b6f;--butter:#f2dfae;--line:#e5dccb;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.intro{text-align:center;padding:44px 0 8px}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--rose);font-weight:800}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;font-weight:400}
+h1 b{color:var(--rose);font-weight:400}
+.sub{max-width:620px;margin:14px auto 0;font-size:clamp(1rem,2vw,1.2rem);color:#6b6257}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px}
+.btn{font-family:Arial,sans-serif;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:999px;font-size:14px}
+.btn-call{background:var(--rose);color:#fff}
+.btn-mail{background:var(--ink);color:#fff}
+.btn-map{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.bento{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:28px}
+.cell{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.cell img{width:100%;height:100%;object-fit:cover;display:block}
+.cell.big{grid-row:span 2;min-height:420px}
+.cell.txt{padding:26px}
+.cell.txt h2{font-size:1.6rem;font-weight:400;margin-bottom:10px}
+.cell.txt h2 i{color:var(--rose)}
+.cap{font-family:Arial,sans-serif;font-size:12px;color:#7a7263;padding:8px 2px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.tile h3{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:10px}
+.tile ul{list-style:none;font-size:16px}
+.tile li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.tile li:last-child{border-bottom:0}
+.visit{margin-top:18px;background:var(--butter);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hours{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:15px}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.12)}
+.hours td:last-child{text-align:right;font-weight:800}
+.note{font-family:Arial,sans-serif;font-size:13px;color:#6b6257;margin-top:12px}
+footer{background:var(--ink);color:#fff;text-align:center;padding:28px 16px;margin-top:40px;font-family:Arial,sans-serif;font-size:13px}
+footer a{color:var(--butter)}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){.bento,.tiles,.visit{grid-template-columns:1fr}.cell.big{min-height:300px;grid-row:auto}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="topbar">Website concept demo — not the official website</div>
+<div class="wrap">
+<div class="intro">
+<p class="eyebrow">Family-owned bakery · Japanese-inspired · Tempe</p>
+<h1>Arai <b>Pastry</b></h1>
+<p class="sub">Light, delicate Japanese-style cakes, breads, and pastries — baked daily and gone fast. Come early for the best selection.</p>
+<div class="cta">
+<a class="btn btn-call" href="tel:+14809669002">Call (480) 966-9002</a>
+<a class="btn btn-mail" href="mailto:taku.arai@gmail.com">Email Arai Pastry</a>
+<a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&query=Arai+Pastry+1335+West+University+Drive+Suite+4+Tempe+AZ+85281" target="_blank" rel="noopener">Find us</a>
+</div>
+<p style="font-family:Arial,sans-serif;font-size:14px">1335 West University Drive, Suite 4 · Tempe, AZ 85281</p>
+</div>
+<div class="bento">
+<div class="cell big reveal">
+<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&q=80&auto=format&fit=crop" alt="Freshly baked pastries">
+</div>
+<div class="cell txt reveal">
+<h2>Light cakes, <i>tender breads</i></h2>
+<p>Airy sponge, tea-infused icing, buttery milk bread — Arai's cakes favor lightness over sweetness, and the breads are baked to a soft, rich crumb.</p>
+</div>
+<div class="cell txt reveal">
+<h2>Custom cakes, <i>made to order</i></h2>
+<p>Special celebration cakes are available — please order ahead. Call the bakery to talk through your date and design.</p>
+</div>
+</div>
+<p class="cap">Illustrative stock photo — not the business's own photography.</p>
+<div class="tiles">
+<div class="tile reveal">
+<h3>Cakes</h3>
+<ul>
+<li>Earl Grey cake</li>
+<li>Strawberry shortcake</li>
+<li>Japanese cheesecake</li>
+<li>Green tea mousse cake</li>
+</ul>
+</div>
+<div class="tile reveal">
+<h3>Breads</h3>
+<ul>
+<li>Milk bread (shokupan)</li>
+<li>Cinnamon raisin bread</li>
+<li>Melon pan</li>
+<li>Butter loaf bread</li>
+</ul>
+</div>
+<div class="tile reveal">
+<h3>Pastries</h3>
+<ul>
+<li>Curry pan</li>
+<li>Custard buns</li>
+<li>Flan</li>
+<li>Cream-filled pastries</li>
+</ul>
+</div>
+</div>
+<div class="visit reveal">
+<div>
+<h2 style="font-weight:400;font-size:1.6rem;margin-bottom:10px">Visit the bakery</h2>
+<table class="hours">
+<tr><td>Tuesday – Saturday</td><td>12:00pm – 6:00pm</td></tr>
+<tr><td>Sunday</td><td>12:00pm – 6:00pm</td></tr>
+<tr><td>Monday</td><td>Closed</td></tr>
+</table>
+<p class="note">One listing shows Sunday closing at 5:00pm instead of 6:00pm — call (480) 966-9002 to confirm Sunday hours.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=80&auto=format&fit=crop" alt="Fresh bread loaves" style="width:100%;height:220px;object-fit:cover;border-radius:12px">
+<p class="cap">Illustrative stock photo — not the business's own photography.</p>
+</div>
+</div>
+</div>
+<footer>
+<p>Website concept demo — not the official website</p>
+<p style="margin-top:8px">Arai Pastry · 1335 West University Drive, Suite 4, Tempe, AZ 85281 · <a href="tel:+14809669002">(480) 966-9002</a> · <a href="mailto:taku.arai@gmail.com">taku.arai@gmail.com</a></p>
+</footer>
+<script>
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
+else{els.forEach(function(el){el.classList.add('on');});}
+</script>
+</body>
+</html>
