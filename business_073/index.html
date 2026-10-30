@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEA Restaurant — Rochester, NY</title>
+<style>
+  :root{
+    --teal:#0e4f4a; --sea:#147a70; --sand:#f4ead8; --ink:#1d2422; --chili:#c2410c; --cream:#fffdf8;
+    --line:#e2d6bd; --muted:#5f6a66;
+    --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    --r:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--sand);color:var(--ink);font-family:var(--sans);line-height:1.6}
+  .disclaimer{background:var(--teal);color:var(--sand);text-align:center;font-size:13px;letter-spacing:.04em;padding:10px 16px}
+  .split{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;min-height:560px}
+  .split-left{padding:48px 40px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--chili);font-weight:700}
+  h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02}
+  h1 em{color:var(--sea);font-style:italic}
+  .split-left p{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);max-width:480px}
+  .split-right{position:relative}
+  .split-right img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0 0 0 var(--r)}
+  .btnrow{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+  .btn-teal{background:var(--teal);color:var(--sand)}
+  .btn-chili{background:var(--chili);color:var(--cream)}
+  .btn-ghost{border:2px solid var(--teal);color:var(--teal)}
+  section{max-width:1120px;margin:0 auto;padding:48px 32px}
+  h2.sec{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:8px}
+  .lede{color:var(--muted);max-width:620px;margin-bottom:24px}
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .tile{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .tile h3{font-family:var(--serif);font-size:1.2rem;margin-bottom:6px}
+  .tile p{color:var(--muted);font-size:15px}
+  .tile.wide{grid-column:span 2}
+  .tile.tall{grid-row:span 2}
+  .tile.img{padding:0;overflow:hidden}
+  .tile.img img{width:100%;height:100%;object-fit:cover;display:block;min-height:220px}
+  .visit{background:var(--teal);color:var(--sand);border-radius:var(--r);padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+  .visit p{opacity:.9;margin-bottom:8px}
+  .visit a{color:var(--sand)}
+  .note{font-size:13px;color:var(--muted);margin-top:14px}
+  .cap{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic;padding:0 32px}
+  footer{max-width:1120px;margin:0 auto;padding:0 32px 40px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media(max-width:780px){
+    .split{grid-template-columns:1fr}
+    .split-right img{border-radius:0;height:300px}
+    .bento{grid-template-columns:1fr 1fr}
+    .tile.wide{grid-column:span 2}
+    .visit{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<div class="split">
+  <div class="split-left">
+    <p class="eyebrow">Vietnamese &middot; Asian Fusion &middot; Laotian &middot; Rochester, NY</p>
+    <h1>SEA<br><em>Restaurant</em></h1>
+    <p>A family-run Rochester restaurant serving Vietnamese, Asian fusion, and Laotian dishes on Monroe Avenue — from pho and vermicelli bowls to chef-special wings.</p>
+    <div class="btnrow">
+      <a class="btn btn-teal" href="tel:+15854738031">Call (585) 473-8031</a>
+      <a class="btn btn-chili" href="mailto:laisysavath@gmail.com">Email us</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=SEA%20Restaurant%20741%20Monroe%20Ave%2C%20Rochester%2C%20NY%2014607">Find us on Maps</a>
+    </div>
+  </div>
+  <div class="split-right">
+    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=1600&q=80" alt="Bowl of Vietnamese noodle soup">
+  </div>
+</div>
+<p class="cap">Stock photo for illustration only — not a photo of this restaurant.</p>
+
+<section class="reveal">
+  <h2 class="sec">Visitor favorites</h2>
+  <p class="lede">Dishes reported by the restaurant's listings and visitors. No prices are listed here — ask the restaurant for the current menu.</p>
+  <div class="bento">
+    <div class="tile"><h3>House Vermicelli Noodles</h3><p>A house favorite, also listed as the House Vermicelli Bowl.</p></div>
+    <div class="tile"><h3>Chef Special Chicken Wings</h3><p>The chef's special wings, named by visitors again and again.</p></div>
+    <div class="tile img"><img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1600&q=80" alt="Noodle dish"></div>
+    <div class="tile"><h3>Pho</h3><p>Vietnamese noodle soup, a staple of the menu.</p></div>
+    <div class="tile"><h3>Fried Eggrolls</h3><p>Crisp eggrolls, a visitor favorite.</p></div>
+    <div class="tile"><h3>Eye Round Steak &amp; Meatballs</h3><p>A distinctive house combination plate.</p></div>
+    <div class="tile"><h3>Flat Rice Noodles with Meat</h3><p>Wide rice noodles with your choice of meat.</p></div>
+    <div class="tile"><h3>Tofu with Chinese Broccoli</h3><p>Tofu sauteed with Chinese broccoli.</p></div>
+    <div class="tile wide"><h3>Also reported by visitors</h3><p>Spicy Basil Fried Rice Chicken, Chicken Pad Thai, Pad Thai Shrimp, Fried Calamari, and Crispy Noodles.</p></div>
+  </div>
+  <p class="cap">Stock photo for illustration only — not a photo of this restaurant.</p>
+</section>
+
+<section class="reveal">
+  <div class="visit">
+    <div>
+      <h2>Visit</h2>
+      <p>741 Monroe Ave<br>Rochester, NY 14607</p>
+      <p><a href="tel:+15854738031">(585) 473-8031</a><br><a href="mailto:laisysavath@gmail.com">laisysavath@gmail.com</a></p>
+    </div>
+    <div>
+      <h2>Hours</h2>
+      <p>Monday – Saturday: 11:00am – 9:00pm<br>Sunday: Closed</p>
+      <p class="note">Hours note: one listing shows Monday–Saturday 11:00am–9:00pm with Sunday closed; an older listing shows 11:00am–10:00pm. The newer listing is shown above and the difference is flagged here rather than silently resolved — please call ahead to confirm.</p>
+    </div>
+  </div>
+  <p class="note">The restaurant's public web presence is its Facebook page; this concept shows what a simple online home could look like. Photos on this page are stock photos for illustration only and are not photos of SEA Restaurant. Menu items are visitor-reported; no prices are shown.</p>
+</section>
+
+<footer>
+  <div class="disclaimer">Website concept demo — not the official website</div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
