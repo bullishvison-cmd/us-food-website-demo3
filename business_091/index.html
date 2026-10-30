@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Butchertown Grocery Bakery — Louisville, KY | Website Concept</title>
+<style>
+  :root{
+    --paper:#faf6ef; --card:#fffdf8; --ink:#2b2118; --muted:#6d5f52;
+    --brick:#9c4a2f; --sage:#5f7161; --line:#e6dccb; --r:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+  .disclaimer{background:var(--ink);color:var(--paper);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+  .disclaimer span{color:#e8c9a8}
+  header{max-width:1100px;margin:0 auto;padding:48px 24px 8px}
+  .eyebrow{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--brick);font-weight:700}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;font-weight:400;margin:16px 0 8px}
+  h1 em{color:var(--brick);font-style:italic}
+  .lede{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted);max-width:640px}
+  .rule{height:3px;background:var(--brick);width:72px;margin:24px 0}
+  .grid{max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+  .hero{border-radius:var(--r);overflow:hidden}
+  .hero img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+  .caption{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:var(--muted);padding:8px 2px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+  .panel h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:400;margin-bottom:12px}
+  .panel p{color:var(--muted);margin-bottom:16px}
+  .facts{list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px}
+  .facts li{padding:10px 0;border-top:1px solid var(--line)}
+  .facts li:first-child{border-top:0}
+  .facts b{color:var(--ink)}
+  .menu{max-width:1100px;margin:0 auto;padding:16px 24px 40px}
+  .menu h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:400;margin-bottom:8px}
+  .menu .sub{color:var(--muted);margin-bottom:24px}
+  .dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .dish{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+  .dish h3{font-size:1.05rem;margin-bottom:6px}
+  .dish p{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;color:var(--muted)}
+  .cta{max-width:1100px;margin:0 auto;padding:8px 24px 48px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:600;font-size:15px;padding:14px 22px;border-radius:var(--r)}
+  .btn-primary{background:var(--brick);color:#fff}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-sage{background:var(--sage);color:#fff}
+  footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}.dishes{grid-template-columns:1fr}header{padding-top:32px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<header class="reveal">
+  <p class="eyebrow">Louisville, Kentucky · Since 2015</p>
+  <h1>Butchertown<br><em>Grocery Bakery</em></h1>
+  <p class="lede">A warm, stylish restaurant in a 19th-century building, serving New American cooking, artisan cocktails, local craft coffee, and breads and pastries made fresh in house.</p>
+  <div class="rule"></div>
+</header>
+
+<section class="grid">
+  <div class="reveal">
+    <div class="hero"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Freshly baked bread loaves"></div>
+    <p class="caption">Stock photo, illustrative only — not a photo of this business.</p>
+    <div class="hero" style="margin-top:16px"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Fresh pastries on display"></div>
+    <p class="caption">Stock photo, illustrative only — not a photo of this business.</p>
+  </div>
+  <div class="panel reveal">
+    <h2>Visit us</h2>
+    <p>Set in the Butchertown neighborhood, the bakery pairs a historic room with a menu built around fresh bread, honest salads and sandwiches, and coffee from local roasters.</p>
+    <ul class="facts">
+      <li><b>Address:</b> 743 East Main Street, Louisville, KY 40202</li>
+      <li><b>Hours:</b> Monday–Sunday, 8am–2pm</li>
+      <li><b>Phone:</b> (502) 742-8315</li>
+      <li><b>Email:</b> info@butchertowngrocery.com</li>
+      <li><b>Good to know:</b> Takeout and catering available</li>
+    </ul>
+  </div>
+</section>
+
+<section class="menu reveal">
+  <h2>What they make</h2>
+  <p class="sub">Drawn from the bakery's published description. No prices shown here.</p>
+  <div class="dishes">
+    <div class="dish"><h3>Fresh breads &amp; pastries</h3><p>Baked in house and served through the day.</p></div>
+    <div class="dish"><h3>Salads &amp; sandwiches</h3><p>Simple, fresh plates alongside the bakery case.</p></div>
+    <div class="dish"><h3>Local craft coffee</h3><p>Coffee from local roasters, poured all morning.</p></div>
+    <div class="dish"><h3>New American plates</h3><p>Seasonal cooking in a historic 19th-century room.</p></div>
+    <div class="dish"><h3>Artisan cocktails</h3><p>A cocktail list to go with the food menu.</p></div>
+    <div class="dish"><h3>Catering</h3><p>Takeout and catering for gatherings and events.</p></div>
+  </div>
+</section>
+
+<section class="cta reveal">
+  <a class="btn btn-primary" href="tel:+15027428315">Call (502) 742-8315</a>
+  <a class="btn btn-sage" href="mailto:info@butchertowngrocery.com">Email the bakery</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Butchertown+Grocery+Bakery%2C+743+East+Main+Street%2C+Louisville%2C+KY+40202">Get directions</a>
+</section>
+
+<footer>
+  <p>Website concept demo — not the official website</p>
+  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
