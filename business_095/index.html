@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roti Rolls — Charleston, SC | Website Concept</title>
+<style>
+  :root{
+    --sand:#f7efe0; --card:#fffdf6; --ink:#23302b; --teal:#0f6b5c; --turmeric:#e8a317; --coral:#d95f43; --line:#e5d9bd; --r:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--sand);color:var(--ink);line-height:1.55}
+  .disclaimer{background:var(--ink);color:var(--sand);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+  .disclaimer span{color:var(--turmeric)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 8px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--teal);font-weight:800}
+  h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.6rem,6.5vw,4.4rem);line-height:1.0;margin:14px 0 10px}
+  h1 span{color:var(--coral)}
+  .lede{font-size:clamp(1.02rem,2vw,1.28rem);color:#5a665f;max-width:560px}
+  .badge{background:var(--teal);color:#fff;border-radius:var(--r);padding:22px;transform:rotate(1.2deg)}
+  .badge b{font-size:15px}
+  .badge p{font-size:14px;color:#d7ece6;margin-top:6px}
+  .gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin:32px 0 8px}
+  .gallery img{width:100%;display:block;object-fit:cover;border-radius:var(--r)}
+  .gallery .main-img{aspect-ratio:16/10}
+  .gallery .side-img{aspect-ratio:1/1}
+  .caption{font-size:12px;color:#8a7a5c;padding:4px 0 24px}
+  .flag{background:#fff3d6;border:1.5px solid var(--turmeric);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
+  .flag b{color:#7a5410}
+  .flag p{font-size:14px;color:#6d5c33;margin-top:4px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .card h2{font-family:Georgia,'Times New Roman',serif;font-size:1.4rem;margin-bottom:12px}
+  .card ul{list-style:none;font-size:15px}
+  .card li{padding:8px 0;border-top:1px solid var(--line)}
+  .card li:first-child{border-top:0}
+  .menu h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:6px}
+  .menu .sub{color:#5a665f;margin-bottom:18px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+  .chip{background:var(--card);border:1.5px solid var(--teal);color:var(--teal);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px}
+  .chip.warm{border-color:var(--coral);color:var(--coral)}
+  .note{color:#5a665f;font-size:14px;margin-bottom:32px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:48px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:14px 22px;border-radius:var(--r)}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#8a7a5c;font-size:13px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:760px){header{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<div class="wrap">
+  <header class="reveal">
+    <div>
+      <p class="eyebrow">Charleston, South Carolina · Food Truck</p>
+      <h1>Roti <span>Rolls</span></h1>
+      <p class="lede">Street food built around rotis and tacos — fresh local ingredients, juicy meats, and a walk-up window in the heart of Charleston.</p>
+    </div>
+    <div class="badge">
+      <b>A truck, not a dining room</b>
+      <p>Roti Rolls is a mobile food business. The address below is its regular Charleston spot — check before you head out, as trucks move.</p>
+    </div>
+  </header>
+
+  <section class="gallery reveal">
+    <img class="main-img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Street food snacks on a plate">
+    <img class="side-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Wrapped street food">
+  </section>
+  <p class="caption">Stock photos, illustrative only — not photos of this business.</p>
+
+  <div class="flag reveal">
+    <b>Please note — hours differ by source.</b>
+    <p>ThreeBestRated and Birdeye list Monday–Friday 9am–6pm, Saturday &amp; Sunday closed. Restaurantji lists Monday–Friday 9am–5pm, Saturday &amp; Sunday closed. We show both listings here rather than picking one — call ahead to confirm.</p>
+  </div>
+
+  <section class="cols">
+    <div class="card reveal">
+      <h2>Find the truck</h2>
+      <ul>
+        <li>384 King St, Charleston, SC 29401</li>
+        <li>Phone: (843) 822-5070</li>
+        <li>Email: eatrotirolls@gmail.com</li>
+        <li>Takeout from the walk-up window</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <h2>Catering &amp; pop-ups</h2>
+      <ul>
+        <li>Weddings, birthdays, company events</li>
+        <li>Pop-ups in Charleston and Atlanta</li>
+        <li>Fresh local ingredients, juicy meats</li>
+        <li>Original tacos on corn or flour tortillas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="menu reveal">
+    <h2>On the menu</h2>
+    <p class="sub">Names from the truck's published menu descriptions. No prices shown here.</p>
+    <div class="chips">
+      <span class="chip">Original Tacos</span>
+      <span class="chip warm">Thuman Murman Roti</span>
+      <span class="chip">Mother Clucker Roti</span>
+      <span class="chip warm">Buddha Bowls</span>
+      <span class="chip">Dirty Water Dogs</span>
+      <span class="chip warm">Hog Tied</span>
+    </div>
+  </section>
+
+  <p class="note">Original tacos come on corn or flour tortillas with cilantro, onions, and your choice of meat.</p>
+
+  <section class="cta reveal">
+    <a class="btn btn-primary" href="tel:+18438225070">Call (843) 822-5070</a>
+    <a class="btn btn-dark" href="mailto:eatrotirolls@gmail.com">Email the truck</a>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Roti+Rolls%2C+384+King+St%2C+Charleston%2C+SC+29401">Get directions</a>
+  </section>
+</div>
+
+<footer>
+  <p>Website concept demo — not the official website</p>
+  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
