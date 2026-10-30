@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saigon Noodle Station — Little Rock, AR | Website Concept</title>
+<style>
+  :root{
+    --white:#ffffff; --ink:#14211a; --green:#1d5c3f; --red:#c23b22; --mist:#eef3ee; --line:#d8e2d8; --r:4px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--white);color:var(--ink);line-height:1.55}
+  .disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+  .disclaimer span{color:#9ed3b4}
+  .bar{height:6px;background:var(--green)}
+  .bar i{display:block;height:100%;width:33%;background:var(--red)}
+  header{max-width:1080px;margin:0 auto;padding:48px 24px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--green);font-weight:800}
+  h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.0;letter-spacing:-.02em;margin:14px 0 10px}
+  .lede{font-size:clamp(1.02rem,2vw,1.25rem);color:#4a5a50;max-width:560px}
+  .meta{text-align:right;font-size:14px;color:#4a5a50}
+  .meta b{color:var(--ink);display:block;font-size:15px}
+  .photos{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .photos img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r)}
+  .caption{font-size:12px;color:#7a8a7f;padding:8px 24px;max-width:1080px;margin:0 auto}
+  .swiss{max-width:1080px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .block{background:var(--mist);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .block h2{font-size:1.15rem;margin-bottom:8px}
+  .block p{font-size:14px;color:#4a5a50}
+  .span7{grid-column:span 7}.span5{grid-column:span 5}.span4{grid-column:span 4}.span8{grid-column:span 8}.span12{grid-column:span 12}
+  .menu{max-width:1080px;margin:0 auto;padding:8px 24px 32px}
+  .menu h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:6px}
+  .menu .sub{color:#4a5a50;margin-bottom:18px}
+  .rows{border-top:2px solid var(--ink)}
+  .row{display:grid;grid-template-columns:1fr 2fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .row h3{font-size:1.05rem}
+  .row p{font-size:14px;color:#4a5a50}
+  .note{max-width:1080px;margin:0 auto;padding:0 24px 32px;color:#4a5a50;font-size:14px}
+  .cta{max-width:1080px;margin:0 auto;padding:0 24px 48px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:14px 22px;border-radius:var(--r)}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#7a8a7f;font-size:13px}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:760px){header{grid-template-columns:1fr}.meta{text-align:left}.photos{grid-template-columns:1fr}.span7,.span5,.span4,.span8{grid-column:span 12}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="bar"><i></i></div>
+
+<header class="reveal">
+  <div>
+    <p class="eyebrow">Little Rock, Arkansas · Since 2025</p>
+    <h1>Saigon Noodle Station</h1>
+    <p class="lede">An independent, locally operated Vietnamese restaurant serving pho, banh mi, and broken-rice dishes, with fresh herbs at the center of every bowl.</p>
+  </div>
+  <div class="meta">
+    <b>9401 N Rodney Parham Rd</b>
+    Little Rock, AR 72227<br>
+    (501) 786-7787<br>
+    x3rahh@hotmail.com
+  </div>
+</header>
+
+<section class="photos reveal">
+  <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Bowl of noodle soup with herbs">
+  <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Noodle dish with fresh toppings">
+</section>
+<p class="caption">Stock photos, illustrative only — not photos of this business.</p>
+
+<section class="swiss">
+  <div class="block span7 reveal"><h2>Fresh herbs, every bowl</h2><p>Cilantro, Thai basil, and mint are part of the cooking here — the bright, fresh finish that Vietnamese cooking is known for.</p></div>
+  <div class="block span5 reveal"><h2>Vegetarian &amp; vegan-friendly</h2><p>Vegetarian options with tofu, plus a vegan-friendly pho made with vegetable broth.</p></div>
+  <div class="block span4 reveal"><h2>Independent &amp; local</h2><p>A locally operated restaurant, not part of a chain.</p></div>
+  <div class="block span8 reveal"><h2>From the menu</h2><p>Pho, banh mi, spring rolls, bun cha, and com tam — noodle soups, crispy baguette sandwiches, grilled pork with noodles, and broken-rice dishes.</p></div>
+</section>
+
+<section class="menu reveal">
+  <h2>The menu, at a glance</h2>
+  <p class="sub">From the restaurant's published description. No prices shown here.</p>
+  <div class="rows">
+    <div class="row"><h3>Pho</h3><p>Beef or chicken noodle soup, with fresh herbs.</p></div>
+    <div class="row"><h3>Banh mi</h3><p>Crispy baguette sandwiches.</p></div>
+    <div class="row"><h3>Spring rolls</h3><p>Fresh or fried.</p></div>
+    <div class="row"><h3>Bun cha</h3><p>Grilled pork served with noodles.</p></div>
+    <div class="row"><h3>Com tam</h3><p>Broken-rice dishes.</p></div>
+    <div class="row"><h3>Vegetarian plates</h3><p>Tofu options, and pho with vegetable broth.</p></div>
+  </div>
+</section>
+
+<p class="note">Hours are not listed on this page — call ahead to confirm today's hours before visiting.</p>
+
+<section class="cta reveal">
+  <a class="btn btn-primary" href="tel:+15017867787">Call (501) 786-7787</a>
+  <a class="btn btn-dark" href="mailto:x3rahh@hotmail.com">Email the restaurant</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Saigon+Noodle+Station%2C+9401+N+Rodney+Parham+Rd%2C+Little+Rock%2C+AR+72227">Get directions</a>
+</section>
+
+<footer>
+  <p>Website concept demo — not the official website</p>
+  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
