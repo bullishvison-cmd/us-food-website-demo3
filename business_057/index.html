@@ -5,78 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Las Américas Bakery — Elizabeth, NJ | Colombian Bakery Since 2003</title>
 <meta name="description" content="Las Américas Bakery in Elizabeth, New Jersey. Colombian bakery since 2003 serving empanadas, arepas, churros and Colombian breakfasts.">
-<style>
-:root{--paper:#FFF9F0;--ink:#33241A;--yellow:#F2B705;--red:#C0392B;--green:#1E7A4C;--r:12px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:var(--body);line-height:1.6}
-a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
-header{border-bottom:1px solid #EADFC6}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
-.brand{font-size:1.7rem;font-weight:800}.brand span{color:var(--red)}
-nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.08em}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
-.hero{padding:56px 0 40px}.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.14em;color:var(--red);font-weight:700}
-h1{font-size:clamp(3rem,8vw,5.2rem);line-height:1;margin:14px 0 16px}
-.lede{font-size:clamp(1.1rem,2vw,1.35rem);max-width:56ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:14px 22px;border-radius:var(--r);text-decoration:none;font-weight:700}.btn.solid{background:var(--red);color:#fff}.btn.line{border:1.5px solid var(--ink)}
-.bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;padding:0 0 56px}
-.tile{border-radius:var(--r);overflow:hidden;position:relative;min-height:180px}
-.tile img{width:100%;height:100%;object-fit:cover;display:block}
-.tile.txt{background:var(--yellow);padding:24px;display:flex;flex-direction:column;justify-content:center}
-.tile.txt.green{background:var(--green);color:#fff}.tile.txt.red{background:var(--red);color:#fff}
-.tile h3{margin:0 0 6px;font-size:1.3rem}.tile p{margin:0}
-.tile.big{grid-row:span 2;min-height:380px}
-section{padding:48px 0}h2{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1;margin:0 0 16px}
-.note{font-size:var(--label);color:#7A6F5C;margin-top:24px}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}.visit-grid h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--red)}address{font-style:normal}
-.flag{background:#FBEEDD;border-left:4px solid var(--red);padding:16px 20px;margin-top:32px;font-size:.98rem}
-figcaption{font-size:var(--label);color:#7A6F5C;margin-top:8px}
-footer{border-top:1px solid #EADFC6;padding:28px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:var(--label);color:#7A6F5C}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.bento{grid-template-columns:1fr}.tile.big{grid-row:auto;min-height:240px}.visit-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-</style>
+<style>:root{--color-primary:#38271F;--color-secondary:#F3E8D5;--color-accent:#B77B48;--paper:var(--color-primary);--ink:var(--color-secondary);--acc:var(--color-accent);--soft:var(--color-secondary);--line:var(--color-secondary);--r:14px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:clamp(1rem,1.2vw,1.125rem);line-height:1.65;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;height:auto;display:block}.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 40px}.hero-grid>*,.about-grid>*,.gal-grid>*,.visit-grid>*,.menu-grid>*,.why-grid>*{min-width:0}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px 32px;padding:16px 40px;flex-wrap:wrap}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,3vw,1.7rem);font-weight:700;line-height:1.15;text-decoration:none}
+nav{display:flex;gap:32px;flex-wrap:wrap;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+nav a{text-decoration:none;padding:6px 2px}nav a:hover,nav a:focus-visible{color:var(--acc);text-decoration:underline;text-underline-offset:4px}
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--color-secondary);font-weight:800;margin:0 0 16px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 16px}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4.5vw,2.9rem);line-height:1.1;margin:0 0 14px}
+h3{font-size:1.15rem;margin:0 0 6px;line-height:1.3}.lede{font-size:clamp(1.1rem,2vw,1.35rem);max-width:56ch;margin:0}
+.hero{padding:96px 0}.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.hero img{width:100%;height:auto;display:block;object-fit:cover;object-position:center;border-radius:14px;aspect-ratio:16/9;transition:transform .5s ease}.gal img{width:100%;height:auto;display:block;object-fit:cover;object-position:center;border-radius:14px;aspect-ratio:4/3;transition:transform .5s ease}
+.hero figure,.gal figure{margin:0;overflow:hidden;border-radius:14px}.hero figure{box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.hero figure:hover img,.gal figure:hover img{transform:scale(1.04)}
+figcaption{font-size:.85rem;color:var(--color-secondary);margin-top:10px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.14)}
+.btn.solid{background:var(--acc);color:var(--color-primary)}.btn.line{border:1.5px solid var(--ink);background:transparent}
+section{padding:96px 0}.section-note{max-width:62ch;color:var(--color-secondary);margin:0 0 32px}
+.menu-sec{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.10)}
+.card p{margin:0;color:var(--color-primary)}.card .tag{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--acc);font-weight:800}
+.menu-note,.small{font-size:.92rem;color:var(--color-secondary)}.menu-note{margin-top:26px;max-width:70ch}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}.about-grid p{margin:0 0 14px}
+.gal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}.gal-grid figure:nth-child(2) img{aspect-ratio:1/1}.gal-grid figure:nth-child(3) img{aspect-ratio:3/2}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.visit-card{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:24px}
+.visit-card h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--color-primary)}
+.visit-card p{margin:10px 0 0}address{font-style:normal}
+.flag{background:var(--soft);border-left:5px solid var(--acc);padding:18px 22px;margin-top:48px;border-radius:0 10px 10px 0;font-size:.98rem}
+footer{border-top:1px solid var(--line);padding:30px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;font-size:.88rem}
+footer nav{font-size:.82rem}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
+.hero-anim{animation:fadeUp .7s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){.wrap{padding:0 28px}header .wrap{padding:16px 28px}.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.menu-grid,.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gal-grid,.visit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:72px 0}section{padding:72px 0}}
+@media(max-width:768px){.wrap{padding:0 20px}header .wrap{padding:16px 20px}.menu-grid,.gal-grid,.why-grid,.visit-grid{grid-template-columns:minmax(0,1fr)}.hero{padding:56px 0}section{padding:56px 0}.cta-band .cta-inner{padding:32px}}@media(max-width:480px){.wrap{padding:0 16px}header .wrap{padding:16px 16px}nav{gap:12px}.hero{padding:44px 0}section{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-anim{animation:none}.hero img,.gal img{transition:none}}
+.visit-card{color:var(--color-primary)}.flag{color:var(--color-primary)}.menu-sec .section-note{color:var(--color-primary)}.menu-sec .menu-note{color:var(--color-primary)}.menu-sec .eyebrow{color:var(--color-primary)}@media(min-width:1440px){.wrap{max-width:1320px}}.menu-sec h2{color:var(--color-primary)}.why-sec{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.why-sec h2{color:var(--color-primary)}.why-sec .eyebrow{color:var(--color-accent)}.break{padding:0}.break figure{margin:0}.break img{width:100%;height:auto;display:block;object-fit:cover;object-position:center;aspect-ratio:16/9}.final-cta{padding:96px 0}.cta-band{position:relative;overflow:hidden;border-radius:16px}.cta-band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.cta-band .cta-inner{position:relative;padding:48px;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.35));color:#fff}.cta-band h2{color:#fff;margin:0 0 16px}.cta-band p{margin:0;max-width:52ch}.cta-band .btn.line{border-color:#fff;color:#fff}</style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="wrap"><div class="brand">Las Américas <span>Bakery</span></div>
-<nav><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#home">Las Américas Bakery</a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav></div></header>
 <main>
-<section class="wrap hero"><div class="reveal">
-<p class="kicker">Elizabeth, New Jersey &middot; Colombian bakery &middot; Since 2003</p>
-<h1>Empanadas, arepas and churros, from early morning.</h1>
-<p class="lede">Las Américas Bakery has served Elizabeth since 2003, opening at 5am most days with Colombian breakfasts, baked goods and coffee.</p>
-<div class="cta-row">
-<a class="btn solid" href="tel:+19083543002">Call (908) 354-3002</a>
-<a class="btn line" href="mailto:lasamericasbakerynj@hotmail.com">Email the bakery</a>
-<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Las+Am%C3%A9ricas+Bakery%2C+137+Elmora+Avenue%2C+Elizabeth%2C+NJ+07202">Get directions</a>
-</div></div></section>
+<section class="hero" id="home"><div class="wrap hero-grid"><div class="hero-anim"><p class="eyebrow">Elizabeth, New Jersey · Colombian bakery · Since 2003</p><h1>Colombian mornings, starting at five.</h1><p class="lede">Las Américas Bakery has served Elizabeth since 2003, opening at 5am most days with Colombian breakfasts, baked goods and coffee.</p><div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div></div><figure class="hero-anim"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photograph"><figcaption>Photos are illustrative stock images, not photos of this business.</figcaption></figure></div></section>
+<section class="menu-sec" id="menu"><div class="wrap reveal"><p class="eyebrow">From the counter</p><h2>From the counter</h2><p class="section-note">The bakery's published-listing favourites, served through the day.</p><div class="menu-grid"><article class="card reveal"><h3>Empanadas</h3><p>A signature item at the counter.</p></article><article class="card reveal"><h3>Arepas</h3><p>Colombian corn cakes, served through the day.</p></article><article class="card reveal"><h3>Churros</h3><p>Sweet, fried and ready from the case.</p></article><article class="card reveal"><h3>Colombian breakfasts</h3><p>The morning menu the bakery is known for.</p></article></div><p class="menu-note">Menu items are drawn from the bakery's published listings. No prices are shown here; please ask in the bakery.</p></div></section>
 
-<section class="wrap" id="menu"><div class="bento reveal">
-<div class="tile big"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1600&auto=format&fit=crop" alt="Sweet baked treats on a plate">
-</div>
-<div class="tile txt"><h3>Empanadas</h3><p>A signature item at the counter.</p></div>
-<div class="tile txt green"><h3>Arepas</h3><p>Colombian corn cakes, served through the day.</p></div>
-<div class="tile txt red"><h3>Churros</h3><p>Sweet, fried and ready from the case.</p></div>
-<div class="tile txt"><h3>Colombian breakfasts</h3><p>The morning menu the bakery is known for.</p></div>
-</div>
-<p class="note">Menu items are drawn from the bakery's published listings. No prices are shown here; please ask in the bakery. Photo shown is an illustrative stock image, not a photo of this business.</p>
-</section>
-
-<section id="visit"><div class="wrap reveal">
-<h2>Visit</h2>
-<div class="visit-grid">
-<div><h3>Find us</h3><address>137 Elmora Avenue<br>Elizabeth, NJ 07202</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Las+Am%C3%A9ricas+Bakery%2C+137+Elmora+Avenue%2C+Elizabeth%2C+NJ+07202">Open in Google Maps</a></p></div>
-<div><h3>Hours</h3><p>Monday to Saturday: 5am to 10pm<br>Sunday: 6:30am to 10pm</p></div>
-<div><h3>Contact</h3><p><a href="tel:+19083543002">(908) 354-3002</a><br><a href="mailto:lasamericasbakerynj@hotmail.com">lasamericasbakerynj@hotmail.com</a></p></div>
-</div>
-<div class="flag"><strong>Good to know before you visit:</strong> hours above agree across the bakery's main directory listings. A delivery listing shows earlier evening closing at 9:30pm, which reflects delivery hours rather than shop hours, so please call ahead if you are coming late. Delivery listings for this bakery also appear on third-party apps; those apps are not the bakery's own website.</div>
-</div></section>
-</main>
-<footer><div class="wrap foot"><span>Las Américas Bakery &middot; 137 Elmora Avenue, Elizabeth, NJ 07202</span><span>Website concept demo — not the official website</span></div></footer>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
-</script>
+<section id="gallery"><div class="wrap reveal"><p class="eyebrow">Gallery</p><h2>A taste of the counter</h2><p class="section-note">Photos are illustrative stock images, not photos of this business.</p><div class="gal-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="Illustrative food photograph" loading="lazy"></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1200&auto=format&fit=crop" alt="Illustrative food photograph" loading="lazy"></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1200&auto=format&fit=crop" alt="Illustrative food photograph" loading="lazy"></figure></div></div></section>
+<section class="break"><figure><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1200&auto=format&fit=crop" alt="Illustrative food photograph" loading="lazy"></figure></section>
+<section class="why-sec" id="why"><div class="wrap reveal"><p class="eyebrow">Why visit</p><h2>Why choose us</h2><div class="why-grid"><article class="card reveal"><h3>Serving Elizabeth since 2003</h3><p>A Colombian bakery with a long neighbourhood history.</p></article><article class="card reveal"><h3>Open from 5am most days</h3><p>Colombian breakfasts, baked goods and coffee from early morning.</p></article><article class="card reveal"><h3>Empanadas, arepas and churros</h3><p>Signature items at the counter, through the day.</p></article></div></div></section>
+<section id="visit"><div class="wrap reveal"><p class="eyebrow">Visit and contact</p><h2>Find us</h2><div class="visit-grid"><div class="visit-card"><h3>Address</h3><address>137 Elmora Avenue<br>Elizabeth, NJ 07202</address><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Am%C3%A9ricas+Bakery%2C+137+Elmora+Avenue%2C+Elizabeth%2C+NJ+07202">Get Directions</a></p></div><div class="visit-card"><h3>Opening hours</h3><p>Monday to Saturday: 5am to 10pm<br>Sunday: 6:30am to 10pm</p></div><div class="visit-card"><h3>Contact</h3><p><a href="tel:+19083543002">(908) 354-3002</a><br><a href="mailto:lasamericasbakerynj@hotmail.com">lasamericasbakerynj@hotmail.com</a></p><p style="margin-top:14px"><a class="btn solid" href="tel:+19083543002">Contact Us</a></p></div></div><div class="flag"><strong>Good to know before you visit:</strong> Hours above agree across the bakery's main directory listings. A delivery listing shows earlier evening closing at 9:30pm, which reflects delivery hours rather than shop hours, so please call ahead if you are coming late. Delivery listings for this bakery also appear on third-party apps; those apps are not the bakery's own website.</div></div></section>
+<section class="final-cta"><div class="wrap"><div class="cta-band"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1600&auto=format&fit=crop" alt="" loading="lazy"><div class="cta-inner"><h2>Come taste it for yourself.</h2><p>Come by and taste what the counter is serving.</p><div class="cta-row"><a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Las+Am%C3%A9ricas+Bakery%2C+137+Elmora+Avenue%2C+Elizabeth%2C+NJ+07202">Get Directions</a><a class="btn line" href="tel:+19083543002">Contact Us</a></div></div></div></div></section></main>
+<footer><div class="wrap foot"><span>Las Américas Bakery &middot; 137 Elmora Avenue, Elizabeth, NJ 07202</span><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav><span>Website concept demo — not the official website</span></div></footer>
+<script>(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();</script>
 </body>
 </html>
