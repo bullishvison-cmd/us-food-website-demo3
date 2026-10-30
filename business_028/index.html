@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dee's Donuts — Las Vegas, NV | Website Concept</title>
+<style>
+:root{--ink:#2b2320;--paper:#fffaf3;--pink:#c95d7e;--brown:#6b4226;--cream:#f7e8d5;--radius:24px}
+*{box-sizing:border-box;margin:0}
+body{font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+.wrap{max-width:1080px;margin:auto;padding:0 24px}
+.layer{position:relative;margin:32px 0}
+.layer img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius);display:block}
+.layer .card{position:absolute;left:24px;bottom:-24px;background:#fff;border-radius:var(--radius);padding:28px;max-width:520px;box-shadow:0 12px 32px rgba(0,0,0,.18)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--pink);font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.02;margin:10px 0}
+.lede{font-size:clamp(1rem,2.2vw,1.2rem)}
+section{padding:48px 0 28px}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid div{background:var(--cream);border-radius:var(--radius);padding:22px}
+.grid h3{font-size:1.1rem;margin-bottom:6px}
+.grid p{font-size:.95rem;color:#5c4a3a}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--pink);color:#fff}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--pink);padding-left:12px;margin-top:18px}
+footer{padding:32px 0;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.layer img{height:280px}.layer .card{position:static;box-shadow:none;border:2px solid var(--cream);margin-top:16px}.grid{grid-template-columns:1fr}section{padding-top:28px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="wrap">
+<div class="layer reveal">
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Sweet dessert treats">
+<div class="card"><p class="eyebrow">Donut shop · Las Vegas, Nevada · Since 2005</p>
+<h1>Dee's Donuts</h1>
+<p class="lede">A family-owned Las Vegas donut shop making traditional-style donuts fresh daily — glazed, frosted, and filled, plus croissants and cinnamon buns.</p>
+<p style="font-size:12px;color:#7a6a58;margin-top:10px">Stock photo for illustration only — not a photo of this business.</p></div>
+</div>
+<section class="reveal">
+<h2>From the case</h2>
+<div class="grid">
+<div><h3>Classic Donuts</h3><p>Glazed, frosted, and filled donuts, made fresh daily.</p></div>
+<div><h3>Old Favourites</h3><p>Apple fritters, old fashioneds, and crullers.</p></div>
+<div><h3>Beyond Donuts</h3><p>Croissants, ham and cheese croissants, kolache, cinnamon buns, muffins, and bagels.</p></div>
+</div>
+<p class="note">Items are visitor-reported favourites. No prices are shown here — and regulars warn the shop runs out early, so arrive in the morning. Directory listings point to a third-party user-generated page about the shop, not to a website run by the shop itself, and it is not linked here.</p>
+</section>
+<section class="reveal">
+<h2>Visit &amp; hours</h2>
+<p>6401 North Durango Drive, Suite 150, Las Vegas, NV 89149</p>
+<p>Monday – Saturday: 5 am – 8 pm<br>Sunday: 5 am – 7 pm</p>
+<div class="cta"><a href="tel:+17026587657">Call (702) 658-7657</a><a class="alt" href="mailto:deesdonutslv@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Dee%27s+Donuts%2C+6401+North+Durango+Drive+Suite+150%2C+Las+Vegas%2C+NV+89149">Get directions</a></div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-size:.85rem;margin-top:16px">Dee's Donuts · 6401 North Durango Drive, Suite 150, Las Vegas, NV 89149 · (702) 658-7657 · deesdonutslv@gmail.com</p></footer>
+</div>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
