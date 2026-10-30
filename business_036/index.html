@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donut Squad — Milwaukee, WI | Gourmet Donuts</title>
+<meta name="description" content="Donut Squad in Milwaukee, Wisconsin. Oversized candy-topped gourmet donuts and breakfast sandwiches on homemade English muffins, open weekends.">
+<style>
+:root{--paper:#FFF6F0;--ink:#2A1A1E;--accent:#E4572E;--pink:#F7C8D3;--line:#EAD5CC;--r:20px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Comic Sans MS","Chalkboard SE",system-ui,sans-serif;font-size:var(--body);line-height:1.6}
+a{color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
+header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
+.brand{font-size:1.7rem;font-weight:800}.brand span{color:var(--accent)}
+nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.08em;font-weight:700}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.hero{padding:52px 0 32px;text-align:center}
+.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:800}
+h1{font-size:clamp(2.8rem,7vw,4.8rem);line-height:1.02;margin:14px 0 12px}
+.lede{font-size:clamp(1.1rem,2vw,1.3rem);max-width:58ch;margin:0 auto}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem}.btn.solid{background:var(--accent);color:#fff}.btn.line{border:1.5px solid var(--ink)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(180px,auto);gap:18px;padding:36px 0}
+.tile{border-radius:var(--r);padding:24px;overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile.photo{padding:0}.tile.photo img{aspect-ratio:1/1}
+.tile.a{grid-column:span 2;grid-row:span 2;background:var(--accent);color:#fff}
+.tile.b{grid-column:span 2;background:var(--pink)}
+.tile.c{background:#fff;border:1px solid var(--line)}
+.tile.d{grid-column:span 2;background:#fff;border:1px solid var(--line)}
+.tile h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;margin:0 0 10px}
+.tile h3{margin:0 0 6px;font-size:1.15rem}.tile p{margin:0}
+figure{margin:0}figcaption{font-size:var(--label);color:#7A5C55;margin-top:8px}
+section{padding:20px 0 48px}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}.visit-grid h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}address{font-style:normal}
+.flag{background:#FDECE6;border-left:4px solid var(--accent);padding:16px 20px;margin-top:28px;font-size:.98rem}
+footer{border-top:1px solid var(--line);padding:28px 0 14px}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:var(--label);color:#7A5C55}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:768px){.bento{grid-template-columns:1fr 1fr}.tile.a,.tile.b,.tile.d{grid-column:span 2}.visit-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="wrap"><div class="brand">Donut <span>Squad</span></div>
+<nav><a href="#donuts">Donuts</a><a href="#visit">Visit</a></nav></div></header>
+<main>
+<section class="hero wrap">
+<p class="kicker">Milwaukee, Wisconsin &middot; Since National Donut Day 2017</p>
+<h1>Big donuts. Bigger toppings.</h1>
+<p class="lede">Donut Squad makes oversized, candy-topped gourmet donuts in Milwaukee — plus breakfast sandwiches on homemade English muffins. A weekend-only shop, so plan your visit.</p>
+<div class="cta-row">
+<a class="btn solid" href="tel:+14146280833">Call (414) 628-0833</a>
+<a class="btn line" href="mailto:donutsquad414@gmail.com">Email the shop</a>
+<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Donut%20Squad%2C%202264%20N%20Prospect%20Ave%2C%20Milwaukee%2C%20WI%2053202">Get directions</a>
+</div></section>
+
+<section class="wrap" id="donuts"><div class="bento">
+<div class="tile a reveal"><h2>Candy-topped, oversized, unapologetic.</h2><p>Donut Squad's donuts are built big and finished with candy toppings — the shop's signature since it opened on National Donut Day in 2017.</p></div>
+<div class="tile photo reveal"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop" alt="Glazed donuts with toppings" loading="lazy"></div>
+<div class="tile b reveal"><h3>Kit Kat, S'mores, Fruity Pebbles, Oreo</h3><p>Visitor-reported topping favourites from the counter.</p></div>
+<div class="tile c reveal"><h3>Nutella Bavarian</h3><p>Filled with peanut butter cups, per visitor reports.</p></div>
+<div class="tile photo reveal"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=1600&auto=format&fit=crop" alt="Pink frosted donuts" loading="lazy"></div>
+<div class="tile d reveal"><h3>Breakfast sandwiches</h3><p>Served on homemade English muffins — a savoury start before the sweet.</p></div>
+</div>
+<p style="font-size:var(--label);color:#7A5C55">Photos shown are illustrative stock images, not photos of this business. Menu items are drawn from the shop's published listings and visitor reports; availability can change, so please call ahead.</p></section>
+
+<section class="wrap reveal" id="visit"><h2>Visit</h2>
+<div class="visit-grid">
+<div><h3>Find us</h3><address>2264 N Prospect Ave<br>Milwaukee, WI 53202</address>
+<p><a href="https://www.google.com/maps/search/?api=1&query=Donut%20Squad%2C%202264%20N%20Prospect%20Ave%2C%20Milwaukee%2C%20WI%2053202">Open in Google Maps</a></p></div>
+<div><h3>Hours</h3><p>Friday to Sunday: 6am to 1pm<br><span style="font-size:var(--label)">Guide-reported hours — please call ahead to confirm.</span></p></div>
+<div><h3>Contact</h3><p><a href="tel:+14146280833">(414) 628-0833</a><br><a href="mailto:donutsquad414@gmail.com">donutsquad414@gmail.com</a></p></div>
+</div>
+<div class="flag"><strong>Good to know:</strong> this demo covers the Milwaukee shop on Prospect Avenue only. Donut Squad has a second location in Waukesha (308 W Broadway, Waukesha, WI 53186) with its own hours — check before heading there. The shop's hours above come from a local guide, not the shop's own listing, so call ahead.</div></section>
+</main>
+<footer><div class="wrap foot"><span>Donut Squad &middot; 2264 N Prospect Ave, Milwaukee, WI 53202</span><span>Website concept demo — not the official website</span></div></footer>
+<script>
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
+</script>
+</body>
+</html>
