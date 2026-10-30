@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darla's Donuts — Salt Lake City, UT | Website Concept</title>
+<style>
+:root{--ink:#22201d;--paper:#fffaf2;--pink:#d96c8a;--cream:#f3e3c8;--teal:#2f6f6a;--radius:4px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+.top{grid-column:1/4;padding:48px 24px 8px}
+.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:12px;color:var(--pink);font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;margin:10px 0}
+.lede{font-size:clamp(1rem,2vw,1.25rem);max-width:640px}
+.hero{grid-column:1/3;padding:24px}
+.hero img{width:100%;height:380px;object-fit:cover;border-radius:var(--radius);display:block}
+.hero figcaption{font-size:12px;color:#7a6a58;margin-top:8px}
+.side{grid-column:3/4;background:var(--pink);color:#fff;padding:32px 24px;margin:24px 24px 24px 0;border-radius:var(--radius)}
+.side h2{font-size:1.3rem;margin-bottom:10px}
+section{max-width:1100px;margin:auto;padding:32px 24px}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--ink);border-radius:999px;padding:8px 16px;font-size:.95rem}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--cream);border-radius:var(--radius);padding:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--teal);color:#fff}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--pink);padding-left:12px;margin-top:18px}
+footer{padding:32px 24px;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.top,.hero,.side{grid-column:1/2}.side{margin:0 24px 24px}.hero img{height:260px}.hours{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="grid">
+<div class="top reveal"><p class="eyebrow">Donut shop · Salt Lake City, Utah · Since 2009</p>
+<h1>Darla's Donuts</h1>
+<p class="lede">A family-operated Salt Lake City donut shop hand-rolling donuts from scratch every morning since 2009.</p></div>
+<figure class="hero reveal"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445" alt="Freshly made sweet breakfast treats"><figcaption>Stock photo for illustration only — not a photo of this business.</figcaption></figure>
+<aside class="side reveal"><h2>Visit us</h2><p>2278 South Redwood Road<br>Salt Lake City, UT 84119</p><div class="cta"><a href="tel:+18019756381">Call (801) 975-6381</a><a class="alt" href="mailto:milligandarla@yahoo.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Darla%27s+Donuts%2C+2278+South+Redwood+Road%2C+Salt+Lake+City%2C+UT+84119">Get directions</a></div></aside>
+</div>
+<section class="reveal">
+<h2>From the case</h2>
+<div class="chips"><span>Hand-rolled donuts from scratch</span><span>Traditional glazed</span><span>Banana cream</span><span>Root beer float</span><span>Blueberry crumb</span><span>Apple turnovers</span><span>Bismarcks</span><span>Churro donuts</span><span>Cookie butter icing varieties</span><span>Muffins</span></div>
+<p class="note">Items are visitor-reported favourites. No prices are shown here — the case changes daily, so arrive early.</p>
+</section>
+<section class="reveal">
+<div class="hours">
+<div><h2>Hours</h2><p>Monday – Friday: 5 am – 1 pm<br>Saturday: 7 am – 12 pm<br>Sunday: Closed</p></div>
+<div><h2>Good to know</h2><p>A second phone number, (801) 895-3651, is also listed for the shop in directories. The main number above is shown first; if it does not answer, try the second number.</p></div>
+</div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-size:.85rem;margin-top:16px">Darla's Donuts · 2278 South Redwood Road, Salt Lake City, UT 84119 · (801) 975-6381 · milligandarla@yahoo.com</p></footer>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
