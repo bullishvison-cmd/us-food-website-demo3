@@ -4,122 +4,190 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Percheron Mexican Grill — Tucson, AZ | Website Concept Demo</title>
+<meta name="description" content="Percheron Mexican Grill is a Mexican food truck on South 12th Avenue in Tucson, serving burritos, tacos, and the Sonoran hot dog six days a week.">
 <style>
-:root{--ink:#1d1d1b;--paper:#faf8f4;--red:#a62b1f;--amber:#e9b44c;--teal:#1f6f5c;--line:#ddd5c6;--r:6px}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-.topbar{background:var(--red);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.05em;font-weight:700}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-.mast{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:40px 0 24px;border-bottom:4px solid var(--ink)}
-.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:800}
-h1{font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;letter-spacing:-.01em}
-h1 em{color:var(--red);font-style:normal}
-.addr{font-size:15px;text-align:right}
-.addr b{font-size:17px}
-.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.btn{text-decoration:none;font-weight:800;padding:12px 18px;border-radius:var(--r);font-size:14px}
-.btn-call{background:var(--ink);color:#fff}
-.btn-mail{background:var(--red);color:#fff}
-.btn-map{background:#fff;color:var(--ink);border:2px solid var(--ink)}
-.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin-top:24px}
-.hero img{width:100%;height:380px;object-fit:cover;border-radius:var(--r);display:block}
-.hero-side{background:var(--teal);color:#fff;border-radius:var(--r);padding:28px;display:flex;flex-direction:column;justify-content:center}
-.hero-side h2{font-family:Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.15}
-.hero-side p{margin-top:12px;font-size:15px;opacity:.95}
-.cap{font-size:12px;color:#7a7263;padding:8px 2px}
-.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:28px}
-.card{border-top:4px solid var(--ink);padding-top:16px}
-.card:nth-child(2){border-color:var(--red)}
-.card:nth-child(3){border-color:var(--amber)}
-.card h3{font-family:Georgia,serif;font-size:1.4rem;margin-bottom:10px}
-.card ul{list-style:none;font-size:15px}
-.card li{padding:9px 0;border-bottom:1px solid var(--line)}
-.card li:last-child{border-bottom:0}
+:root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;--ink:var(--color-primary);--paper:var(--color-secondary);--accent:var(--color-accent);--accent2:var(--color-primary);--r:6px}
+*{box-sizing:border-box;margin:0;padding:0}img{max-width:100%;height:auto;display:block}
+html{scroll-behavior:smooth}
+body{font-family:Arial, Helvetica, sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;animation:pagein .5s ease both}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+a{color:inherit}
+.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.03em}
+nav{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:1px solid var(--color-primary)}
+.nav-in{width:100%;max-width:1200px;margin-inline:auto;padding:12px 40px;display:flex;flex-wrap:wrap;gap:32px;align-items:center}
+@media(min-width:1440px){.nav-in{max-width:1320px}}
+.brand{font-family:Georgia, 'Times New Roman', serif;font-weight:700;font-size:1.25rem;text-decoration:none;margin-right:auto}
+.brand span{color:var(--color-primary)}
+.nav-in a.nl{text-decoration:none;font-weight:600;font-size:15px;padding:6px 2px}
+.nav-in a.nl:hover,.nav-in a.nl:focus-visible{text-decoration:underline}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;font-size:15px;min-height:48px;line-height:1.25;border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.btn-p{background:var(--accent);color:var(--color-primary)}
+.btn-s{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn-nav{background:var(--accent);color:var(--color-primary);padding:10px 18px;min-height:44px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:24px;align-items:center;padding:96px 0 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--color-primary);font-weight:800;margin:0 0 16px}
+h1{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.1;margin:0 0 16px}
+.hero h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;color:var(--color-primary);margin:0 0 16px}
+.lede{font-size:clamp(1rem,2vw,1.2rem);max-width:560px;line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero figure img,.g-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease}
+.hero figure{border-radius:var(--r);overflow:hidden;aspect-ratio:16/9}
+.hero figure:hover img,.g-item:hover img{transform:scale(1.04)}
+.cap{font-size:12px;color:var(--color-primary);padding:8px 2px}
+section{padding:96px 0;scroll-margin-top:84px}
+section h2.sec{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.15;margin:0 0 32px}
+.sub{color:var(--color-primary);margin:0 0 32px;max-width:680px;line-height:1.6}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dish{background:#fff;border:1px solid var(--color-primary);border-radius:var(--r);overflow:hidden;padding:0;transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.dish .card-body{padding:24px}
+.dish h3{font-family:Georgia, 'Times New Roman', serif;font-size:1.2rem;line-height:1.2;margin:0 0 6px;color:var(--color-primary)}
+.dish p{font-size:15px;line-height:1.6;color:var(--color-primary)}
+.menu-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.group{background:#fff;border:1px solid var(--color-primary);border-top:4px solid var(--accent);border-radius:var(--r);overflow:hidden;padding:0}
+.group img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.group .card-body{padding:24px}
+.group h3{font-family:Georgia, 'Times New Roman', serif;font-size:1.25rem;line-height:1.2;margin-bottom:10px}
+.group ul{list-style:none}
+.group li{padding:8px 0;border-bottom:1px dashed var(--color-primary);font-size:15px}
+.group li:last-child{border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--accent2);background:#fff;border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600}
+.note{font-size:14px;color:var(--color-primary);border-left:4px solid var(--accent2);padding-left:14px;margin-top:24px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.about-grid figure{border-radius:var(--r);overflow:hidden}.about-grid figure img{aspect-ratio:4/3;object-fit:cover;object-position:center}
+.about-grid p{font-size:1.05rem;line-height:1.6;margin:0 0 16px}.about-grid p:last-child{margin-bottom:0}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:0}
+.why-item{background:var(--accent);color:var(--color-primary);border-radius:var(--r);padding:24px}
+.why-item h3{font-size:1.05rem;line-height:1.35}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g-item{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--color-primary)}
+.g-item img{aspect-ratio:4/3;object-position:center}
+.g-item figcaption{font-size:12px;color:var(--color-primary);padding:8px 12px}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
 .hours{width:100%;border-collapse:collapse;font-size:15px}
-.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
-.hours td:last-child{text-align:right;font-weight:800}
-.visit{margin-top:32px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.visit img{width:100%;height:260px;object-fit:cover;border-radius:var(--r)}
-footer{background:var(--ink);color:#fff;text-align:center;padding:28px 16px;margin-top:40px;font-size:13px}
-footer a{color:var(--amber)}
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
-.reveal.on{opacity:1;transform:none}
-@media(max-width:760px){.mast,.hero,.grid,.visit{grid-template-columns:1fr}.addr{text-align:left}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.hours td{padding:10px 0;border-bottom:1px solid var(--color-primary);vertical-align:top}
+.hours td:last-child{text-align:right;font-weight:700;padding-left:12px}
+.contact-cards{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+section#contact{background:var(--ink);color:#fff}
+section#contact h2.sec{color:#fff}section#contact .sub{color:#fff}
+section#contact .contact-cta-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+section#contact figure{border-radius:var(--r);overflow:hidden}section#contact figure img{aspect-ratio:16/9;object-fit:cover;object-position:center}
+section#about{background:#fff}
+footer{background:var(--ink);color:#fff;text-align:center;padding:30px 0;margin-top:0;font-size:13px}
+footer a{color:#fff}
+footer nav{position:static;background:transparent;border-bottom:0;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;margin:12px 0;color:#fff}
+footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+@media(max-width:1024px){.wrap{padding-inline:28px}.nav-in{padding:12px 28px}.menu-grid,.menu-groups,.why-grid,.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:72px 0}.hero{padding:72px 0 0}}
+@media(max-width:768px){.wrap{padding-inline:20px}.nav-in{padding:12px 20px}.hero,.about-grid,.visit-grid,section#contact .contact-cta-grid,.menu-grid,.menu-groups,.why-grid,.gallery{grid-template-columns:minmax(0,1fr)}.hero figure{aspect-ratio:16/9}section{padding:56px 0}.hero{padding:56px 0 0}}
+@media(max-width:480px){.wrap{padding-inline:16px}.nav-in{padding:12px 16px}section{padding:44px 0}.hero{padding:44px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.dish:hover,.hero figure:hover img,.g-item:hover img{transform:none;box-shadow:none}}
 </style>
 </head>
 <body>
 <div class="topbar">Website concept demo — not the official website</div>
-<div class="wrap">
-<div class="mast">
+<nav aria-label="Main navigation"><div class="nav-in">
+<a class="brand" href="#top">Percheron Mexican Grill</a>
+<a class="nl" href="#menu">Menu</a>
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#gallery">Gallery</a>
+<a class="nl" href="#visit">Visit</a>
+<a class="nl" href="#contact">Contact</a>
+<a class="btn btn-nav" href="tel:+15202725490">Call</a>
+</div></nav>
+<div class="wrap" id="top">
+<header class="hero">
 <div>
-<p class="kicker">Food truck · Mexican · Tucson</p>
-<h1>Percheron <em>Mexican Grill</em></h1>
+<p class="eyebrow">Food truck · Mexican · Tucson</p>
+<h1>Percheron Mexican Grill</h1>
+<h2>Sonoran flavor, grilled to order on South 12th Avenue.</h2>
+<p class="lede">Burritos, tacos, and the Sonoran hot dog — grilled, wrapped, and served hot six days a week.</p>
 <div class="cta">
-<a class="btn btn-call" href="tel:+15202725490">Call (520) 272-5490</a>
-<a class="btn btn-mail" href="mailto:percheronmexicangrill@gmail.com">Email us</a>
-<a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&query=Percheron+Mexican+Grill+4860+South+12th+Avenue+Tucson+AZ+85714" target="_blank" rel="noopener">Get directions</a>
+<a class="btn btn-p" href="#menu">Explore Our Menu</a>
+<a class="btn btn-s" href="#visit">Find Us</a>
 </div>
 </div>
-<div class="addr"><b>4860 South 12th Avenue</b><br>Tucson, AZ 85714<br>(520) 272-5490</div>
+<figure>
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of Mexican dishes served at a table">
+<figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption>
+</figure>
+</header>
+<main>
+<section id="menu">
+<h2 class="sec">Featured menu</h2>
+<p class="sub">Dishes and categories from the business's current menu listing.</p>
+<div class="menu-groups"><div class="group reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo — not the business’s own photography." loading="lazy"><div class="card-body"><h3>Signature plates</h3><ul><li>Percheron burrito</li><li>Bacon-wrapped burrito</li><li>Sonoran hot dog</li></ul></div></div><div class="group reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo — not the business’s own photography." loading="lazy"><div class="card-body"><h3>Also on the grill</h3><ul><li>Caramelo</li><li>Quesadillas</li><li>Tacos</li></ul></div></div></div>
+<p class="note">This concept is for the South 12th Avenue location in Tucson. No prices shown here.</p>
+</section>
+<section id="about">
+<h2 class="sec">About Percheron Mexican Grill</h2>
+<div class="about-grid">
+<figure><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative restaurant interior — not the business’s own photography." loading="lazy"><figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<div><p>Percheron Mexican Grill is a Tucson food truck serving Mexican comfort food all day, six days a week. Call ahead or just show up — the grill is on from late morning to late night.</p><p>See the menu above for what is on offer, and the visit section for the address and opening hours.</p></div>
 </div>
-<div class="hero">
-<div class="reveal">
-<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80&auto=format&fit=crop" alt="Mexican dishes served at a table">
-<p class="cap">Illustrative stock photo — not the business's own photography.</p>
+</section>
+<section id="gallery">
+<h2 class="sec">Gallery</h2>
+<p class="sub">A look at the kind of food on offer. Photos are illustrative stock images, not the business's own photography.</p>
+<div class="gallery">
+<figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of tacos served on a plate" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a plated meal" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of tacos with fresh toppings" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure>
 </div>
-<div class="hero-side reveal">
-<h2>Sonoran flavor from the South 12th Avenue truck.</h2>
-<p>Burritos, tacos, and the Sonoran hot dog — grilled, wrapped, and served hot six days a week.</p>
-<p style="margin-top:16px;font-weight:800">Open Mon–Sat · 10:30am – 11:00pm<br>Closed Sundays</p>
+</section>
+<section id="why">
+<h2 class="sec">Why choose us</h2>
+<div class="why-grid">
+<div class="why-item reveal"><h3>Sonoran specialties, including the Sonoran hot dog</h3></div><div class="why-item reveal"><h3>Open six days a week</h3></div><div class="why-item reveal"><h3>Served from the South 12th Avenue truck</h3></div><div class="why-item reveal"><h3>Grill hours from late morning to late night</h3></div>
 </div>
+</section>
+<section id="visit">
+<h2 class="sec">Location and opening hours</h2>
+<div class="visit-grid">
+<div>
+<p><strong>4860 South 12th Avenue, Tucson, AZ 85714</strong></p>
+<p style="margin-top:10px">(520) 272-5490 · <a href="mailto:percheronmexicangrill@gmail.com">percheronmexicangrill@gmail.com</a></p>
+<div class="cta"><a class="btn btn-p" href="https://www.google.com/maps/search/?api=1&amp;query=Percheron+Mexican+Grill+4860+South+12th+Avenue+Tucson+AZ+85714" target="_blank" rel="noopener">Get Directions</a></div>
+
 </div>
-<div class="grid">
-<div class="card reveal">
-<h3>Signature plates</h3>
-<ul>
-<li>Percheron burrito</li>
-<li>Bacon-wrapped burrito</li>
-<li>Sonoran hot dog</li>
-</ul>
-</div>
-<div class="card reveal">
-<h3>Also on the grill</h3>
-<ul>
-<li>Caramelo</li>
-<li>Quesadillas</li>
-<li>Tacos</li>
-</ul>
-</div>
-<div class="card reveal">
-<h3>Hours</h3>
+<div>
 <table class="hours">
-<tr><td>Monday – Saturday</td><td>10:30am – 11pm</td></tr>
-<tr><td>Sunday</td><td>Closed</td></tr>
+<tr><td>Monday – Saturday</td><td>10:30am – 11:00pm</td></tr><tr><td>Sunday</td><td>Closed</td></tr>
 </table>
-<p style="font-size:13px;color:#7a7263;margin-top:12px">This concept is for the South 12th Avenue location in Tucson.</p>
+
 </div>
 </div>
-<div class="visit">
-<div class="reveal">
-<h3 style="font-family:Georgia,serif;font-size:1.5rem;margin-bottom:10px">Come hungry.</h3>
-<p>Percheron Mexican Grill is a Tucson food truck serving Mexican comfort food all day, six days a week. Call ahead or just show up — the grill is on from late morning to late night.</p>
-<p style="margin-top:16px"><a class="btn btn-call" href="tel:+15202725490">Call (520) 272-5490</a></p>
+</section>
+<section id="contact">
+<div class="contact-cta-grid">
+<figure><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative food photo — not the business’s own photography." loading="lazy"></figure>
+<div>
+<h2 class="sec">Contact us</h2>
+<p class="sub">Call or email to ask about the day's menu, or get directions to find the business.</p>
+<div class="contact-cards">
+<a class="btn btn-p" href="tel:+15202725490">Call (520) 272-5490</a>
+<a class="btn btn-s" href="mailto:percheronmexicangrill@gmail.com">Email Us</a>
+<a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&amp;query=Percheron+Mexican+Grill+4860+South+12th+Avenue+Tucson+AZ+85714" target="_blank" rel="noopener">Get Directions</a>
 </div>
-<div class="reveal">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop" alt="A plated meal">
-<p class="cap">Illustrative stock photo — not the business's own photography.</p>
 </div>
 </div>
+</section>
+</main>
 </div>
-<footer>
+<footer><div class="wrap">
 <p>Website concept demo — not the official website</p>
-<p style="margin-top:8px">Percheron Mexican Grill · 4860 South 12th Avenue, Tucson, AZ 85714 · <a href="tel:+15202725490">(520) 272-5490</a> · <a href="mailto:percheronmexicangrill@gmail.com">percheronmexicangrill@gmail.com</a></p>
+<nav aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a href="#contact">Contact</a></nav>
+<p>Percheron Mexican Grill · 4860 South 12th Avenue, Tucson, AZ 85714 · <a href="tel:+15202725490">(520) 272-5490</a> · <a href="mailto:percheronmexicangrill@gmail.com">percheronmexicangrill@gmail.com</a></p></div>
 </footer>
 <script>
 var els=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
-else{els.forEach(function(el){el.classList.add('on');});}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
+else{els.forEach(function(el){el.classList.add('visible');});}
 </script>
 </body>
 </html>
