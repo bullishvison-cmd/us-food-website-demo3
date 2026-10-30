@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Gallo Giro — Provo, UT | Website Concept</title>
+<style>
+:root{--ink:#221a12;--paper:#fffdf6;--red:#8f2d22;--gold:#d9a441;--cream:#f6ead2;--radius:20px 4px 20px 4px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
+.wrap{max-width:1080px;margin:auto;padding:0 24px}
+header{padding:56px 0 8px}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--red);font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;margin:12px 0}
+.lede{font-size:clamp(1rem,2.2vw,1.3rem);max-width:640px}
+.mag{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;margin:24px 0}
+.mag img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:var(--radius);display:block}
+.mag .box{background:var(--red);color:#fff;border-radius:var(--radius);padding:32px}
+.mag .box h2{font-size:1.4rem;margin-bottom:10px}
+section{padding:28px 0}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.tacos{display:flex;flex-wrap:wrap;gap:10px}
+.tacos span{border:2px solid var(--gold);border-radius:999px;padding:8px 16px;font-family:Arial,sans-serif;font-size:.95rem}
+.more{font-family:Arial,sans-serif;font-size:.95rem;color:#5c4a3a;margin-top:14px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-family:Arial,sans-serif;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--gold);color:var(--ink)}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.note{font-family:Arial,sans-serif;font-size:.85rem;color:#6b5a49;border-left:4px solid var(--red);padding-left:12px;margin-top:18px}
+footer{padding:32px 0;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.mag{grid-template-columns:1fr}.mag img{min-height:240px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="wrap">
+<header class="reveal"><p class="eyebrow">Mexican restaurant · Provo, Utah · Since 2001</p>
+<h1>El Gallo Giro</h1>
+<p class="lede">A Provo Mexican restaurant since 2001, known for its wide taco menu and classic dishes from burritos to enchiladas.</p></header>
+<div class="mag reveal">
+<img src="https://images.unsplash.com/photo-1563245372-f21724e3856d" alt="Mexican food">
+<div class="box"><h2>Visit us</h2><p>346 North University Avenue<br>Provo, UT 84601</p><p style="margin-top:12px">Monday – Thursday: 9 am – 9 pm<br>Friday &amp; Saturday: 9 am – 9:30 pm<br>Sunday: 9 am – 8 pm</p><div class="cta"><a href="tel:+18013772571">Call (801) 377-2571</a><a class="alt" href="mailto:elgallogiroprovo@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=El+Gallo+Giro%2C+346+North+University+Avenue%2C+Provo%2C+UT+84601">Get directions</a></div></div>
+</div>
+<p style="font-size:12px;color:#7a6a58">Stock photo for illustration only — not a photo of this business.</p>
+<section class="reveal">
+<h2>Tacos, and then some</h2>
+<div class="tacos"><span>Buche</span><span>Cochinita</span><span>Pastor</span><span>Chicharron</span><span>Tripa</span><span>Cabeza</span><span>Lengua</span><span>Choritaco</span><span>Flor de Calabaza</span><span>Quesadilla Hongos</span><span>La Gringa</span><span>Quesadillas Chicharron Prensado</span></div>
+<p class="more">Also on the menu: burritos, tamales, sopes, and enchiladas. No prices are shown here — ask in store for the day's menu. Delivery is available through DoorDash, a third-party ordering portal, not the restaurant's own website.</p>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-family:Arial,sans-serif;font-size:.85rem;margin-top:16px">El Gallo Giro · 346 North University Avenue, Provo, UT 84601 · (801) 377-2571 · elgallogiroprovo@gmail.com</p></footer>
+</div>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
