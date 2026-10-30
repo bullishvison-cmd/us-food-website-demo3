@@ -4,74 +4,121 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kobe Japan — Rockford, IL | Japanese Food Court Restaurant</title>
-<meta name="description" content="Kobe Japan in Rockford, Illinois. Family-owned Japanese restaurant in the CherryVale Mall food court serving authentic Japanese dishes at affordable prices.">
+<meta name="description" content="Kobe Japan is a family-owned food-court restaurant in CherryVale Mall, Rockford, serving authentic Japanese dishes.">
 <style>
-:root{--paper:#FAF7F2;--ink:#1E1B18;--accent:#B3231B;--dark:#1E1B18;--line:#E2D8CC;--r:4px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Trebuchet MS","Segoe UI",sans-serif;font-size:var(--body);line-height:1.6}
-a{color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--dark);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
-header{position:absolute;top:38px;left:0;right:0;z-index:2;color:#fff}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
-.brand{font-size:1.6rem;font-weight:800;letter-spacing:-.01em}.brand span{color:#FFB3AC}
-nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.1em;font-weight:700}nav a{text-decoration:none;color:#fff}nav a:hover{text-decoration:underline}
-.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,.25) 55%,rgba(0,0,0,.35))}
-.hero .inner{position:relative;padding:120px 24px 56px;max-width:1100px;margin:0 auto;width:100%}
-.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.16em;color:#FFB3AC;font-weight:800}
-h1{font-size:clamp(3rem,8vw,5.4rem);line-height:.98;letter-spacing:-.02em;margin:14px 0 16px;max-width:14ch}
-.lede{font-size:clamp(1.1rem,2vw,1.3rem);max-width:54ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:13px 20px;border-radius:var(--r);text-decoration:none;font-weight:800;font-size:1rem}.btn.solid{background:var(--accent);color:#fff}.btn.line{border:1.5px solid #fff;color:#fff}
-section{padding:52px 0}h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.08;margin:0 0 14px}
-figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:16/9;object-fit:cover}figcaption{font-size:var(--label);color:#6F655A;margin-top:8px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}.visit-grid h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}address{font-style:normal}
-.flag{background:#FBECEA;border-left:4px solid var(--accent);padding:16px 20px;margin-top:28px;font-size:.98rem}
-footer{border-top:1px solid var(--line);padding:28px 0 14px}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:var(--label);color:#6F655A}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.two,.visit-grid{grid-template-columns:1fr}header{position:static;background:var(--dark)}nav a{color:#fff}.hero{min-height:60vh}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+:root{--color-primary:#202321;--color-secondary:#F1EBDD;--color-accent:#A43A35;--bg:var(--color-secondary);--ink:var(--color-primary);--accent:var(--color-accent);--soft:#fff;--accent-ink:#FFFFFF;--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+img{max-width:100%;height:auto;display:block}a{color:var(--accent)}.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:.82rem;letter-spacing:.03em}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-secondary)}
+.nav{max-width:1200px;margin-left:auto;margin-right:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:Georgia, 'Times New Roman', serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.1}
+.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}.navlinks a:hover{color:var(--accent)}
+.menubtn{display:none;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}
+.wrap{max-width:1200px;margin-left:auto;margin-right:auto;padding:0 24px}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px;align-items:center;padding:48px 0 40px}
+.hero img{width:100%;height:440px;object-fit:cover;border-radius:24px;display:block}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--accent);font-weight:800;margin:0 0 10px}
+h1{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.3rem,5.5vw,3.9rem);line-height:1.05;margin:0 0 14px}
+.lede{font-size:clamp(1.02rem,2vw,1.22rem);margin:0 0 22px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;background:var(--accent);color:var(--accent-ink);min-height:48px;line-height:1.3;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}.cta{display:flex;flex-wrap:wrap;gap:12px}
+section{padding:52px 0}h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.15;margin:0 0 12px}
+.sec-lede{max-width:680px;margin:0 0 26px;color:rgba(32,35,33,.72)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--color-secondary);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.10)}.card h3{margin:0 0 8px;font-size:1.12rem}.card p{margin:0;color:rgba(32,35,33,.72)}
+.about{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}.about img{width:100%;height:360px;object-fit:cover;border-radius:24px}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.gal figure{margin:0;overflow:hidden;border-radius:var(--radius);background:#fff;border:1px solid var(--color-secondary)}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s}.gal figure:hover img{transform:scale(1.05)}.gal figcaption{padding:12px 14px;font-size:.9rem;color:rgba(32,35,33,.72)}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.flag{margin-top:20px;background:var(--soft);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}
+.note{font-size:.9rem;color:rgba(32,35,33,.72);border-left:4px solid var(--accent);padding-left:14px;margin-top:20px}
+.illust{font-size:.82rem;color:rgba(32,35,33,.72);margin-top:10px}footer{background:var(--ink);color:#fff;padding:32px 0;margin-top:20px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+.foot a{color:#fff}.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){.hero,.about{grid-template-columns:minmax(0,1fr)}.hero img{height:300px}.about img{height:260px}.grid,.gal,.visit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menubtn{display:block}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--color-secondary)}.navlinks.open{display:flex}}
+@media(max-width:520px){.grid,.gal,.visit-grid{grid-template-columns:minmax(0,1fr)}h1{font-size:2.3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.card:hover,.gal figure:hover img{transform:none;box-shadow:none}}
+/* §14 layout alignment: single centred grid (superseded by §16) */.hero>*,.about>*,.grid>*,.gal>*,.visit-grid>*{min-width:0}.card{overflow-wrap:break-word}@media(max-width:768px){.nav,.wrap{padding-left:16px;padding-right:16px}.navlinks{padding-left:16px;padding-right:16px}}
+/* §16 spacing + §17 art direction (2026-10-30): supersedes the §14 container. Palette variables untouched. */
+html,body{overflow-x:clip}
+.nav,.wrap{max-width:1200px;margin-inline:auto;padding-inline:40px;box-sizing:border-box}
+@media(min-width:1440px){.nav,.wrap{max-width:1320px}}
+header{background:var(--color-primary);border-bottom:0}
+.brand,.navlinks a{color:#fff}
+.navlinks{gap:32px}
+.navlinks a:hover{color:var(--color-accent)}
+.menubtn{background:var(--color-accent);color:var(--accent-ink)}
+section{padding:96px 0}
+.hero{gap:24px;align-items:center}
+.hero img{aspect-ratio:3/2;height:auto;object-fit:cover;object-position:center}
+.eyebrow{margin:0 0 16px}
+h1{line-height:1.1;margin:0 0 16px}
+.lede{margin:0 0 24px;line-height:1.6;max-width:56ch}
+h2{line-height:1.15;margin:0 0 32px}
+h2:has(+.sec-lede){margin-bottom:16px}
+.sec-lede{margin:0 0 24px;line-height:1.6}
+.cta{gap:16px}
+.grid,.gal,.visit-grid{gap:24px}
+.card{padding:24px}
+.about{gap:24px;align-items:center}
+.about img{aspect-ratio:3/2;height:auto;object-fit:cover;object-position:center}
+#menu{background:#fff}
+#menu .card{background:var(--color-secondary)}
+#gallery{background:#fff}
+#visit{background:#fff}
+.gal img{object-position:center}
+.gal figure:nth-child(2) img{aspect-ratio:1/1}
+.gal figure:nth-child(3) img{aspect-ratio:3/2}
+.menu-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:12px;margin:0 0 16px}
+.editorial-break-section{padding:48px 0}
+.editorial-break{margin:0}
+.editorial-break img{width:100%;height:420px;object-fit:cover;object-position:center;border-radius:24px}
+.editorial-break figcaption{padding:12px 14px;text-align:center;font-size:.9rem;color:rgba(0,0,0,.6)}
+.final-cta{background:var(--color-primary);color:#fff}
+.final-cta h2{color:#fff}
+.final-cta .sec-lede{color:rgba(255,255,255,.85)}
+.final-cta .btn-outline{color:#fff;border-color:#fff}
+.final-cta .illust{color:rgba(255,255,255,.8)}
+.final-cta-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.final-cta-inner img{width:100%;height:320px;object-fit:cover;object-position:center;border-radius:24px}
+.note,.flag{margin-top:48px}
+footer{padding:48px 0;margin-top:0}
+@media(max-width:1024px){.nav,.wrap{padding-inline:28px}section{padding:72px 0}.hero,.about{grid-template-columns:minmax(0,1fr)}.hero img{height:auto}.about img{height:auto}.grid,.gal,.visit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menubtn{display:block}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:var(--color-primary);flex-direction:column;padding:28px;border-bottom:1px solid var(--color-secondary)}.navlinks.open{display:flex}.navlinks a{color:#fff}.final-cta-inner{grid-template-columns:minmax(0,1fr)}.editorial-break img{height:300px}}
+@media(max-width:768px){.nav,.wrap{padding-inline:20px}section{padding:56px 0}.grid,.gal,.visit-grid{grid-template-columns:minmax(0,1fr)}.final-cta-inner img{height:260px}}
+@media(max-width:480px){.nav,.wrap{padding-inline:16px}section{padding:44px 0}.editorial-break img{height:240px}.final-cta-inner img{height:240px}}
 </style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="wrap"><div class="brand">Kobe <span>Japan</span></div>
-<nav><a href="#about">About</a><a href="#visit">Visit</a></nav></div></header>
+<header><nav class="nav" aria-label="Main navigation"><a class="brand" href="#home">Kobe Japan</a>
+<button class="menubtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+<div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a><a class="btn" href="#visit">Get Directions</a></div></nav></header>
 <main>
-<section class="hero" style="padding:0"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1600&auto=format&fit=crop" alt="Japanese dishes served on a platter" loading="lazy">
-<div class="shade"></div><div class="inner">
-<p class="kicker">CherryVale Mall, Rockford, Illinois</p>
-<h1>Japanese cooking, mall-fast and family-run.</h1>
-<p class="lede">Kobe Japan is a family-owned food-court restaurant in CherryVale Mall, serving authentic Japanese dishes at affordable prices.</p>
-<div class="cta-row">
-<a class="btn solid" href="tel:+18153329233">Call (815) 332-9233</a>
-<a class="btn line" href="mailto:tyeng@gap.com">Email the restaurant</a>
-<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Kobe%20Japan%2C%20CherryVale%20Mall%2C%20Rockford%2C%20IL%2061112">Get directions</a>
-</div></div></section>
-<p class="wrap" style="font-size:var(--label);color:#6F655A;padding-top:8px">Photos shown are illustrative stock images, not photos of this business.</p>
-
-<section class="wrap two reveal" id="about"><div>
-<h2>Right in the food court.</h2>
-<p>Kobe Japan keeps it simple: a family-owned counter in the CherryVale Mall food court, cooking authentic Japanese dishes at prices that suit a mall lunch or a quick family dinner. No booking, no fuss — order at the counter and eat in the food court.</p>
-<p>This demo keeps the menu general on purpose: the restaurant's published listings describe its cooking in general terms, and no dish-by-dish list was verified for this page.</p>
-</div><div>
-<figure><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1600&auto=format&fit=crop" alt="Freshly prepared Japanese dishes" loading="lazy">
-<figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
-</div></section>
-
-<section class="wrap reveal" id="visit"><h2>Visit</h2>
-<div class="visit-grid">
-<div><h3>Find us</h3><address>7200 Harrison Avenue, Suite Fc1<br>CherryVale Mall<br>Rockford, IL 61112</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Kobe%20Japan%2C%20CherryVale%20Mall%2C%20Rockford%2C%20IL%2061112">Open in Google Maps</a></p></div>
-<div><h3>Hours</h3><p>Hours follow the CherryVale Mall food court — please call ahead to confirm today's hours before visiting.</p></div>
-<div><h3>Contact</h3><p><a href="tel:+18153329233">(815) 332-9233</a><br><a href="mailto:tyeng@gap.com">tyeng@gap.com</a></p></div>
-</div>
-<div class="flag"><strong>Good to know:</strong> the restaurant's published contact email sits on an unrelated corporate domain rather than a restaurant domain. It is the address published as the business contact, and it passes a domain mail check — but mailbox acceptance is unproven until a real message is sent, and this demo does not test-send.</div></section>
+<section class="wrap hero" id="home"><div class="reveal"><p class="eyebrow">CherryVale Mall, Rockford, Illinois</p>
+<h1>Japanese cooking, mall-fast and family-run.</h1><p class="lede">Kobe Japan is a family-owned food-court restaurant in CherryVale Mall, serving authentic Japanese dishes at affordable prices.</p>
+<div class="cta"><a class="btn" href="#visit">Get Directions</a><a class="btn btn-outline" href="#about">About the Counter</a></div><p class="illust">Photos shown are illustrative stock images, not photos of this business.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of Japanese food"></div></section>
+<section id="about" class="reveal"><div class="wrap about"><div><p class="eyebrow">About</p><h2>Right in the food court</h2><p>Kobe Japan keeps it simple: a family-owned counter in the CherryVale Mall food court, cooking authentic Japanese dishes at prices that suit a mall lunch or a quick family dinner. No booking, no fuss — order at the counter and eat in the food court. This demo keeps the menu general on purpose: the restaurant&#x27;s published listings describe its cooking in general terms, and no dish-by-dish list was verified for this page.</p></div>
+<div><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of Japanese dishes" loading="lazy"></div></div></section>
+<section class="reveal editorial-break-section"><div class="wrap"><figure class="editorial-break"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food close-up" loading="lazy"><figcaption>Illustrative food photography — not this business's own dishes.</figcaption></figure></div></section>
+<section id="gallery" class="reveal"><div class="wrap"><p class="eyebrow">Gallery</p><h2>From the counter, in spirit</h2>
+<p class="sec-lede">Illustrative food photography only — these images show the kind of food served, not this business's own dishes or interior.</p>
+<div class="gal"><figure class="reveal"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative Japanese dishes" loading="lazy"><figcaption>Illustrative Japanese dishes</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop" alt="Illustrative restaurant seating" loading="lazy"><figcaption>Illustrative restaurant seating</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop" alt="Illustrative plated food" loading="lazy"><figcaption>Illustrative plated food</figcaption></figure></div></div></section>
+<section class="reveal"><div class="wrap"><p class="eyebrow">Why visit</p><h2>Why visit</h2><div class="grid"><article class="card reveal"><h3>Family-owned food-court counter</h3><p>A family-owned counter in the CherryVale Mall food court.</p></article><article class="card reveal"><h3>Authentic Japanese dishes</h3><p>Cooking authentic Japanese dishes, in general terms as published.</p></article><article class="card reveal"><h3>No booking, no fuss</h3><p>Order at the counter and eat in the food court.</p></article></div></div></section>
+<section id="visit" class="reveal"><div class="wrap"><p class="eyebrow">Visit</p><h2>Find us</h2><div class="visit-grid">
+<div class="card"><h3>Address</h3><p>7200 Harrison Avenue, Suite Fc1<br>CherryVale Mall<br>Rockford, IL 61112</p><p><a href="https://www.google.com/maps/search/?api=1&query=Kobe%20Japan%2C%20CherryVale%20Mall%2C%20Rockford%2C%20IL%2061112">Open in Google Maps</a></p></div>
+<div class="card"><h3>Opening hours</h3><p>Hours follow the CherryVale Mall food court — please call ahead to confirm today's hours before visiting.</p></div>
+<div class="card"><h3>Contact</h3><p><a href="tel:+18153329233">Call (815) 332-9233</a><br><a href="mailto:tyeng@gap.com">tyeng@gap.com</a></p><p><a href="https://www.google.com/maps/search/?api=1&query=Kobe%20Japan%2C%20CherryVale%20Mall%2C%20Rockford%2C%20IL%2061112">Get Directions</a></p></div>
+</div><p class="note">Good to know: the restaurant's published contact email sits on an unrelated corporate domain rather than a restaurant domain. It is the address published as the business contact, and it passes a domain mail check — but mailbox acceptance is unproven until a real message is sent, and this demo does not test-send.</p></div></section>
+<section class="reveal final-cta"><div class="wrap final-cta-inner"><div><h2>Contact us</h2><p class="sec-lede">Call ahead to confirm today&#x27;s food-court hours before visiting.</p>
+<div class="cta"><a class="btn btn-outline" href="tel:+18153329233">Call (815) 332-9233</a><a class="btn btn-outline" href="mailto:tyeng@gap.com">Email us</a><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Kobe%20Japan%2C%20CherryVale%20Mall%2C%20Rockford%2C%20IL%2061112">Get Directions</a></div></div><div><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food photo" loading="lazy"><p class="illust">Photos shown are illustrative stock images, not photos of this business.</p></div></div></section>
 </main>
 <footer><div class="wrap foot"><span>Kobe Japan &middot; CherryVale Mall, Rockford, IL 61112</span><span>Website concept demo — not the official website</span></div></footer>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+<script>(function(){var btn=document.querySelector('.menubtn');var links=document.getElementById('navlinks');if(btn){btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
-</script>
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i%3,2)*70)+'ms';io.observe(el);});})();</script>
 </body>
 </html>
