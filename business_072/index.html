@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Forest Tea House — Lowell, MA</title>
+<style>
+  :root{
+    --green:#1f4d2e; --moss:#5a7a5a; --paper:#f7f5ef; --ink:#1c241c; --gold:#c9a227; --cream:#ffffff;
+    --line:#dde2d6; --muted:#5c665c;
+    --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    --r:8px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+  .disclaimer{background:var(--green);color:var(--paper);text-align:center;font-size:13px;letter-spacing:.04em;padding:10px 16px}
+  .topbar{border-bottom:3px solid var(--green)}
+  .topbar-in{max-width:1080px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  .brand{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.1}
+  .brand span{color:var(--green)}
+  .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .grid{max-width:1080px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .hero-img{grid-column:span 8}
+  .hero-img img{width:100%;height:440px;object-fit:cover;border-radius:var(--r);display:block}
+  .hero-txt{grid-column:span 4;background:var(--green);color:var(--paper);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .hero-txt h1{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1.15}
+  .hero-txt p{opacity:.92}
+  .btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;text-align:center}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-ghost{border:2px solid var(--paper);color:var(--paper)}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-green{background:var(--green);color:var(--paper)}
+  .cell{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .cell h2,.cell h3{font-family:var(--serif)}
+  .cell h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:8px}
+  .cell h3{font-size:1.2rem;margin-bottom:6px}
+  .cell p{color:var(--muted);font-size:15px}
+  .span4{grid-column:span 4}
+  .span6{grid-column:span 6}
+  .span8{grid-column:span 8}
+  .span12{grid-column:span 12}
+  .hours{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+  .hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .cap{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+  footer{max-width:1080px;margin:0 auto;padding:0 24px 40px}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media(max-width:780px){
+    .hero-img,.hero-txt,.span4,.span6,.span8{grid-column:span 12}
+    .hero-img img{height:280px}
+  }
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+
+<div class="topbar"><div class="topbar-in">
+  <div>
+    <div class="brand">Green Forest <span>Tea House</span></div>
+    <div class="tag">Asian Bakery &amp; Tea House &middot; Lowell, Massachusetts</div>
+  </div>
+  <div>
+    <a class="btn btn-green" href="tel:+19784599208">Call (978) 459-9208</a>
+  </div>
+</div></div>
+
+<div class="grid">
+  <div class="hero-img reveal">
+    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Cozy cafe interior with tables">
+    <p class="cap">Stock photo for illustration only — not a photo of this tea house.</p>
+  </div>
+  <div class="hero-txt reveal">
+    <h1>Baked goods, roasted meats &amp; tea, late into the night.</h1>
+    <p>Green Forest Tea House is a Lowell bakery and tea house known for Asian baked goods and roasted meats — and for staying open late, a favorite stop for a late-night snack.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn btn-gold" href="mailto:greenforestteahouse1@gmail.com">Email us</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Green%20Forest%20Tea%20House%2038%20Willie%20St%2C%20Lowell%2C%20MA%2001854">Find us on Maps</a>
+    </div>
+  </div>
+
+  <div class="cell span4 reveal"><h3>Asian Baked Goods</h3><p>Fresh-baked Asian pastries and buns, made for the bakery case.</p></div>
+  <div class="cell span4 reveal"><h3>Roasted Meats</h3><p>Roasted pork, duck, and chicken, reported by visitors.</p></div>
+  <div class="cell span4 reveal"><h3>Strawberry Cake</h3><p>Noted by visitors as a must-try when you stop in.</p></div>
+
+  <div class="cell span8 reveal">
+    <h2>Visit</h2>
+    <p>38 Willie St<br>Lowell, MA 01854</p>
+    <p style="margin-top:12px"><a href="tel:+19784599208">(978) 459-9208</a><br><a href="mailto:greenforestteahouse1@gmail.com">greenforestteahouse1@gmail.com</a></p>
+    <p class="note">The tea house's public web presence is its Facebook page; this concept shows what a simple online home could look like. Photos on this page are stock photos for illustration only and are not photos of Green Forest Tea House. Menu items are visitor-reported; no prices are shown.</p>
+  </div>
+  <div class="cell span4 reveal">
+    <h2>Hours</h2>
+    <table class="hours">
+      <tr><td>Monday – Thursday</td><td>11am – 12am</td></tr>
+      <tr><td>Friday – Saturday</td><td>11am – 1am</td></tr>
+      <tr><td>Sunday</td><td>11am – 12am</td></tr>
+      <tr><td>Tuesday</td><td>Closed</td></tr>
+    </table>
+    <p class="note">Hours agree across two directory listings. Please call ahead to confirm before a late-night visit.</p>
+  </div>
+
+  <div class="cell span12 reveal" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+    <p style="color:var(--ink);font-family:var(--serif);font-size:1.2rem">Open late. Come for a snack, stay for the tea.</p>
+    <a class="btn btn-dark" href="tel:+19784599208">Call (978) 459-9208</a>
+  </div>
+</div>
+
+<footer>
+  <div class="disclaimer">Website concept demo — not the official website</div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
