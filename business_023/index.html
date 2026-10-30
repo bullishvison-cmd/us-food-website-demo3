@@ -3,73 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catrinas Mexican Food — West Valley City, UT | Website Concept</title>
+<title>Catrinas Mexican Food — West Valley City, UT | Website Concept Demo</title>
+<meta name="description" content="Catrinas Mexican Food is a Utah food truck serving tacos, quesadillas, burritos, and flautas, with al pastor and fresh salsas.">
 <style>
-:root{--ink:#1f1a14;--paper:#fff8ef;--orange:#c65a1e;--lime:#7a8c3f;--dark:#33302a;--radius:18px}
-*{box-sizing:border-box;margin:0}
-body{font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
-.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
-.wrap{max-width:1080px;margin:auto;padding:0 24px}
-header{padding:64px 0 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--orange);font-weight:700}
-h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;margin:12px 0}
-.lede{font-size:clamp(1rem,2.2vw,1.3rem)}
-header img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius);display:block}
-.cap{font-size:12px;color:#7a6a58;margin-top:8px}
-section{padding:32px 0}
-h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
-.list{columns:2;column-gap:32px}
-.list div{break-inside:avoid;padding:14px 0;border-bottom:1px solid #e5d7bd}
-.list h3{font-size:1.05rem}
-.list p{font-size:.95rem;color:#5c4a3a}
-.hours{background:var(--dark);color:#fff;border-radius:var(--radius);padding:28px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--orange);color:#fff}
-.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
-.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--lime);padding-left:12px;margin-top:18px}
-footer{padding:32px 0;text-align:center}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:760px){header{grid-template-columns:1fr}header img{height:260px}.list{columns:1}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;--ink:var(--color-primary);--paper:var(--color-secondary);--accent:var(--color-accent);--accent2:var(--color-accent);--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+img{max-width:100%;height:auto;display:block}
+html{scroll-behavior:smooth}
+body{font-family:'Trebuchet MS', Verdana, sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;animation:pagein .5s ease both}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+a{color:inherit}
+.topbar{background:var(--ink);color:#fff;text-align:center;padding:10px 24px;font-size:13px;letter-spacing:.03em}
+nav{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--color-secondary)}
+.nav-in{width:100%;max-width:1200px;margin-inline:auto;padding:12px 40px;display:flex;flex-wrap:wrap;gap:10px 32px;align-items:center}
+.brand{font-family:'Trebuchet MS', Verdana, sans-serif;font-weight:700;font-size:1.25rem;text-decoration:none;margin-right:auto}
+.brand span{color:var(--accent)}
+.nav-in a.nl{text-decoration:none;font-weight:600;font-size:15px;padding:6px 2px}
+.nav-in a.nl:hover,.nav-in a.nl:focus-visible{color:var(--accent);text-decoration:underline}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;font-size:15px;min-height:48px;line-height:1.25;border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.btn-p{background:var(--accent);color:#fff}
+.btn-s{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn-nav{background:var(--accent);color:#fff;padding:10px 18px;min-height:44px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px;box-sizing:border-box}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding:64px 0 96px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--accent);font-weight:800}
+h1{font-family:'Trebuchet MS', Verdana, sans-serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:12px 0 6px}
+.hero h2{font-family:'Trebuchet MS', Verdana, sans-serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;color:var(--accent);margin-bottom:12px}
+.lede{font-size:clamp(1rem,2vw,1.2rem);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero figure img,.g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.hero figure{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+.hero figure:hover img,.g-item:hover img{transform:scale(1.04)}
+.cap{font-size:12px;color:var(--color-primary);padding:8px 2px}
+section{padding:96px 0;scroll-margin-top:84px}
+section h2.sec{font-family:'Trebuchet MS', Verdana, sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.15;margin-bottom:8px}
+.sub{color:var(--color-primary);margin-bottom:24px;max-width:680px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.dish{background:#fff;border:1px solid var(--color-secondary);border-radius:var(--r);padding:22px;transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.dish h3{font-family:'Trebuchet MS', Verdana, sans-serif;font-size:1.2rem;margin-bottom:6px;color:var(--accent)}
+.dish p{font-size:15px;color:var(--color-primary)}
+.menu-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.group{background:#fff;border:1px solid var(--color-secondary);border-top:4px solid var(--accent);border-radius:var(--r);padding:22px}
+.group h3{font-family:'Trebuchet MS', Verdana, sans-serif;font-size:1.25rem;margin-bottom:10px}
+.group ul{list-style:none}
+.group li{padding:8px 0;border-bottom:1px dashed var(--color-secondary);font-size:15px}
+.group li:last-child{border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--accent2);background:#fff;border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600}
+.note{font-size:14px;color:var(--color-primary);border-left:4px solid var(--accent2);padding-left:14px;margin-top:18px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.about-grid p{font-size:1.05rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+.why-item{background:var(--accent);color:#fff;border-radius:var(--r);padding:22px}
+.why-item h3{font-size:1.05rem;line-height:1.35}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.g-item{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--color-secondary)}
+.g-item img{aspect-ratio:4/3}
+.g-item figcaption{font-size:12px;color:var(--color-primary);padding:8px 12px}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--color-secondary);vertical-align:top}
+.hours td:last-child{text-align:right;font-weight:700;padding-left:12px}
+.contact-cards{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+footer{background:var(--ink);color:#fff;text-align:center;padding:30px 0;margin-top:20px;font-size:13px}
+footer a{color:#fff}
+footer nav{position:static;background:transparent;border-bottom:0;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin:12px 0}
+footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+@media(max-width:760px){.hero,.about-grid,.visit-grid{grid-template-columns:minmax(0,1fr)}.hero figure{aspect-ratio:16/10}}
+@media(max-width:768px){.nav-in,.wrap,.topbar{padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.dish:hover,.hero figure:hover img,.g-item:hover img{transform:none;box-shadow:none}}
+
+/* §16 spacing + §17 art direction (2026-10-30) — supersedes §14 container */
+html,body{overflow-x:hidden}
+h1{line-height:1.1}
+section h2.sec{line-height:1.15;margin-bottom:16px}
+.sub{margin-bottom:32px}
+.cta{margin-top:24px}
+.hero h2{margin-bottom:24px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.menu-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.menu-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:8px}
+.menu-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:var(--r)}
+.dish,.group,.why-item{padding:24px}
+.dish{padding:0;overflow:hidden}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.dish h3{padding:24px 24px 0}
+.dish p{padding:0 24px 8px}
+.dish-cap{display:block;padding:0 24px 24px;font-size:12px}
+.about-grid{gap:24px;align-items:center}
+.about-photo{border-radius:var(--r);overflow:hidden}
+.about-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.about-text p{margin-bottom:16px}
+.about-text p:last-child{margin-bottom:0}
+.break{margin:0}
+.break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:var(--r)}
+#about,#visit{background:#fff;border-radius:var(--r);padding-left:40px;padding-right:40px}
+#contact{background:var(--accent);color:#fff;border-radius:var(--r);padding-left:40px;padding-right:40px}
+#contact .sub{color:#fff}
+#contact .note{color:#fff;border-left-color:#fff}
+#contact .cap{color:#fff}
+#contact .btn-p{background:#fff;color:var(--ink)}
+#contact .btn-s{background:transparent;color:#fff;border-color:#fff}
+.final-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.final-photo{border-radius:var(--r);overflow:hidden}
+.final-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.visit-grid{gap:48px}
+footer{margin-top:0}
+@media(min-width:1440px){.wrap,.nav-in{max-width:1320px}}
+@media(max-width:1024px){.wrap,.nav-in{padding-inline:28px}.topbar{padding-left:28px;padding-right:28px}section{padding:72px 0}#about,#visit,#contact{padding-left:28px;padding-right:28px}.hero{padding:56px 0 72px}.menu-grid,.menu-groups,.gallery,.why-grid,.menu-photos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:768px){.wrap,.nav-in{padding-inline:20px}.topbar{padding-left:20px;padding-right:20px}section{padding:56px 0}#about,#visit,#contact{padding-left:20px;padding-right:20px}.hero{grid-template-columns:minmax(0,1fr);padding:48px 0 56px;gap:24px}.menu-grid,.menu-groups,.gallery,.why-grid,.menu-photos,.final-grid,.about-grid,.visit-grid{grid-template-columns:minmax(0,1fr)}.about-grid,.visit-grid,.final-grid{gap:24px}}
+@media(max-width:480px){.wrap,.nav-in{padding-inline:16px}.topbar{padding-left:16px;padding-right:16px}section{padding:44px 0}#about,#visit,#contact{padding-left:16px;padding-right:16px}}
 </style>
 </head>
 <body>
-<div class="disclaimer">Website concept demo — not the official website</div>
-<div class="wrap">
-<header class="reveal">
-<div><p class="eyebrow">Food truck · West Valley City, Utah</p>
+<div class="topbar">Website concept demo — not the official website</div>
+<nav aria-label="Main navigation"><div class="nav-in">
+<a class="brand" href="#top">Catrinas Mexican Food</a>
+<a class="nl" href="#menu">Menu</a>
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#gallery">Gallery</a>
+<a class="nl" href="#visit">Visit</a>
+<a class="nl" href="#contact">Contact</a>
+<a class="btn btn-nav" href="tel:+13852228197">Call</a>
+</div></nav>
+<div class="wrap" id="top">
+<header class="hero">
+<div>
+<p class="eyebrow">Food truck · West Valley City, Utah</p>
 <h1>Catrinas Mexican Food</h1>
+<h2>Tacos, salsas, and al pastor, made for every order.</h2>
 <p class="lede">Tacos, quesadillas, burritos and flautas from a Utah food truck, with al pastor and fresh salsas made for every order.</p>
-<div class="cta"><a href="tel:+13852228197">Call (385) 222-8197</a><a class="alt" href="mailto:flaco020271@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Catrinas+Mexican+Food%2C+7189+West+3500+South%2C+West+Valley+City%2C+UT+84128">Get directions</a></div></div>
-<figure><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Mexican food plate"><figcaption class="cap">Stock photo for illustration only — not a photo of this business.</figcaption></figure>
+<div class="cta">
+<a class="btn btn-p" href="#menu">Explore Our Menu</a>
+<a class="btn btn-s" href="#visit">Find Us</a>
+</div>
+</div>
+<figure>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a plated meal">
+<figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption>
+</figure>
 </header>
-<section class="reveal">
-<h2>On the menu</h2>
-<div class="list">
-<div><h3>Tacos</h3><p>The truck's core offering, with a choice of fillings.</p></div>
-<div><h3>Quesadillas</h3><p>Grilled, cheese-filled, and made to order.</p></div>
-<div><h3>Burritos</h3><p>Hearty, wrapped, and ready to go.</p></div>
-<div><h3>Flautas</h3><p>Crisp rolled tacos, a visitor favourite.</p></div>
-<div><h3>Al Pastor</h3><p>Marinated pork, a signature flavour.</p></div>
-<div><h3>Fresh Salsas</h3><p>Made fresh to go with every dish.</p></div>
-</div>
-<p class="note">Items are visitor-reported. No prices are shown here — ask the truck for the day's menu. Delivery is available through DoorDash, a third-party ordering portal, not the truck's own website.</p>
+<main>
+<section id="menu">
+<h2 class="sec">Featured menu</h2>
+<p class="sub">Dishes and categories from the business's current menu listing.</p>
+<div class="menu-grid"><article class="dish reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of tacos" loading="lazy"><h3>Tacos</h3><p>The truck’s core offering, with a choice of fillings.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of quesadillas" loading="lazy"><h3>Quesadillas</h3><p>Grilled, cheese-filled, and made to order.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of burritos" loading="lazy"><h3>Burritos</h3><p>Hearty, wrapped, and ready to go.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of flautas" loading="lazy"><h3>Flautas</h3><p>Crisp rolled tacos, a visitor favourite.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of al pastor" loading="lazy"><h3>Al Pastor</h3><p>Marinated pork, a signature flavour.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of fresh salsas" loading="lazy"><h3>Fresh Salsas</h3><p>Made fresh to go with every dish.</p><span class="dish-cap">Illustrative stock photo — not the business’s own photography.</span></article></div>
+<p class="note">Items are visitor-reported. No prices are shown here — ask the truck for the day’s menu. Delivery is available through DoorDash, a third-party ordering portal, not the truck’s own website.</p>
 </section>
-<section class="reveal">
-<div class="hours">
-<h2>Hours</h2>
-<p>Monday, Tuesday &amp; Friday: 4 pm – 9:30 pm<br>Wednesday: 4:30 pm – 9:30 pm<br>Thursday: 9 am – 9:30 pm<br>Saturday: Closed<br>Sunday: 11 am – 9 pm</p>
-<p class="note" style="color:#e8e0d2">Location note: directory listings describe the truck as serving from a Cash America Pawn location, about 6.5 miles from West Valley City. Food-truck spots can change — check before visiting. A second phone number, 801-330-9960, is also listed in directories.</p>
-<p style="margin-top:12px">7189 West 3500 South, West Valley City, UT 84128</p>
+<section id="about">
+<h2 class="sec">About Catrinas Mexican Food</h2>
+<div class="about-grid">
+<figure class="about-photo"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a restaurant interior" loading="lazy"><figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<div class="about-text">
+<p>Tacos, quesadillas, burritos and flautas from a Utah food truck, with al pastor and fresh salsas made for every order.</p>
+<p>See the menu above for what is on offer, and the visit section for the address and opening hours.</p>
+</div>
 </div>
 </section>
-<footer><div class="disclaimer">Website concept demo — not the official website</div>
-<p style="font-size:.85rem;margin-top:16px">Catrinas Mexican Food · 7189 West 3500 South, West Valley City, UT 84128 · (385) 222-8197 · flaco020271@gmail.com</p></footer>
+<figure class="break"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative close-up photo of food" loading="lazy"><figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<section id="gallery">
+<h2 class="sec">Gallery</h2>
+<p class="sub">A look at the kind of food on offer. Photos are illustrative stock images, not the business's own photography.</p>
+<div class="gallery">
+<figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of tacos with fresh toppings" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of tacos served on a plate" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure><figure class="g-item reveal"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of Mexican food" loading="lazy"><figcaption>Illustrative stock photo — not the business’s own photography.</figcaption></figure>
 </div>
+</section>
+<section id="why">
+<h2 class="sec">Why choose us</h2>
+<div class="why-grid">
+<div class="why-item reveal"><h3>Made to order</h3></div><div class="why-item reveal"><h3>Fresh salsas made for every order</h3></div><div class="why-item reveal"><h3>Al pastor, a signature flavour</h3></div><div class="why-item reveal"><h3>Delivery available through DoorDash, a third-party ordering portal</h3></div>
+</div>
+</section>
+<section id="visit">
+<h2 class="sec">Location and opening hours</h2>
+<div class="visit-grid">
+<div>
+<p><strong>7189 West 3500 South, West Valley City, UT 84128</strong></p>
+<p style="margin-top:10px">(385) 222-8197 · <a href="mailto:flaco020271@gmail.com">flaco020271@gmail.com</a></p>
+<div class="cta"><a class="btn btn-p" href="https://www.google.com/maps/search/?api=1&amp;query=Catrinas+Mexican+Food%2C+7189+West+3500+South%2C+West+Valley+City%2C+UT+84128" target="_blank" rel="noopener">Get Directions</a></div>
+<p class="note">Directory listings describe the truck as serving from a Cash America Pawn location, about 6.5 miles from West Valley City. Food-truck spots can change — check before visiting. A second phone number, 801-330-9960, is also listed in directories.</p>
+</div>
+<div>
+<table class="hours">
+<tr><td>Monday, Tuesday &amp; Friday</td><td>4 pm – 9:30 pm</td></tr><tr><td>Wednesday</td><td>4:30 pm – 9:30 pm</td></tr><tr><td>Thursday</td><td>9 am – 9:30 pm</td></tr><tr><td>Saturday</td><td>Closed</td></tr><tr><td>Sunday</td><td>11 am – 9 pm</td></tr>
+</table>
+
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="final-grid">
+<figure class="final-photo"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative photo of a plated meal" loading="lazy"><figcaption class="cap">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<div>
+<h2 class="sec">Contact us</h2>
+<p class="sub">Call or email to ask about the day's menu, or get directions to find the business.</p>
+<div class="contact-cards">
+<a class="btn btn-p" href="tel:+13852228197">Call (385) 222-8197</a>
+<a class="btn btn-s" href="mailto:flaco020271@gmail.com">Email Us</a>
+<a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&amp;query=Catrinas+Mexican+Food%2C+7189+West+3500+South%2C+West+Valley+City%2C+UT+84128" target="_blank" rel="noopener">Get Directions</a>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer><div class="wrap">
+<p>Website concept demo — not the official website</p>
+<nav aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a href="#contact">Contact</a></nav>
+<p>Catrinas Mexican Food · 7189 West 3500 South, West Valley City, UT 84128 · <a href="tel:+13852228197">(385) 222-8197</a> · <a href="mailto:flaco020271@gmail.com">flaco020271@gmail.com</a></p>
+</div></footer>
 <script>
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
+else{els.forEach(function(el){el.classList.add('visible');});}
 </script>
 </body>
 </html>
