@@ -1,115 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saigon Noodle Station — Little Rock, AR | Website Concept</title>
+<meta name="description" content="Saigon Noodle Station in 9401 N Rodney Parham Rd, Little Rock, AR 72227. Vietnamese restaurant.">
 <style>
-  :root{
-    --white:#ffffff; --ink:#14211a; --green:#1d5c3f; --red:#c23b22; --mist:#eef3ee; --line:#d8e2d8; --r:4px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--white);color:var(--ink);line-height:1.55}
-  .disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
-  .disclaimer span{color:#9ed3b4}
-  .bar{height:6px;background:var(--green)}
-  .bar i{display:block;height:100%;width:33%;background:var(--red)}
-  header{max-width:1080px;margin:0 auto;padding:48px 24px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
-  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--green);font-weight:800}
-  h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.0;letter-spacing:-.02em;margin:14px 0 10px}
-  .lede{font-size:clamp(1.02rem,2vw,1.25rem);color:#4a5a50;max-width:560px}
-  .meta{text-align:right;font-size:14px;color:#4a5a50}
-  .meta b{color:var(--ink);display:block;font-size:15px}
-  .photos{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .photos img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r)}
-  .caption{font-size:12px;color:#7a8a7f;padding:8px 24px;max-width:1080px;margin:0 auto}
-  .swiss{max-width:1080px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-  .block{background:var(--mist);border:1px solid var(--line);border-radius:var(--r);padding:24px}
-  .block h2{font-size:1.15rem;margin-bottom:8px}
-  .block p{font-size:14px;color:#4a5a50}
-  .span7{grid-column:span 7}.span5{grid-column:span 5}.span4{grid-column:span 4}.span8{grid-column:span 8}.span12{grid-column:span 12}
-  .menu{max-width:1080px;margin:0 auto;padding:8px 24px 32px}
-  .menu h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:6px}
-  .menu .sub{color:#4a5a50;margin-bottom:18px}
-  .rows{border-top:2px solid var(--ink)}
-  .row{display:grid;grid-template-columns:1fr 2fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
-  .row h3{font-size:1.05rem}
-  .row p{font-size:14px;color:#4a5a50}
-  .note{max-width:1080px;margin:0 auto;padding:0 24px 32px;color:#4a5a50;font-size:14px}
-  .cta{max-width:1080px;margin:0 auto;padding:0 24px 48px;display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:14px 22px;border-radius:var(--r)}
-  .btn-primary{background:var(--green);color:#fff}
-  .btn-dark{background:var(--ink);color:#fff}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-  footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#7a8a7f;font-size:13px}
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-  @media (max-width:760px){header{grid-template-columns:1fr}.meta{text-align:left}.photos{grid-template-columns:1fr}.span7,.span5,.span4,.span8{grid-column:span 12}.row{grid-template-columns:1fr}}
-</style>
+:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;--paper:var(--color-secondary);--card:#FFFFFF;--ink:var(--color-primary);--muted:var(--color-primary);--accent:var(--color-accent);--accent2:var(--color-accent);--line:rgba(0,0,0,.12);--r:6px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;font-size:clamp(1rem,1.2vw,1.1rem)}
+img{max-width:100%;height:auto;display:block}a{color:inherit}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px}}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header.site{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 40px;flex-wrap:wrap}
+.brand{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+nav.mainnav{display:flex;gap:32px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+nav.mainnav a{text-decoration:none;padding:6px 2px}nav.mainnav a:hover,nav.mainnav a:focus-visible{color:var(--ink);text-decoration:underline}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:1rem;min-height:48px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.btn.solid{background:var(--accent);color:#fff}.btn.line{border:2px solid var(--ink);color:var(--ink)}.btn.light{background:#fff;color:var(--ink)}
+.btn.small{padding:10px 18px;min-height:44px;font-size:.92rem}
+.kicker{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--ink);font-weight:800}
+.hero{padding:96px 0}.hero{background:var(--ink);color:var(--paper)}.hero .kicker,.hero .lede{color:var(--paper)}.hero h1{color:var(--paper)}.hero h1 em{color:var(--accent)}.hero .btn.line{border-color:var(--paper);color:var(--paper)}.hero-img figcaption{color:var(--paper)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+h1{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:clamp(2.4rem,5.5vw,4.1rem);line-height:1.1;letter-spacing:-.02em;margin:16px 0 16px}
+h1 em{color:var(--ink);font-style:normal}
+.lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:56ch}
+.hero-img{border-radius:var(--r);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.14)}
+.hero-img img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;display:block;transition:transform .5s ease}
+.hero-img:hover img{transform:scale(1.04)}
+.hero-img figcaption{font-size:.8rem;color:var(--muted);padding:8px 2px 0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+section.block{padding:96px 0;border-top:1px solid var(--line)}.block-white{background:var(--card)}.block-dark{background:var(--ink);color:var(--paper)}.block-dark h2,.block-dark .sec-sub{color:var(--paper)}.block-dark .why-card{background:var(--card);color:var(--ink)}.block-dark .why-card p{color:var(--ink)}.block-cta{background:var(--ink);color:var(--paper)}.block-cta h2,.block-cta .sec-sub{color:var(--paper)}.break{margin:0}.break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block}.break figcaption{max-width:1200px;margin:0 auto;padding:12px 40px 0;font-size:.8rem;color:var(--muted)}
+h2{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;margin:0 0 16px}
+.sec-sub{color:var(--muted);max-width:62ch;margin:0 0 32px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0;overflow:hidden;.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block}.dish-body{padding:24px}transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.09)}
+.dish h3{margin:0 0 6px;font-size:1.12rem}.dish p{margin:0;color:var(--muted);font-size:.98rem}
+.menu-note,.note{font-size:.9rem;color:var(--muted);margin-top:24px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.about-grid>div p{margin:0 0 16px}
+.about-grid figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block}
+.about-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.gallery-grid figure:nth-child(2) img{aspect-ratio:1/1}.gallery-grid figure:nth-child(3) img{aspect-ratio:3/2}.gallery-grid img{object-position:center}
+.gallery-grid figure{margin:0}.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block;transition:transform .4s ease}
+.gallery-grid figure:hover img{transform:scale(1.03)}
+.gallery-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.why-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent2);border-radius:var(--r);padding:24px}
+.why-card h3{margin:0 0 6px;font-size:1.1rem}.why-card p{margin:0;color:var(--muted);font-size:.98rem}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.visit-grid h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin:0 0 10px}
+address{font-style:normal}.flag{background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;margin-top:32px;border-radius:0 var(--r) var(--r) 0}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.contact-cards a.cardlink{background:var(--accent);color:#fff;border-radius:var(--r);padding:24px;text-decoration:none;display:block;transition:transform .2s ease}
+.contact-cards a.cardlink:hover{transform:translateY(-3px)}.contact-cards a.cardlink b{display:block;font-size:1.05rem}.contact-cards a.cardlink span{opacity:.9;font-size:.95rem}
+footer{background:var(--ink);color:var(--paper);border-top:1px solid var(--line);padding:48px 0 32px}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--paper)}
+footer nav{display:flex;gap:32px;flex-wrap:wrap}footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-grid>*{animation:rise .7s ease both}.hero-grid>*:nth-child(2){animation-delay:.12s}
+@media(max-width:1024px){.wrap{padding-inline:28px}header.site .wrap{padding:16px 28px}section.block{padding:72px 0}.hero{padding:72px 0}.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:repeat(2,minmax(0,1fr))}nav.mainnav{gap:32px}.break figcaption{padding-inline:28px}}@media(max-width:768px){.wrap{padding-inline:20px}header.site .wrap{padding:14px 20px}section.block{padding:56px 0}.hero{padding:56px 0}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:minmax(0,1fr)}nav.mainnav{gap:24px}.break img{aspect-ratio:3/2}.break figcaption{padding-inline:20px}}@media(max-width:480px){.wrap{padding-inline:16px}header.site .wrap{padding:12px 16px}section.block{padding:44px 0}.hero{padding:44px 0}.break figcaption{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-grid>*{animation:none}.btn:hover{transform:none}}
+.hero-grid>*,.about-grid>*,.grid>*,.gal>*,.visit-grid>*,.menu-grid>*,.gallery-grid>*,.why-grid>*,.contact-cards>*,header .wrap>*,.foot>*{min-width:0}a{overflow-wrap:anywhere}</style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<div class="bar"><i></i></div>
-
-<header class="reveal">
-  <div>
-    <p class="eyebrow">Little Rock, Arkansas · Since 2025</p>
-    <h1>Saigon Noodle Station</h1>
-    <p class="lede">An independent, locally operated Vietnamese restaurant serving pho, banh mi, and broken-rice dishes, with fresh herbs at the center of every bowl.</p>
-  </div>
-  <div class="meta">
-    <b>9401 N Rodney Parham Rd</b>
-    Little Rock, AR 72227<br>
-    (501) 786-7787<br>
-    x3rahh@hotmail.com
-  </div>
-</header>
-
-<section class="photos reveal">
-  <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Bowl of noodle soup with herbs">
-  <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Noodle dish with fresh toppings">
-</section>
-<p class="caption">Stock photos, illustrative only — not photos of this business.</p>
-
-<section class="swiss">
-  <div class="block span7 reveal"><h2>Fresh herbs, every bowl</h2><p>Cilantro, Thai basil, and mint are part of the cooking here — the bright, fresh finish that Vietnamese cooking is known for.</p></div>
-  <div class="block span5 reveal"><h2>Vegetarian &amp; vegan-friendly</h2><p>Vegetarian options with tofu, plus a vegan-friendly pho made with vegetable broth.</p></div>
-  <div class="block span4 reveal"><h2>Independent &amp; local</h2><p>A locally operated restaurant, not part of a chain.</p></div>
-  <div class="block span8 reveal"><h2>From the menu</h2><p>Pho, banh mi, spring rolls, bun cha, and com tam — noodle soups, crispy baguette sandwiches, grilled pork with noodles, and broken-rice dishes.</p></div>
-</section>
-
-<section class="menu reveal">
-  <h2>The menu, at a glance</h2>
-  <p class="sub">From the restaurant's published description. No prices shown here.</p>
-  <div class="rows">
-    <div class="row"><h3>Pho</h3><p>Beef or chicken noodle soup, with fresh herbs.</p></div>
-    <div class="row"><h3>Banh mi</h3><p>Crispy baguette sandwiches.</p></div>
-    <div class="row"><h3>Spring rolls</h3><p>Fresh or fried.</p></div>
-    <div class="row"><h3>Bun cha</h3><p>Grilled pork served with noodles.</p></div>
-    <div class="row"><h3>Com tam</h3><p>Broken-rice dishes.</p></div>
-    <div class="row"><h3>Vegetarian plates</h3><p>Tofu options, and pho with vegetable broth.</p></div>
-  </div>
-</section>
-
-<p class="note">Hours are not listed on this page — call ahead to confirm today's hours before visiting.</p>
-
-<section class="cta reveal">
-  <a class="btn btn-primary" href="tel:+15017867787">Call (501) 786-7787</a>
-  <a class="btn btn-dark" href="mailto:x3rahh@hotmail.com">Email the restaurant</a>
-  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Saigon+Noodle+Station%2C+9401+N+Rodney+Parham+Rd%2C+Little+Rock%2C+AR+72227">Get directions</a>
-</section>
-
-<footer>
-  <p>Website concept demo — not the official website</p>
-  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
-</footer>
-
+<header class="site"><div class="wrap"><a class="brand" href="#home">Saigon Noodle Station</a>
+<nav class="mainnav" aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<a class="btn solid small" href="tel:+15017867787">Call the restaurant</a></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<p class="kicker">Little Rock, Arkansas · Since 2025 · Independent &amp; local</p><h1>Fresh herbs, honest bowls, <em>right here in Little Rock.</em></h1><p class="lede">An independent, locally operated Vietnamese restaurant serving pho, banh mi, and broken-rice dishes, with fresh herbs at the center of every bowl.</p>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div></div>
+<figure class="hero-img"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative bowl of noodle soup with herbs" fetchpriority="high"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
+</div></section>
+<section class="block" id="menu"><div class="wrap"><h2>The menu, at a glance</h2><p class="sec-sub">From the restaurant's published description. No prices shown here.</p>
+<div class="menu-grid"><article class="dish reveal"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative bowl of noodle soup with herbs" loading="lazy"><div class="dish-body"><h3>Pho</h3><p>Beef or chicken noodle soup, with fresh herbs.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative noodle dish with fresh toppings" loading="lazy"><div class="dish-body"><h3>Banh mi</h3><p>Crispy baguette sandwiches.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1555126634-323283e090fa?q=80&w=1600&auto=format&fit=crop" alt="Illustrative noodle dish" loading="lazy"><div class="dish-body"><h3>Spring rolls</h3><p>Fresh or fried.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative Asian dish" loading="lazy"><div class="dish-body"><h3>Bun cha</h3><p>Grilled pork served with noodles.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative rice bowl" loading="lazy"><div class="dish-body"><h3>Com tam</h3><p>Broken-rice dishes.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1600&auto=format&fit=crop" alt="Illustrative rice bowl dish" loading="lazy"><div class="dish-body"><h3>Vegetarian plates</h3><p>Tofu options, and pho with vegetable broth.</p></div></article></div>
+<p class="menu-note">From the restaurant's published description.</p></div></section>
+<figure class="break reveal"><img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative rice bowl close-up" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><section class="block block-white" id="about"><div class="wrap about-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop" alt="Illustrative restaurant interior" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div class="reveal"><h2>About</h2><p>Cilantro, Thai basil, and mint are part of the cooking here — the bright, fresh finish that Vietnamese cooking is known for. The restaurant is locally operated, not part of a chain.</p><p>Vietnamese restaurant in 9401 N Rodney Parham Rd, Little Rock, AR 72227 · Since 2025.</p></div></div></section>
+<section class="block" id="gallery"><div class="wrap"><h2>Gallery</h2><p class="sec-sub">A look at the kind of food on offer. Photos shown are illustrative stock images, not photos of this business.</p>
+<div class="gallery-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop" alt="Illustrative noodle soup" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1600&auto=format&fit=crop" alt="Illustrative noodle dish" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1600&auto=format&fit=crop" alt="Illustrative rice bowl" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></div></section>
+<section class="block block-dark"><div class="wrap"><h2>Why visit</h2><p class="sec-sub">What sets this place apart, in its own words and in visitors&rsquo; words.</p>
+<div class="why-grid"><article class="why-card reveal"><h3>Fresh herbs, every bowl</h3><p>Cilantro, Thai basil, and mint are part of the cooking here.</p></article><article class="why-card reveal"><h3>Vegetarian &amp; vegan-friendly</h3><p>Vegetarian options with tofu, plus a vegan-friendly pho made with vegetable broth.</p></article><article class="why-card reveal"><h3>Independent &amp; local</h3><p>A locally operated restaurant, not part of a chain.</p></article></div></div></section>
+<section class="block" id="visit"><div class="wrap"><h2>Visit</h2><div class="visit-grid reveal">
+<div><h3>Find us</h3><address>9401 N Rodney Parham Rd, Little Rock, AR 72227</address><p><a href="https://www.google.com/maps/search/?api=1&query=Saigon+Noodle+Station%2C+9401+N+Rodney+Parham+Rd%2C+Little+Rock%2C+AR+72227">Open in Google Maps</a></p></div>
+<div><h3>Opening hours</h3><p>Hours are not listed — call ahead to confirm today's hours before visiting.</p></div>
+<div><h3>Contact</h3><p><a href="tel:+15017867787">(501) 786-7787</a><br><a href="mailto:x3rahh@hotmail.com">x3rahh@hotmail.com</a></p></div>
+</div><div class="flag reveal"><strong>Good to know before you visit:</strong> Hours are not listed on this page — call ahead to confirm today's hours before visiting.</div></div></section>
+<section class="block block-cta"><div class="wrap"><h2>Contact Us</h2><p class="sec-sub">Questions about the menu or a visit? Reach the business directly.</p>
+<div class="contact-cards">
+<a class="cardlink" href="tel:+15017867787"><b>Call us</b><span>(501) 786-7787</span></a>
+<a class="cardlink" href="mailto:x3rahh@hotmail.com"><b>Email us</b><span>x3rahh@hotmail.com</span></a>
+<a class="cardlink" href="https://www.google.com/maps/search/?api=1&query=Saigon+Noodle+Station%2C+9401+N+Rodney+Parham+Rd%2C+Little+Rock%2C+AR+72227"><b>Get Directions</b><span>9401 N Rodney Parham Rd, Little Rock, AR</span></a>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>Saigon Noodle Station &middot; 9401 N Rodney Parham Rd, Little Rock, AR 72227</span>
+<nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<span>Website concept demo — not the official website</span></div></footer>
 <script>
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.15});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
 </script>
 </body>
 </html>
