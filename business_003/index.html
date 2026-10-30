@@ -6,59 +6,62 @@
 <title>Gold&#x27;n Fresh Bakery — Modesto, CA | Filipino Bakery</title>
 <meta name="description" content="Gold&#x27;n Fresh Bakery in Modesto, CA. A family-owned Modesto bakery making Filipino breads and pastries since 1972, with vegan, gluten-free and soy-free options.">
 <style>
-:root{--paper:#FFF9F0;--ink:#3A2A1A;--acc:#7A4A12;--soft:#F5E6C8;--line:#DDD3BE;--r:10px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:var(--body);line-height:1.6}
-a{color:inherit}.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
-header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
-.brand{font-family:Georgia, 'Times New Roman', serif;font-size:1.6rem;font-weight:700}
-nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.08em}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
-.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.14em;color:var(--acc);font-weight:700}
-h1{font-family:Georgia, 'Times New Roman', serif;line-height:1.02;letter-spacing:-.015em;margin:16px 0 20px}
-h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.2rem,4.5vw,3.2rem);line-height:1.05;margin:0 0 16px}
-.lede{font-size:clamp(1.15rem,2vw,1.4rem);max-width:56ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem}.btn.solid{background:var(--acc);color:#fff}.btn.line{border:1.5px solid var(--ink)}
-figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}figcaption{font-size:var(--label);color:#5A665E;margin-top:8px}
-.menu{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}.menu-item h3{margin:0 0 4px;font-size:1.15rem}.menu-item p{margin:0}.menu-note{font-size:var(--label);color:#5A665E;margin-top:24px}
-.visit{padding:56px 0}.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}.visit h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--acc)}address{font-style:normal}
-.flag{background:var(--soft);border-left:4px solid var(--acc);padding:16px 20px;margin-top:32px;font-size:.98rem}
-footer{border-top:1px solid var(--line);padding:32px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:var(--label);color:#5A665E}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-.hero{padding:72px 0 40px}.hero h1{font-size:clamp(3rem,7vw,4.8rem);max-width:14ch}.cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;padding:56px 0}.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-@media(max-width:768px){.cols,.menu-grid,.visit-grid,.hero{grid-template-columns:1fr}.hero img{min-height:0}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+:root{--color-primary:#172638;--color-secondary:#F7F5F0;--color-accent:#B89B65;--paper:var(--color-secondary);--ink:var(--color-primary);--acc:var(--color-accent);--acc2:var(--color-primary);--soft:var(--color-secondary);--line:var(--color-primary);--r:12px}
+*{box-sizing:border-box}img{max-width:100%;height:auto;display:block}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:clamp(1rem,1.2vw,1.125rem);line-height:1.6;overflow-x:hidden}
+a{color:inherit}a:focus-visible,.btn:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:.85rem;letter-spacing:.04em;padding:10px 16px}
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--paper);border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;flex-wrap:wrap}
+.brand{font-family:Georgia, 'Times New Roman', serif;font-size:1.45rem;font-weight:700;line-height:1.1;max-width:100%}
+nav{display:flex;gap:32px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}nav a{text-decoration:none;padding:6px 2px}nav a:hover{text-decoration:underline}
+.nav-cta{background:var(--acc);color:var(--color-primary)!important;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;font-size:.95rem;text-transform:none;letter-spacing:0}
+.kicker{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);font-weight:700;margin:0 0 16px}
+h1{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.6rem,6.5vw,4.4rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
+h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2rem,4.5vw,3rem);line-height:1.15;margin:0 0 32px}
+.lede{font-size:clamp(1.15rem,2vw,1.35rem);max-width:56ch;margin:0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:15px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}.btn.solid{background:var(--acc);color:var(--color-primary)}.btn.line{border:1.5px solid var(--ink)}
+.hero{padding:96px 0}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:24px;align-items:center}
+figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;object-position:center;transition:transform .4s ease}figure:hover img{transform:scale(1.03)}figcaption{font-size:.85rem;color:var(--color-primary);margin-top:8px}
+.hero figure img{aspect-ratio:16/9;object-position:center}
+section{padding:96px 0}section#about{background:#fff}section#why{background:#fff}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.about-grid figure img{aspect-ratio:4/3;object-position:center}
+.why{background:var(--soft);border-radius:var(--r);padding:24px} .why ul{margin:0;padding-left:20px} .why li{margin:6px 0}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:0}.menu-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;padding:0;transition:transform .2s ease,box-shadow .2s ease}.menu-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.10)}.menu-card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:0}.menu-card .card-body{padding:24px}.menu-card h3{margin:0 0 6px;font-size:1.15rem;line-height:1.2}.menu-card p{margin:0;line-height:1.6}.menu-note{font-size:.9rem;color:var(--color-primary);margin-top:24px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}.gallery-grid figure img{aspect-ratio:1/1;object-position:center}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}.visit-grid h3{font-size:.9rem;text-transform:uppercase;letter-spacing:.12em;color:var(--color-primary);margin:0 0 16px}address{font-style:normal}
+.flag{background:var(--soft);border-left:4px solid var(--acc);padding:16px 20px;margin-top:48px;font-size:.98rem}
+.final-cta{background:var(--ink);color:var(--paper)}.final-cta .cta-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.final-cta h2{color:var(--paper)}.final-cta .kicker{color:var(--paper)}.final-cta figure img{aspect-ratio:16/9;object-position:center}.final-cta .btn.line{border-color:var(--paper)}.final-cta figcaption{color:var(--paper)}
+footer{background:var(--ink);color:var(--paper);border-top:1px solid var(--line);padding:32px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.9rem}footer nav{text-transform:none;letter-spacing:0;gap:32px}
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease var(--d,0s),transform .6s ease var(--d,0s)}.js .reveal.in{opacity:1;transform:none}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.hero .wrap{animation:fadeIn .7s ease both}
+@media(max-width:1024px){.wrap{padding-inline:28px}header .wrap{padding-inline:28px}.menu-grid,.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:72px 0}.hero{padding:72px 0}nav{gap:32px}}
+@media(max-width:768px){.wrap{padding-inline:20px}header .wrap{padding-inline:20px}.hero-grid,.about-grid,.menu-grid,.gallery-grid,.visit-grid,.final-cta .cta-grid{grid-template-columns:minmax(0,1fr)}section{padding:56px 0}.hero{padding:56px 0}.btn{width:100%;text-align:center}nav{gap:20px}}
+@media(max-width:480px){.wrap{padding-inline:16px}header .wrap{padding-inline:16px}section{padding:44px 0}.hero{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}.hero .wrap{animation:none}.btn:hover,.menu-card:hover,figure:hover img{transform:none;box-shadow:none}}
 </style>
+<script>document.documentElement.className+=' js';</script>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
 <header><div class="wrap"><div class="brand">Gold&#x27;n Fresh Bakery</div>
-<nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></div></header>
+<nav aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a href="#contact">Contact</a></nav>
+<a class="nav-cta" href="tel:+2095792898">Call (209) 579-2898</a></div></header>
 <main>
-<section class="hero"><div class="wrap"><p class="kicker">Modesto, CA &middot; Since 1972</p><h1>Gold&#x27;n Fresh Bakery</h1><p class="lede">A family-owned Modesto bakery making Filipino breads and pastries since 1972, with vegan, gluten-free and soy-free options.</p><div class="cta-row"><a class="btn solid" href="tel:+2095792898">Call (209) 579-2898</a><a class="btn line" href="mailto:modesto@goldnfresh.com">Email the shop</a><a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Gold%27n%20Fresh%20Bakery%203430%20Tully%20Road%2C%20Suite%2017%2C%20Modesto%2C%20CA%2095350">Get directions</a></div></div></section>
-<section class="cols wrap" id="about"><div class="reveal">
-<h2>About the shop</h2>
-<p>Gold&#x27;n Fresh Bakery is a family-owned and operated bakery in Modesto. Its case covers Filipino bakery items alongside sandwiches and quick meals, and it caters for family gatherings, brunches and office treats year-round.</p>
-</div><div class="reveal">
-<figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo of food" loading="lazy">
-<figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
-</div></section>
-<section class="menu" id="menu"><div class="wrap reveal">
-<h2>From the counter</h2>
-<div class="menu-grid"><div class="menu-item"><h3>Ube bread</h3><p>A signature Filipino loaf, vivid and soft.</p></div><div class="menu-item"><h3>Hopia and papaya items</h3><p>Filipino bakery staples listed in the shop&#x27;s profile.</p></div><div class="menu-item"><h3>Jalapeño cheese bread</h3><p>A savoury favourite named in the shop&#x27;s profile.</p></div><div class="menu-item"><h3>Pan de coco</h3><p>Named by visitors in reviews of the shop.</p></div><div class="menu-item"><h3>Cakes with custom decoration</h3><p>One-of-a-kind decorated cakes for celebrations.</p></div></div>
-<p class="menu-note">Menu items are drawn from the bakery&#x27;s published profile and visitor mentions. Please call ahead for one item in particular.</p>
-</div></section>
-<section class="visit wrap" id="visit"><div class="reveal">
-<h2>Visit</h2>
-<div class="visit-grid">
-<div><h3>Find us</h3><address>3430 Tully Road, Suite 17, Modesto, CA 95350</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Gold%27n%20Fresh%20Bakery%203430%20Tully%20Road%2C%20Suite%2017%2C%20Modesto%2C%20CA%2095350">Open in Google Maps</a></p></div>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<p class="kicker">Modesto, CA · Since 1972</p><h1>Filipino breads, baked fresh for generations.</h1><p class="lede">A family-owned Modesto bakery making Filipino breads and pastries since 1972, with vegan, gluten-free and soy-free options.</p>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#contact">Find Us</a></div></div>
+<div><figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food image" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure></div></div></section>
+<section id="menu"><div class="wrap"><p class="kicker">Featured menu</p><h2>From the counter</h2><div class="menu-grid"><article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock image, not a photo of this business." loading="lazy"><div class="card-body"><h3>Ube bread</h3><p>A signature Filipino loaf, vivid and soft.</p></div></article><article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock image, not a photo of this business." loading="lazy"><div class="card-body"><h3>Hopia and papaya items</h3><p>Filipino bakery staples listed in the shop&#x27;s profile.</p></div></article><article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock image, not a photo of this business." loading="lazy"><div class="card-body"><h3>Jalapeño cheese bread</h3><p>A savoury favourite named in the shop&#x27;s profile.</p></div></article><article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock image, not a photo of this business." loading="lazy"><div class="card-body"><h3>Pan de coco</h3><p>Named by visitors in reviews of the shop.</p></div></article><article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock image, not a photo of this business." loading="lazy"><div class="card-body"><h3>Cakes with custom decoration</h3><p>One-of-a-kind decorated cakes for celebrations.</p></div></article></div><p class="menu-note">Menu items are drawn from the bakery&#x27;s published profile and visitor mentions. Please call ahead for one item in particular.</p></div></section>
+<section id="about"><div class="wrap"><div class="about-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1600&auto=format&fit=crop" alt="Illustrative restaurant interior" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div class="reveal"><p class="kicker">About</p><h2>About the shop</h2><p>Gold&#x27;n Fresh Bakery is a family-owned and operated bakery in Modesto. Its case covers Filipino bakery items alongside sandwiches and quick meals, and it caters for family gatherings, brunches and office treats year-round.</p></div></div></div></section>
+<section id="gallery"><div class="wrap"><p class="kicker">Gallery</p><h2>Illustrative food gallery</h2><p>These are generic stock images shown for illustration only — they are not photos of this business.</p><div class="gallery-grid"><figure class="reveal" style="--d:0.00s"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative bakery items" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal" style="--d:0.07s"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Illustrative bread" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal" style="--d:0.14s"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative bakery" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></div></section>
+<section id="why"><div class="wrap"><p class="kicker">Why choose us</p><h2>Why choose us</h2><div class="why"><ul><li>Family-owned and operated since 1972</li><li>Filipino breads and pastries</li><li>Vegan, gluten-free and soy-free options</li><li>Sandwiches and quick meals</li><li>Catering for family gatherings, brunches and office treats year-round</li></ul></div></div></section><section id="visit"><div class="wrap"><p class="kicker">Visit us</p><h2>Location and opening hours</h2><div class="visit-grid">
+<div><h3>Find us</h3><address>3430 Tully Road, Suite 17, Modesto, CA 95350</address><p><a href="https://www.google.com/maps/search/?api=1&query=Gold%27n%20Fresh%20Bakery%203430%20Tully%20Road%2C%20Suite%2017%2C%20Modesto%2C%20CA%2095350">Get Directions</a></p></div>
 <div><h3>Hours</h3><p>Monday to Friday: 8am to 6pm<br>Saturday: 10am to 5pm<br>Sunday: Closed</p></div>
-<div><h3>Contact</h3><p><a href="tel:+2095792898">(209) 579-2898</a><br><a href="mailto:modesto@goldnfresh.com">modesto@goldnfresh.com</a></p></div>
-</div>
-
-</div></section>
+<div><h3>Contact</h3><p><a href="tel:+2095792898">(209) 579-2898</a><br><a href="mailto:modesto@goldnfresh.com">modesto@goldnfresh.com</a></p><p><a class="btn solid" href="tel:+2095792898">Contact Us</a></p></div>
+</div></div></section><section id="contact" class="final-cta"><div class="wrap"><div class="cta-grid"><figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative food image" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div><p class="kicker">Visit us</p><h2>Plan your visit</h2><p>Directions and contact details are in the section above.</p><div class="cta-row"><a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=Gold%27n%20Fresh%20Bakery%203430%20Tully%20Road%2C%20Suite%2017%2C%20Modesto%2C%20CA%2095350">Get Directions</a><a class="btn line" href="tel:+2095792898">Contact Us</a></div></div></div></div></section>
 </main>
-<footer><div class="wrap foot"><span>Gold&#x27;n Fresh Bakery &middot; 3430 Tully Road, Suite 17, Modesto, CA 95350</span><span>Website concept demo — not the official website</span></div></footer>
-<script>(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();</script>
+<footer><div class="wrap foot"><span>Gold&#x27;n Fresh Bakery · 3430 Tully Road, Suite 17, Modesto, CA 95350</span><nav aria-label="Footer navigation"><a href="#home">Home</a> · <a href="#menu">Menu</a> · <a href="#about">About</a> · <a href="#gallery">Gallery</a> · <a href="#contact">Contact</a></nav><span>Website concept demo — not the official website</span></div></footer>
+<script>(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();</script>
 </body>
 </html>
