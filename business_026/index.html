@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Saigon — Salt Lake City, UT | Website Concept</title>
+<style>
+:root{--ink:#1e2420;--paper:#fbfdf8;--green:#2e7d5b;--lime:#b7d96a;--cream:#eef3e2;--radius:6px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+.wrap{max-width:1080px;margin:auto;padding:0 24px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 -24px}
+.split img{width:100%;height:520px;object-fit:cover;display:block}
+.split .text{background:var(--green);color:#fff;padding:56px 40px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--lime);font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:12px 0}
+.lede{font-size:clamp(1rem,2.2vw,1.25rem)}
+section{padding:32px 0}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.rows div{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #dbe4c8}
+.rows h3{font-size:1.1rem}
+.rows p{font-size:.95rem;color:#4a5548}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--lime);color:var(--ink)}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid #fff}
+.hours{background:var(--cream);border-radius:var(--radius);padding:28px}
+.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--green);padding-left:12px;margin-top:18px}
+footer{padding:32px 0;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.split{grid-template-columns:1fr}.split img{height:280px}.split .text{padding:32px 24px}.rows div{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="split reveal">
+<img src="https://images.unsplash.com/photo-1585032226651-759b368d7246" alt="Noodle bowl">
+<div class="text"><p class="eyebrow">Vietnamese restaurant · Salt Lake City, Utah · Since 2015</p>
+<h1>Little Saigon</h1>
+<p class="lede">Pho, banh mi and rice dishes in Salt Lake City, with a vegetarian broth option and fresh herbs in every bowl.</p>
+<p style="font-size:12px;color:#cfe0c0;margin-top:12px">Stock photo for illustration only — not a photo of this business.</p></div>
+</div>
+<div class="wrap">
+<section class="reveal">
+<h2>The menu, at a glance</h2>
+<div class="rows">
+<div><h3>Pho</h3><p>The signature noodle soup, with a choice of protein and fresh cilantro and green onions.</p></div>
+<div><h3>Banh Mi</h3><p>Vietnamese sandwiches, made to order.</p></div>
+<div><h3>Rice Dishes</h3><p>Classic rice plates alongside the noodle menu.</p></div>
+<div><h3>Shrimp Noodles</h3><p>A seafood noodle option, visitor-recommended.</p></div>
+<div><h3>Vegetarian Broth</h3><p>A vegetarian broth with cilantro, green onions, and your choice of protein.</p></div>
+</div>
+<p class="note">Items are visitor-reported. No prices are shown here. Delivery is available through DoorDash, a third-party ordering portal, not the restaurant's own website.</p>
+</section>
+<section class="reveal">
+<div class="hours">
+<h2>Visit &amp; hours</h2>
+<p>2021 Windsor Street, Salt Lake City, UT 84105</p>
+<p>Monday – Saturday: 11 am – 9 pm<br>Sunday: 11 am – 7 pm</p>
+<div class="cta"><a href="tel:+18019068630">Call (801) 906-8630</a><a class="alt" href="mailto:littlesaigonutah@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Little+Saigon%2C+2021+Windsor+Street%2C+Salt+Lake+City%2C+UT+84105">Get directions</a></div>
+<p class="note">A second phone number, (801) 386-1306, is also listed in directories.</p>
+</div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-size:.85rem;margin-top:16px">Little Saigon · 2021 Windsor Street, Salt Lake City, UT 84105 · (801) 906-8630 · littlesaigonutah@gmail.com</p></footer>
+</div>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
