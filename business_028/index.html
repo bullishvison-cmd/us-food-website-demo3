@@ -3,67 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dee's Donuts — Las Vegas, NV | Website Concept</title>
+<title>Dee&#x27;s Donuts — Las Vegas, NV | Website Concept</title>
+<meta name="description" content="Dee&#x27;s Donuts is a family-owned Las Vegas donut shop making traditional-style donuts fresh daily since 2005.">
 <style>
-:root{--ink:#2b2320;--paper:#fffaf3;--pink:#c95d7e;--brown:#6b4226;--cream:#f7e8d5;--radius:24px}
-*{box-sizing:border-box;margin:0}
-body{font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
-.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
-.wrap{max-width:1080px;margin:auto;padding:0 24px}
-.layer{position:relative;margin:32px 0}
-.layer img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius);display:block}
-.layer .card{position:absolute;left:24px;bottom:-24px;background:#fff;border-radius:var(--radius);padding:28px;max-width:520px;box-shadow:0 12px 32px rgba(0,0,0,.18)}
-.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--pink);font-weight:700}
-h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.02;margin:10px 0}
-.lede{font-size:clamp(1rem,2.2vw,1.2rem)}
-section{padding:48px 0 28px}
-h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.grid div{background:var(--cream);border-radius:var(--radius);padding:22px}
-.grid h3{font-size:1.1rem;margin-bottom:6px}
-.grid p{font-size:.95rem;color:#5c4a3a}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--pink);color:#fff}
-.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
-.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--pink);padding-left:12px;margin-top:18px}
-footer{padding:32px 0;text-align:center}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+:root{--color-primary:#38271F;--color-secondary:#F3E8D5;--color-accent:#B77B48;--bg:var(--color-secondary);--ink:var(--color-primary);--accent:var(--color-accent);--soft:var(--color-secondary);--accent-ink:#fff;--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+img{max-width:100%;height:auto;display:block}a{color:var(--accent)}.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 24px;font-size:.82rem;letter-spacing:.03em}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-secondary)}
+.nav{width:100%;max-width:1200px;margin-inline:auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:Georgia, 'Times New Roman', serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.1}
+.navlinks{display:flex;gap:32px;align-items:center}.navlinks a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}.navlinks a:hover{color:var(--accent)}
+.menubtn{display:none;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding:0 40px}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding:64px 0 96px}
+.hero img{width:100%;height:440px;object-fit:cover;border-radius:24px;display:block}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--accent);font-weight:800;margin:0 0 10px}
+h1{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(2.3rem,5.5vw,3.9rem);line-height:1.05;margin:0 0 14px}
+.lede{font-size:clamp(1.02rem,2vw,1.22rem);margin:0 0 22px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;background:var(--accent);color:var(--accent-ink);min-height:48px;line-height:1.3;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}.cta{display:flex;flex-wrap:wrap;gap:12px}
+section{padding:96px 0}h2{font-family:Georgia, 'Times New Roman', serif;font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.15;margin:0 0 12px}
+.sec-lede{max-width:680px;margin:0 0 26px;color:var(--color-primary)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--color-secondary);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.10)}.card h3{margin:0 0 8px;font-size:1.12rem}.card p{margin:0;color:var(--color-primary)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}.about img{width:100%;height:360px;object-fit:cover;border-radius:24px}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.gal figure{margin:0;overflow:hidden;border-radius:var(--radius);background:#fff;border:1px solid var(--color-secondary)}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s}.gal figure:hover img{transform:scale(1.05)}.gal figcaption{padding:12px 14px;font-size:.9rem;color:var(--color-primary)}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.flag{margin-top:20px;background:var(--soft);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}
+.note{font-size:.9rem;color:var(--color-primary);border-left:4px solid var(--accent);padding-left:14px;margin-top:20px}
+.illust{font-size:.82rem;color:var(--color-primary);margin-top:10px}footer{background:var(--ink);color:#fff;padding:32px 0;margin-top:20px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+.foot a{color:#fff}.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
 .reveal.in{opacity:1;transform:none}
-@media(max-width:760px){.layer img{height:280px}.layer .card{position:static;box-shadow:none;border:2px solid var(--cream);margin-top:16px}.grid{grid-template-columns:1fr}section{padding-top:28px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:1024px){.hero,.about{grid-template-columns:minmax(0,1fr)}.hero img{height:300px}.about img{height:260px}.grid,.gal,.visit-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.menubtn{display:block}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--color-secondary)}.navlinks.open{display:flex}}
+@media(max-width:768px){.grid,.gal,.visit-grid{grid-template-columns:minmax(0,1fr)}h1{font-size:2.3rem}}
+@media(max-width:768px){.nav,.wrap,.disclaimer{padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.card:hover,.gal figure:hover img{transform:none;box-shadow:none}}
+
+/* §16 spacing + §17 art direction (2026-10-30) — supersedes §14 container */
+html,body{overflow-x:hidden}
+h1{line-height:1.1}
+h2{line-height:1.15;margin-bottom:16px}
+.sec-lede{margin-bottom:32px}
+.cta{margin-top:24px}
+.grid,.gal,.visit-grid{gap:24px}
+.card{padding:24px}
+.menu-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:var(--radius);margin-bottom:16px}
+.about{gap:24px;align-items:center}
+.break{max-width:1200px;margin-inline:auto;padding-inline:40px}
+.break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:var(--radius)}
+#about{background:#fff}
+.final-cta{background:var(--accent);color:#fff}
+.final-cta .sec-lede{color:#fff}
+.final-cta .btn-outline{color:#fff;border-color:#fff}
+.final-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.final-photo{border-radius:var(--radius);overflow:hidden}
+.final-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.visit-grid{gap:48px}
+footer{margin-top:0}
+@media(min-width:1440px){.wrap,.nav{max-width:1320px}}
+@media(max-width:1024px){.wrap,.nav{padding-inline:28px}.disclaimer{padding-left:28px;padding-right:28px}section{padding:72px 0}.hero{padding:56px 0 72px}}
+@media(max-width:768px){.wrap,.nav{padding-inline:20px}.disclaimer{padding-left:20px;padding-right:20px}section{padding:56px 0}.hero{padding:48px 0 56px;gap:24px}.final-grid{grid-template-columns:minmax(0,1fr);gap:24px}.break{padding-inline:20px}}
+@media(max-width:480px){.wrap,.nav{padding-inline:16px}.disclaimer{padding-left:16px;padding-right:16px}section{padding:44px 0}.break{padding-inline:16px}}
 </style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<div class="wrap">
-<div class="layer reveal">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Sweet dessert treats">
-<div class="card"><p class="eyebrow">Donut shop · Las Vegas, Nevada · Since 2005</p>
-<h1>Dee's Donuts</h1>
-<p class="lede">A family-owned Las Vegas donut shop making traditional-style donuts fresh daily — glazed, frosted, and filled, plus croissants and cinnamon buns.</p>
-<p style="font-size:12px;color:#7a6a58;margin-top:10px">Stock photo for illustration only — not a photo of this business.</p></div>
-</div>
-<section class="reveal">
-<h2>From the case</h2>
-<div class="grid">
-<div><h3>Classic Donuts</h3><p>Glazed, frosted, and filled donuts, made fresh daily.</p></div>
-<div><h3>Old Favourites</h3><p>Apple fritters, old fashioneds, and crullers.</p></div>
-<div><h3>Beyond Donuts</h3><p>Croissants, ham and cheese croissants, kolache, cinnamon buns, muffins, and bagels.</p></div>
-</div>
-<p class="note">Items are visitor-reported favourites. No prices are shown here — and regulars warn the shop runs out early, so arrive in the morning. Directory listings point to a third-party user-generated page about the shop, not to a website run by the shop itself, and it is not linked here.</p>
-</section>
-<section class="reveal">
-<h2>Visit &amp; hours</h2>
-<p>6401 North Durango Drive, Suite 150, Las Vegas, NV 89149</p>
-<p>Monday – Saturday: 5 am – 8 pm<br>Sunday: 5 am – 7 pm</p>
-<div class="cta"><a href="tel:+17026587657">Call (702) 658-7657</a><a class="alt" href="mailto:deesdonutslv@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Dee%27s+Donuts%2C+6401+North+Durango+Drive+Suite+150%2C+Las+Vegas%2C+NV+89149">Get directions</a></div>
-</section>
-<footer><div class="disclaimer">Website concept demo — not the official website</div>
-<p style="font-size:.85rem;margin-top:16px">Dee's Donuts · 6401 North Durango Drive, Suite 150, Las Vegas, NV 89149 · (702) 658-7657 · deesdonutslv@gmail.com</p></footer>
-</div>
-<script>
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-</script>
+<header><nav class="nav" aria-label="Main navigation"><a class="brand" href="#home">Dee&#x27;s Donuts</a>
+<button class="menubtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+<div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a><a class="btn" href="#menu">Explore Our Menu</a></div></nav></header>
+<main>
+<section class="wrap hero" id="home"><div class="reveal"><p class="eyebrow">Donut shop · Las Vegas, Nevada · Since 2005</p>
+<h1>Fresh from the fryer — gone by morning.</h1><p class="lede">A family-owned Las Vegas donut shop making traditional-style donuts fresh daily — glazed, frosted, and filled, plus croissants and cinnamon buns.</p>
+<div class="cta"><a class="btn" href="#menu">Explore Our Menu</a><a class="btn btn-outline" href="#visit">Find Us</a></div><p class="illust">Photos shown are illustrative stock images, not photos of this business.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of donuts"></div></section>
+<section id="menu" class="reveal"><div class="wrap"><p class="eyebrow">Featured menu</p><h2>From the case</h2>
+<p class="sec-lede">Items are visitor-reported favourites.</p><div class="grid">
+<article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative baked goods" loading="lazy"><h3>Classic Donuts</h3><p>Glazed, frosted, and filled donuts, made fresh daily.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative sweet treats" loading="lazy"><h3>Old Favourites</h3><p>Apple fritters, old fashioneds, and crullers.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative dessert" loading="lazy"><h3>Beyond Donuts</h3><p>Croissants, ham and cheese croissants, kolache, cinnamon buns, muffins, and bagels.</p></article>
+</div><p class="note">Photos are illustrative stock images, not the business’s own photography.</p><p class="note">No prices are shown here. Directory listings point to a third-party user-generated page about the shop, not to a website run by the shop itself, and it is not linked here.</p></div></section>
+<section id="about" class="reveal"><div class="wrap about"><div><p class="eyebrow">About</p><h2>A family shop, doing the classics well</h2><p>Dee&#x27;s Donuts is a family-owned Las Vegas donut shop. Its case leans traditional: donuts made fresh daily, alongside croissants and cinnamon buns. Regulars warn the shop runs out early, so arrive in the morning.</p></div>
+<div><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative photo of fresh donuts" loading="lazy"></div></div></section>
+<section id="gallery" class="reveal"><div class="wrap"><p class="eyebrow">Gallery</p><h2>From the counter, in spirit</h2>
+<p class="sec-lede">Illustrative food photography only — these images show the kind of food served, not this business's own dishes or interior.</p>
+<div class="gal"><figure class="reveal"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative donuts" loading="lazy"><figcaption>Illustrative donuts</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1600&auto=format&fit=crop" alt="Illustrative baked goods" loading="lazy"><figcaption>Illustrative baked goods</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=1600&auto=format&fit=crop" alt="Illustrative sweet treats" loading="lazy"><figcaption>Illustrative sweet treats</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1600&auto=format&fit=crop" alt="Illustrative dessert" loading="lazy"><figcaption>Illustrative dessert</figcaption></figure></div></div></section>
+<figure class="break"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative baked goods" loading="lazy"><figcaption class="illust">Illustrative stock photo — not the business’s own photography.</figcaption></figure>
+<section class="reveal"><div class="wrap"><p class="eyebrow">Why visit</p><h2>Why regulars come back</h2><div class="grid"><article class="card reveal"><h3>Family-owned since 2005</h3><p>A family-owned Las Vegas donut shop, serving the neighbourhood since 2005.</p></article><article class="card reveal"><h3>Made fresh daily</h3><p>Traditional-style donuts, made fresh daily.</p></article><article class="card reveal"><h3>Come early</h3><p>Regulars warn the shop runs out early, so arrive in the morning.</p></article></div></div></section>
+<section id="visit" class="reveal"><div class="wrap"><p class="eyebrow">Visit</p><h2>Find us</h2><div class="visit-grid">
+<div class="card"><h3>Address</h3><p>6401 North Durango Drive, Suite 150<br>Las Vegas, NV 89149</p><p><a href="https://www.google.com/maps/search/?api=1&query=Dee%27s+Donuts%2C+6401+North+Durango+Drive+Suite+150%2C+Las+Vegas%2C+NV+89149">Open in Google Maps</a></p></div>
+<div class="card"><h3>Opening hours</h3><p>Monday – Saturday: 5 am – 8 pm<br>Sunday: 5 am – 7 pm</p></div>
+<div class="card"><h3>Contact</h3><p><a href="tel:+17026587657">Call (702) 658-7657</a><br><a href="mailto:deesdonutslv@gmail.com">deesdonutslv@gmail.com</a></p><p><a href="https://www.google.com/maps/search/?api=1&query=Dee%27s+Donuts%2C+6401+North+Durango+Drive+Suite+150%2C+Las+Vegas%2C+NV+89149">Get Directions</a></p></div>
+</div></div></section>
+<section class="reveal final-cta"><div class="wrap final-grid"><figure class="final-photo"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative photo of donuts" loading="lazy"><figcaption class="illust">Illustrative stock photo — not the business’s own photography.</figcaption></figure><div><h2>Contact us</h2><p class="sec-lede">Call or email to check what is in the case before you visit.</p><div class="cta"><a class="btn btn-outline" href="tel:+17026587657">Call (702) 658-7657</a><a class="btn btn-outline" href="mailto:deesdonutslv@gmail.com">Email us</a><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Dee%27s+Donuts%2C+6401+North+Durango+Drive+Suite+150%2C+Las+Vegas%2C+NV+89149">Get Directions</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>Dee&#x27;s Donuts &middot; 6401 North Durango Drive, Suite 150, Las Vegas, NV 89149</span><span>Website concept demo — not the official website</span></div></footer>
+<script>(function(){var btn=document.querySelector('.menubtn');var links=document.getElementById('navlinks');if(btn){btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i%3,2)*70)+'ms';io.observe(el);});})();</script>
 </body>
 </html>
