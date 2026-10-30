@@ -3,64 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aztecas's &mdash; Baton Rouge, LA 70815 | Mexican Food Truck</title>
-<meta name="description" content="Aztecas's in 8386 Airline Highway, Baton Rouge, LA 70815. Mexican Food Truck.">
+<title>Aztecas&#x27;s — Baton Rouge, LA 70815 | Mexican Food Truck</title>
+<meta name="description" content="Aztecas&#x27;s in 8386 Airline Highway, Baton Rouge, LA 70815. Mexican Food Truck.">
 <style>
-:root{--paper:#FFFDF7;--ink:#1D1D1B;--accent:#B42318;--soft:#F6E8DE;--line:#E3D5C8;--r:0px;--body:clamp(1rem,1.2vw,1.125rem);--label:clamp(.75rem,1vw,.875rem)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:var(--body);line-height:1.6}
-a{color:inherit}.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:var(--label);letter-spacing:.04em;padding:10px 16px}
-header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;flex-wrap:wrap}
-.brand{font-family:'Trebuchet MS', system-ui, sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-.01em}nav{display:flex;gap:20px;font-size:var(--label);text-transform:uppercase;letter-spacing:.08em}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
-.hero{padding:64px 0 48px}.hero.full{position:relative;padding:0}.hero.full img{width:100%;height:420px;object-fit:cover;display:block}.hero.full .hero-in{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;padding:48px 24px 32px}.hero.full .kicker{color:#F5C97B}
-.hero.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.kicker{font-size:var(--label);text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
-h1{font-family:'Trebuchet MS', system-ui, sans-serif;font-size:clamp(2.6rem,6vw,4.5rem);line-height:1.02;letter-spacing:-.02em;margin:16px 0 20px;max-width:18ch}
-.hero p.lede{font-size:clamp(1.1rem,2vw,1.35rem);max-width:56ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 22px;border-radius:var(--r);text-decoration:none;font-weight:700;font-size:1rem}.btn.solid{background:var(--accent);color:#fff}.btn.line{border:1.5px solid currentColor}
-section.block{padding:56px 0;border-top:1px solid var(--line)}h2{font-family:'Trebuchet MS', system-ui, sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:0 0 16px}
-figure{margin:0}figure img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover}figcaption{font-size:var(--label);opacity:.75;margin-top:8px}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 48px;margin-top:24px}.menu-item{border-top:1px solid var(--line);padding:16px 0}.menu-item h3{margin:0 0 4px;font-size:1.15rem}.menu-item p{margin:0;opacity:.85}.menu-note{font-size:var(--label);opacity:.75;margin-top:24px}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}.visit-grid h3{font-size:var(--label);text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}address{font-style:normal}
-.flag{background:var(--soft);border-left:4px solid var(--accent);padding:16px 20px;margin-top:32px;font-size:.98rem}
-footer{border-top:1px solid var(--line);padding:32px 0 16px}footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:var(--label);opacity:.8}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
-@media(max-width:768px){.menu-grid,.visit-grid,.hero.split{grid-template-columns:1fr}.hero{padding:44px 0 32px}.hero.full img{height:300px}nav{gap:14px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+:root{--color-primary:#78866B;--color-secondary:#F2EBDD;--color-accent:#B86F50;--bg:var(--color-secondary);--ink:#000000;--accent:var(--color-accent);--accent2:var(--color-primary);--card:#FFFFFF;--muted:#000000;--r:12px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.02rem;line-height:1.65;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:40px;width:100%}.hero-grid>*,.grid>*,.about-grid>*,.gal>*,.visit-grid>*{min-width:0;overflow-wrap:break-word}
+.disclaimer{background:var(--ink);color:var(--bg);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--bg);box-shadow:0 2px 12px rgba(0,0,0,.18)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 24px;flex-wrap:wrap}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+nav a{text-decoration:none;padding:6px 2px}nav a:hover,nav a:focus-visible{color:var(--accent2);outline:2px solid var(--accent2);outline-offset:3px}
+.hero{padding:56px 0 48px} .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}
+.kicker{font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--ink)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.05;letter-spacing:-.02em;margin:14px 0 16px}
+.lede{font-size:clamp(1.05rem,2vw,1.3rem);max-width:54ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18);outline:2px solid var(--accent2);outline-offset:3px}
+.btn.solid{background:var(--accent);color:#000000} .btn.line{border:2px solid var(--ink);color:var(--ink)}
+.hero figure,.gal figure{margin:0} .hero img{width:100%;height:auto;display:block;border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;transition:transform .4s ease}
+.hero img:hover{transform:scale(1.02)} figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.strip{background:var(--accent2);color:var(--ink);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;padding:12px 0;text-align:center}
+section{padding:56px 0} h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;margin:0 0 12px;letter-spacing:-.01em}
+.sec-lede{max-width:62ch;color:var(--muted);margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.card,.why{background:var(--card);border:1px solid rgba(0,0,0,.1);border-top:4px solid var(--accent);border-radius:var(--r);padding:22px;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.why:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.card h3,.why h3{margin:0 0 6px;font-size:1.15rem} .card p,.why p{margin:0;color:var(--muted)}
+.about{background:var(--card);border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.1)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.gal img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);transition:transform .35s ease} .gal img:hover{transform:scale(1.04)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:28px}
+.visit-grid h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);margin:0 0 10px}
+address{font-style:normal} .visit-grid p{margin:0 0 8px}
+.flag{background:var(--card);border-left:5px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:18px 22px;margin-top:30px}
+footer{background:var(--ink);color:var(--bg);padding:30px 0 16px} footer .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.9rem;opacity:.92}
+.foot nav{gap:14px} .foot a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease} .reveal.in{opacity:1;transform:none}
+@media(max-width:820px){.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.visit-grid{grid-template-columns:minmax(0,1fr)}.hero{padding:36px 0 32px}section{padding:40px 0}}
+@media(max-width:768px){.wrap{padding:0 16px}header .wrap{padding-left:16px;padding-right:16px}}
+@media(max-width:520px){.grid,.gal{grid-template-columns:minmax(0,1fr)}nav{gap:12px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.card,.why,.gal img,.hero img{transition:none;transform:none}}
+
+/* §16 spacing (supersedes §14 container) + §17 art direction */
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px;box-sizing:border-box}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+header .wrap,header.site .wrap{padding-inline:40px}
+section,.hero,section.block{padding-block:96px}
+h1{line-height:1.1;margin-top:16px;margin-bottom:16px}
+h2{line-height:1.1;margin-bottom:16px}
+body{line-height:1.6}
+.cta-row{margin-top:24px}
+.sec-lede,.sec-sub{margin-bottom:0}
+.grid,.menu-grid,.why-grid,.gallery-grid,.gal{margin-top:32px;gap:24px}
+.visit-grid{margin-top:32px;gap:24px}
+.contact-cards{margin-top:32px;gap:24px}
+.card,.dish,.why,.why-card{padding:24px;overflow:hidden}
+.card .menu-img,.dish .menu-img{width:calc(100% + 48px);max-width:none;aspect-ratio:4/3;object-fit:cover;object-position:center;border-radius:var(--r) var(--r) 0 0;margin:-24px -24px 16px;display:block}
+nav,nav.mainnav{gap:32px}
+.hero-grid{gap:48px;align-items:center}
+.about-grid{gap:24px;align-items:center}
+.about-grid figure{margin:0}
+.about-grid figure img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:var(--r);display:block}
+.about-grid p{max-width:62ch}
+.hero img{aspect-ratio:16/9;object-fit:cover;object-position:center}
+.hero-img img{aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center}
+.gal figure:first-child img{aspect-ratio:16/9}
+.gallery-grid figure:first-child img{aspect-ratio:16/9}
+.gallery-grid img,.gal img{object-position:center}
+.editorial-break{margin:0}
+.editorial-break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:var(--r);display:block}
+.editorial-break figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.final-cta{background:var(--ink);color:var(--bg)}
+.final-cta .final-cta-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.final-cta figure{margin:0}
+.final-cta figure img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:var(--r);display:block}
+.final-cta h2{color:var(--bg)}
+.final-cta .btn.line{border-color:var(--bg);color:var(--bg)}
+.hero-grid>*,.about-grid>*,.grid>*,.gal>*,.visit-grid>*,.menu-grid>*,.gallery-grid>*,.why-grid>*,.contact-cards>*,.final-cta-grid>*{min-width:0}
+
+/* §17 alternating sections, adapted to this file's palette */
+#menu{background:var(--card)}#menu .card{background:var(--bg)}
+.about{background:var(--bg)}
+#gallery{background:var(--card)}
+#visit{background:var(--card)}
+.final-cta .sec-note{color:var(--bg);opacity:.92}
+
+@media(max-width:1024px){
+.wrap{padding-inline:28px}header .wrap,header.site .wrap{padding-inline:28px}
+section,.hero,section.block{padding-block:72px}
+.hero-grid,.about-grid,.final-cta .final-cta-grid{grid-template-columns:minmax(0,1fr)}
+.grid,.menu-grid,.why-grid,.gallery-grid,.gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.visit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:768px){
+.wrap{padding-inline:20px}header .wrap,header.site .wrap{padding-inline:20px}
+section,.hero,section.block{padding-block:56px}
+.grid,.menu-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:minmax(0,1fr)}
+.gal,.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+.wrap{padding-inline:16px}header .wrap,header.site .wrap{padding-inline:16px}
+section,.hero,section.block{padding-block:44px}
+.gal,.gallery-grid{grid-template-columns:minmax(0,1fr)}
+}
+.final-cta figcaption{color:inherit;opacity:.85}
 </style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="wrap"><div class="brand">Aztecas's</div>
-<nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></div></header>
-<main>
-<section class="hero wrap"><p class="kicker">Baton Rouge, Louisiana &middot; Mexican Street Food</p><h1>Street tacos, made from scratch on Airline Highway.</h1><p class="lede">Aztecas's is a taco truck serving traditional Mexican street dishes at wallet-friendly prices, with every meal crafted from scratch and a house-made horchata to go with it.</p><div class="cta-row"><a class="btn solid" href="tel:+12253545274">Call (225) 354-5274</a><a class="btn line" href="mailto:aztecasfood17@gmail.com">Email the business</a><a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Aztecas%27s%2C%208386%20Airline%20Highway%2C%20Baton%20Rouge%2C%20LA%2070815">Get directions</a></div></section>
-<section class="block wrap" id="about"><div class="reveal">
-<h2>About the business</h2>
-<p>The truck's focus is tacos in all their forms: chicken, steak, al pastor, barbacoa and birria, plus heavily stuffed quesadillas with melted cheese, guacamole, radishes, jalapeños, cilantro and grilled onions. The asada tacos are the signature order.</p>
-<p>Mexican Food Truck in 8386 Airline Highway, Baton Rouge, LA 70815.</p>
-</div><figure class="reveal"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo for Aztecas's" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure></section>
-<section class="block" id="menu"><div class="wrap reveal">
-<h2>From the counter</h2>
-<div class="menu-grid"><div class="menu-item"><h3>Asada Tacos</h3><p>Juicy steak with the truck's fresh toppings.</p></div><div class="menu-item"><h3>Birria Tacos</h3><p>A slow-cooked favourite at the truck.</p></div><div class="menu-item"><h3>Al Pastor Tacos</h3><p>Traditional pork tacos, made from scratch.</p></div><div class="menu-item"><h3>Barbacoa Tacos</h3><p>Slow-cooked barbacoa in a street taco.</p></div><div class="menu-item"><h3>Quesadillas</h3><p>Heavily stuffed with cheese and fresh toppings.</p></div><div class="menu-item"><h3>House-Made Horchata</h3><p>Rice milk with cinnamon and vanilla, in two sizes.</p></div></div>
-<p class="menu-note">Menu items are drawn from the business's published listings and visitor mentions. Availability can change through the day, so please call ahead if you are coming for one item in particular.</p>
-</div></section>
-<section class="block wrap" id="visit"><div class="reveal">
-<h2>Visit</h2>
-<div class="visit-grid">
-<div><h3>Find us</h3><address>8386 Airline Highway, Baton Rouge, LA 70815</address>
-<p><a href="https://www.google.com/maps/search/?api=1&query=Aztecas%27s%2C%208386%20Airline%20Highway%2C%20Baton%20Rouge%2C%20LA%2070815">Open in Google Maps</a></p></div>
-<div><h3>Hours</h3><p>Tuesday to Sunday: 11am to 8pm<br>Monday: Closed</p></div>
-<div><h3>Contact</h3><p><a href="tel:+12253545274">(225) 354-5274</a><br><a href="mailto:aztecasfood17@gmail.com">aztecasfood17@gmail.com</a></p></div>
+<header><div class="wrap"><a class="brand" href="#top">Aztecas&#x27;s</a>
+<nav aria-label="Main navigation"><a href="#top">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid"><div class="reveal">
+<p class="kicker">Baton Rouge, Louisiana · Mexican Street Food</p>
+<h1>Street tacos, made from scratch on Airline Highway.</h1>
+<p class="lede">Aztecas&#x27;s is a taco truck serving traditional Mexican street dishes at wallet-friendly prices, with every meal crafted from scratch and a house-made horchata to go with it.</p>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div>
 </div>
-<div class="flag"><strong>Good to know before you visit:</strong> Good to know: delivery listings are third-party ordering pages, not this truck's own website. Call ahead to confirm the truck is at this spot today.</div>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" fetchpriority="high"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
 </div></section>
+<div class="strip"><div class="wrap">Baton Rouge, Louisiana · Call (225) 354-5274</div></div>
+<section id="menu"><div class="wrap reveal"><h2>Featured Menu</h2>
+<p class="sec-lede">Menu items are drawn from the business&#x27;s published listings and visitor mentions. Availability can change through the day, so please call ahead if you are coming for one item in particular.</p>
+<div class="grid"><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>Asada Tacos</h3><p>Juicy steak with the truck&#x27;s fresh toppings.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>Birria Tacos</h3><p>A slow-cooked favourite at the truck.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>Al Pastor Tacos</h3><p>Traditional pork tacos, made from scratch.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>Barbacoa Tacos</h3><p>Slow-cooked barbacoa in a street taco.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>Quesadillas</h3><p>Heavily stuffed with cheese and fresh toppings.</p></article><article class="card reveal"><img class="menu-img" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><h3>House-Made Horchata</h3><p>Rice milk with cinnamon and vanilla, in two sizes.</p></article></div></div></section>
+<section class="about" id="about"><div class="wrap"><h2 class="reveal">About Aztecas&#x27;s</h2><div class="about-grid reveal"><figure><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of a restaurant interior" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div><p>The truck&#x27;s focus is tacos in all their forms: chicken, steak, al pastor, barbacoa and birria, plus heavily stuffed quesadillas with melted cheese, guacamole, radishes, jalapeños, cilantro and grilled onions.</p><p>The asada tacos are the signature order.</p></div></div></div></section>
+<section id="gallery"><div class="wrap"><h2 class="reveal">Gallery</h2><p class="sec-lede reveal">Photos shown are illustrative stock images, not photos of this business.</p><div class="gal"><figure class="reveal"><img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure></div></div></section><div class="wrap"><figure class="editorial-break"><img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Illustrative stock photo</figcaption></figure></div>
+<section id="why"><div class="wrap"><h2 class="reveal">Why Choose Us</h2><div class="grid"><article class="why reveal"><h3>Made from scratch</h3><p>Every meal crafted from scratch, with traditional Mexican street dishes.</p></article><article class="why reveal"><h3>Signature asada</h3><p>The asada tacos are the signature order.</p></article><article class="why reveal"><h3>House-made horchata</h3><p>Rice milk with cinnamon and vanilla, in two sizes.</p></article></div></div></section>
+<section id="visit"><div class="wrap reveal"><h2>Visit &amp; Contact</h2>
+<div class="visit-grid">
+<div><h3>Find us</h3><address>8386 Airline Highway<br>Baton Rouge, LA 70815</address><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Aztecas%27s%2C%208386%20Airline%20Highway%2C%20Baton%20Rouge%2C%20LA%2070815">Get Directions</a></p></div>
+<div><h3>Opening Hours</h3><p>Tuesday to Sunday: 11am to 8pm<br>Monday: Closed</p></div>
+<div><h3>Contact Us</h3><p><a href="tel:+12253545274">Call (225) 354-5274</a><br><a href="mailto:aztecasfood17@gmail.com">aztecasfood17@gmail.com</a></p><p><a class="btn solid" href="tel:+12253545274">Contact Us</a></p></div>
+</div>
+<div class="flag"><p>Good to know before you visit: delivery listings are third-party ordering pages, not this truck&#x27;s own website. Call ahead to confirm the truck is at this spot today.</p></div>
+</div></section><section class="final-cta"><div class="wrap final-cta-grid"><figure><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Illustrative stock photo of food" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div><h2>Come and taste it for yourself.</h2><p class="sec-note">Directions and contact details are in the Visit section above — or get in touch directly.</p><div class="cta-row"><a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Aztecas%27s%2C%208386%20Airline%20Highway%2C%20Baton%20Rouge%2C%20LA%2070815">Get Directions</a><a class="btn line" href="tel:+12253545274">Contact Us</a></div></div></div></section>
 </main>
-<footer><div class="wrap foot"><span>Aztecas's &middot; 8386 Airline Highway, Baton Rouge, LA 70815</span><span>Website concept demo — not the official website</span></div></footer>
+<footer><div class="wrap foot"><span>Aztecas&#x27;s · 8386 Airline Highway, Baton Rouge, LA 70815</span><nav aria-label="Footer navigation"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Contact</a></nav><span>aztecasfood17@gmail.com · (225) 354-5274</span><span>Website concept demo — not the official website</span></div></footer>
 <script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*60)+'ms';io.observe(el);});})();
 </script>
 </body>
 </html>
