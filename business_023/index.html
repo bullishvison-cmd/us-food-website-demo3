@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catrinas Mexican Food — West Valley City, UT | Website Concept</title>
+<style>
+:root{--ink:#1f1a14;--paper:#fff8ef;--orange:#c65a1e;--lime:#7a8c3f;--dark:#33302a;--radius:18px}
+*{box-sizing:border-box;margin:0}
+body{font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
+.wrap{max-width:1080px;margin:auto;padding:0 24px}
+header{padding:64px 0 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--orange);font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;margin:12px 0}
+.lede{font-size:clamp(1rem,2.2vw,1.3rem)}
+header img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius);display:block}
+.cap{font-size:12px;color:#7a6a58;margin-top:8px}
+section{padding:32px 0}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.list{columns:2;column-gap:32px}
+.list div{break-inside:avoid;padding:14px 0;border-bottom:1px solid #e5d7bd}
+.list h3{font-size:1.05rem}
+.list p{font-size:.95rem;color:#5c4a3a}
+.hours{background:var(--dark);color:#fff;border-radius:var(--radius);padding:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--orange);color:#fff}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.note{font-size:.85rem;color:#6b5a49;border-left:4px solid var(--lime);padding-left:12px;margin-top:18px}
+footer{padding:32px 0;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){header{grid-template-columns:1fr}header img{height:260px}.list{columns:1}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="wrap">
+<header class="reveal">
+<div><p class="eyebrow">Food truck · West Valley City, Utah</p>
+<h1>Catrinas Mexican Food</h1>
+<p class="lede">Tacos, quesadillas, burritos and flautas from a Utah food truck, with al pastor and fresh salsas made for every order.</p>
+<div class="cta"><a href="tel:+13852228197">Call (385) 222-8197</a><a class="alt" href="mailto:flaco020271@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Catrinas+Mexican+Food%2C+7189+West+3500+South%2C+West+Valley+City%2C+UT+84128">Get directions</a></div></div>
+<figure><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Mexican food plate"><figcaption class="cap">Stock photo for illustration only — not a photo of this business.</figcaption></figure>
+</header>
+<section class="reveal">
+<h2>On the menu</h2>
+<div class="list">
+<div><h3>Tacos</h3><p>The truck's core offering, with a choice of fillings.</p></div>
+<div><h3>Quesadillas</h3><p>Grilled, cheese-filled, and made to order.</p></div>
+<div><h3>Burritos</h3><p>Hearty, wrapped, and ready to go.</p></div>
+<div><h3>Flautas</h3><p>Crisp rolled tacos, a visitor favourite.</p></div>
+<div><h3>Al Pastor</h3><p>Marinated pork, a signature flavour.</p></div>
+<div><h3>Fresh Salsas</h3><p>Made fresh to go with every dish.</p></div>
+</div>
+<p class="note">Items are visitor-reported. No prices are shown here — ask the truck for the day's menu. Delivery is available through DoorDash, a third-party ordering portal, not the truck's own website.</p>
+</section>
+<section class="reveal">
+<div class="hours">
+<h2>Hours</h2>
+<p>Monday, Tuesday &amp; Friday: 4 pm – 9:30 pm<br>Wednesday: 4:30 pm – 9:30 pm<br>Thursday: 9 am – 9:30 pm<br>Saturday: Closed<br>Sunday: 11 am – 9 pm</p>
+<p class="note" style="color:#e8e0d2">Location note: directory listings describe the truck as serving from a Cash America Pawn location, about 6.5 miles from West Valley City. Food-truck spots can change — check before visiting. A second phone number, 801-330-9960, is also listed in directories.</p>
+<p style="margin-top:12px">7189 West 3500 South, West Valley City, UT 84128</p>
+</div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-size:.85rem;margin-top:16px">Catrinas Mexican Food · 7189 West 3500 South, West Valley City, UT 84128 · (385) 222-8197 · flaco020271@gmail.com</p></footer>
+</div>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
