@@ -1,121 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Smashed N' Stacked — Little Rock, AR | Website Concept</title>
+<meta name="description" content="Smashed N' Stacked in 1020 E 6th St, Little Rock, AR 72202. Burger restaurant.">
 <style>
-  :root{
-    --ink:#191512; --paper:#f6f1e8; --card:#fffdf7; --flame:#e4572e; --gold:#f2a007; --muted:#6f6259; --r:8px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  .disclaimer{background:var(--ink);color:var(--paper);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
-  .disclaimer span{color:var(--gold)}
-  .hero-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
-  .hero-copy{background:var(--ink);color:var(--paper);padding:56px 40px;display:flex;flex-direction:column;justify-content:center}
-  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--gold);font-weight:700}
-  h1{font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.98;font-weight:900;letter-spacing:-.02em;margin:16px 0}
-  h1 span{color:var(--flame)}
-  .lede{font-size:clamp(1.05rem,2vw,1.3rem);color:#d8cfc2;max-width:520px}
-  .hero-img{overflow:hidden}
-  .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-  .caption{font-size:12px;color:var(--muted);padding:8px 24px}
-  .strip{background:var(--flame);color:#fff;padding:14px 24px;text-align:center;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
-  .main{max-width:1080px;margin:0 auto;padding:40px 24px 16px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .card{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:28px}
-  .card h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:12px;letter-spacing:-.01em}
-  .card p{color:var(--muted);margin-bottom:14px}
-  .facts{list-style:none;font-size:15px}
-  .facts li{padding:9px 0;border-top:1px solid #ece4d3}
-  .facts li:first-child{border-top:0}
-  .facts b{color:var(--ink)}
-  .menu{max-width:1080px;margin:0 auto;padding:16px 24px 40px}
-  .menu h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:8px}
-  .menu .sub{color:var(--muted);margin-bottom:20px}
-  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-  .dish{border:2px solid var(--ink);border-radius:var(--r);padding:20px;background:var(--card)}
-  .dish h3{font-size:1.05rem;margin-bottom:6px}
-  .dish h3 span{color:var(--flame)}
-  .dish p{font-size:14px;color:var(--muted)}
-  .note{max-width:1080px;margin:0 auto;padding:0 24px 32px;color:var(--muted);font-size:14px}
-  .cta{max-width:1080px;margin:0 auto;padding:0 24px 48px;display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;text-decoration:none;font-weight:800;font-size:15px;padding:14px 22px;border-radius:var(--r)}
-  .btn-primary{background:var(--flame);color:#fff}
-  .btn-dark{background:var(--ink);color:#fff}
-  .btn-ghost{border:2px solid var(--ink);color:var(--ink)}
-  footer{border-top:2px solid var(--ink);padding:28px 24px;text-align:center;color:var(--muted);font-size:13px}
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-  @media (max-width:760px){.hero-wrap{grid-template-columns:1fr}.hero-img{min-height:280px}.main{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.hero-copy{padding:40px 24px}}
-</style>
+:root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;--paper:var(--color-secondary);--card:#FFFFFF;--ink:var(--color-primary);--muted:var(--color-primary);--accent:var(--color-accent);--accent2:var(--color-accent);--line:rgba(0,0,0,.12);--r:10px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;font-size:clamp(1rem,1.2vw,1.1rem)}
+img{max-width:100%;height:auto;display:block}a{color:inherit}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px}}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header.site{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 40px;flex-wrap:wrap}
+.brand{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+nav.mainnav{display:flex;gap:32px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+nav.mainnav a{text-decoration:none;padding:6px 2px}nav.mainnav a:hover,nav.mainnav a:focus-visible{color:var(--ink);text-decoration:underline}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:1rem;min-height:48px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.btn.solid{background:var(--accent);color:var(--color-primary)}.btn.line{border:2px solid var(--ink);color:var(--ink)}.btn.light{background:#fff;color:var(--ink)}
+.btn.small{padding:10px 18px;min-height:44px;font-size:.92rem}
+.kicker{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--ink);font-weight:800}
+.hero{padding:96px 0}.hero{background:var(--ink);color:var(--paper)}.hero .kicker,.hero .lede{color:var(--paper)}.hero h1{color:var(--paper)}.hero h1 em{color:var(--accent)}.hero .btn.line{border-color:var(--paper);color:var(--paper)}.hero-img figcaption{color:var(--paper)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+h1{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:clamp(2.4rem,5.5vw,4.1rem);line-height:1.1;letter-spacing:-.02em;margin:16px 0 16px}
+h1 em{color:var(--ink);font-style:normal}
+.lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:56ch}
+.hero-img{border-radius:var(--r);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.14)}
+.hero-img img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;display:block;transition:transform .5s ease}
+.hero-img:hover img{transform:scale(1.04)}
+.hero-img figcaption{font-size:.8rem;color:var(--muted);padding:8px 2px 0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+section.block{padding:96px 0;border-top:1px solid var(--line)}.block-white{background:var(--card)}.block-dark{background:var(--ink);color:var(--paper)}.block-dark h2,.block-dark .sec-sub{color:var(--paper)}.block-dark .why-card{background:var(--card);color:var(--ink)}.block-dark .why-card p{color:var(--ink)}.block-cta{background:var(--ink);color:var(--paper)}.block-cta h2,.block-cta .sec-sub{color:var(--paper)}.break{margin:0}.break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block}.break figcaption{max-width:1200px;margin:0 auto;padding:12px 40px 0;font-size:.8rem;color:var(--muted)}
+h2{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;margin:0 0 16px}
+.sec-sub{color:var(--muted);max-width:62ch;margin:0 0 32px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0;overflow:hidden;.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block}.dish-body{padding:24px}transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.09)}
+.dish h3{margin:0 0 6px;font-size:1.12rem}.dish p{margin:0;color:var(--muted);font-size:.98rem}
+.menu-note,.note{font-size:.9rem;color:var(--muted);margin-top:24px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.about-grid>div p{margin:0 0 16px}
+.about-grid figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block}
+.about-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.gallery-grid figure:nth-child(2) img{aspect-ratio:1/1}.gallery-grid figure:nth-child(3) img{aspect-ratio:3/2}.gallery-grid img{object-position:center}
+.gallery-grid figure{margin:0}.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block;transition:transform .4s ease}
+.gallery-grid figure:hover img{transform:scale(1.03)}
+.gallery-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.why-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent2);border-radius:var(--r);padding:24px}
+.why-card h3{margin:0 0 6px;font-size:1.1rem}.why-card p{margin:0;color:var(--muted);font-size:.98rem}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.visit-grid h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin:0 0 10px}
+address{font-style:normal}.flag{background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;margin-top:32px;border-radius:0 var(--r) var(--r) 0}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.contact-cards a.cardlink{background:var(--accent);color:var(--color-primary);border-radius:var(--r);padding:24px;text-decoration:none;display:block;transition:transform .2s ease}
+.contact-cards a.cardlink:hover{transform:translateY(-3px)}.contact-cards a.cardlink b{display:block;font-size:1.05rem}.contact-cards a.cardlink span{opacity:.9;font-size:.95rem}
+footer{background:var(--ink);color:var(--paper);border-top:1px solid var(--line);padding:48px 0 32px}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--paper)}
+footer nav{display:flex;gap:32px;flex-wrap:wrap}footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-grid>*{animation:rise .7s ease both}.hero-grid>*:nth-child(2){animation-delay:.12s}
+@media(max-width:1024px){.wrap{padding-inline:28px}header.site .wrap{padding:16px 28px}section.block{padding:72px 0}.hero{padding:72px 0}.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:repeat(2,minmax(0,1fr))}nav.mainnav{gap:32px}.break figcaption{padding-inline:28px}}@media(max-width:768px){.wrap{padding-inline:20px}header.site .wrap{padding:14px 20px}section.block{padding:56px 0}.hero{padding:56px 0}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:minmax(0,1fr)}nav.mainnav{gap:24px}.break img{aspect-ratio:3/2}.break figcaption{padding-inline:20px}}@media(max-width:480px){.wrap{padding-inline:16px}header.site .wrap{padding:12px 16px}section.block{padding:44px 0}.hero{padding:44px 0}.break figcaption{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-grid>*{animation:none}.btn:hover{transform:none}}
+.hero-grid>*,.about-grid>*,.grid>*,.gal>*,.visit-grid>*,.menu-grid>*,.gallery-grid>*,.why-grid>*,.contact-cards>*,header .wrap>*,.foot>*{min-width:0}a{overflow-wrap:anywhere}</style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-
-<section class="hero-wrap">
-  <div class="hero-copy reveal">
-    <p class="eyebrow">Little Rock, Arkansas · Since 2023</p>
-    <h1>SMASHED<br><span>N' STACKED</span></h1>
-    <p class="lede">A Little Rock burger destination built on maximalist smash burgers: a signature bacon-infused crust, house-made sauces, and toppings you choose yourself.</p>
-  </div>
-  <div class="hero-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop" alt="Smash burger with toppings"></div>
-</section>
-<p class="caption">Stock photo, illustrative only — not a photo of this business.</p>
-
-<div class="strip">Smash burgers · House-made sauces · Custom toppings</div>
-
-<section class="main">
-  <div class="card reveal">
-    <h2>Visit</h2>
-    <ul class="facts">
-      <li><b>Address:</b> 1020 E 6th St, Little Rock, AR 72202</li>
-      <li><b>Hours:</b> Tuesday–Saturday, 11am–9pm; Sunday &amp; Monday closed</li>
-      <li><b>Phone:</b> (501) 291-2353</li>
-      <li><b>Email:</b> smashednstacked@gmail.com</li>
-      <li><b>Seating:</b> Indoor seating, plus takeout</li>
-    </ul>
-  </div>
-  <div class="card reveal">
-    <h2>Why people come</h2>
-    <p>Big, bold burgers with a bacon-infused crust, sauces made in house, and a build-your-own approach to toppings — including a gluten-free bun option and vegetarian selections.</p>
-    <div style="overflow:hidden;border-radius:var(--r)"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1600&auto=format&fit=crop" alt="Burger and fries" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover"></div>
-    <p style="font-size:12px;color:var(--muted);margin-top:8px">Stock photo, illustrative only — not a photo of this business.</p>
-  </div>
-</section>
-
-<section class="menu reveal">
-  <h2>The line-up</h2>
-  <p class="sub">From the shop's published description. No prices shown here.</p>
-  <div class="grid2">
-    <div class="dish"><h3><span>01</span> Maximalist smash burgers</h3><p>Smashed patties stacked high, cooked to order.</p></div>
-    <div class="dish"><h3><span>02</span> Bacon-infused crust</h3><p>The shop's signature crust on its smash burgers.</p></div>
-    <div class="dish"><h3><span>03</span> House-made sauces</h3><p>Sauces made in house to finish each burger.</p></div>
-    <div class="dish"><h3><span>04</span> Custom toppings</h3><p>Build it your way from the toppings list.</p></div>
-    <div class="dish"><h3><span>05</span> Gluten-free bun option</h3><p>A gluten-free bun choice, noted by visitors.</p></div>
-    <div class="dish"><h3><span>06</span> Vegetarian selections</h3><p>Meat-free options on the menu.</p></div>
-  </div>
-</section>
-
-<p class="note">Delivery is available through third-party delivery platforms. This demo does not link to an ordering page, because no direct ordering destination was verified.</p>
-
-<section class="cta reveal">
-  <a class="btn btn-primary" href="tel:+15012912353">Call (501) 291-2353</a>
-  <a class="btn btn-dark" href="mailto:smashednstacked@gmail.com">Email the shop</a>
-  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Smashed+N%27+Stacked%2C+1020+E+6th+St%2C+Little+Rock%2C+AR+72202">Get directions</a>
-</section>
-
-<footer>
-  <p>Website concept demo — not the official website</p>
-  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
-</footer>
-
+<header class="site"><div class="wrap"><a class="brand" href="#home">Smashed N' Stacked</a>
+<nav class="mainnav" aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<a class="btn solid small" href="tel:+15012912353">Call the shop</a></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<p class="kicker">Little Rock, Arkansas · Since 2023</p><h1>Maximalist smash burgers, <em>stacked high and cooked to order.</em></h1><p class="lede">A Little Rock burger destination built on maximalist smash burgers: a signature bacon-infused crust, house-made sauces, and toppings you choose yourself.</p>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div></div>
+<figure class="hero-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative smash burger with toppings" fetchpriority="high"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
+</div></section>
+<section class="block" id="menu"><div class="wrap"><h2>The line-up</h2><p class="sec-sub">From the shop's published description. No prices shown here.</p>
+<div class="menu-grid"><article class="dish reveal"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative smash burger with toppings" loading="lazy"><div class="dish-body"><h3>Maximalist smash burgers</h3><p>Smashed patties stacked high, cooked to order.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger" loading="lazy"><div class="dish-body"><h3>Bacon-infused crust</h3><p>The shop's signature crust on its smash burgers.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger meal" loading="lazy"><div class="dish-body"><h3>House-made sauces</h3><p>Sauces made in house to finish each burger.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger" loading="lazy"><div class="dish-body"><h3>Custom toppings</h3><p>Build it your way from the toppings list.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger and fries" loading="lazy"><div class="dish-body"><h3>Gluten-free bun option</h3><p>A gluten-free bun choice, noted by visitors.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger" loading="lazy"><div class="dish-body"><h3>Vegetarian selections</h3><p>Meat-free options on the menu.</p></div></article></div>
+<p class="menu-note">From the shop's published description. Delivery is available through third-party delivery platforms. This demo does not link to an ordering page, because no direct ordering destination was verified.</p></div></section>
+<figure class="break reveal"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger close-up" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><section class="block block-white" id="about"><div class="wrap about-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop" alt="Illustrative restaurant interior" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><div class="reveal"><h2>About</h2><p>Big, bold burgers with a bacon-infused crust, sauces made in house, and a build-your-own approach to toppings — including a gluten-free bun option and vegetarian selections.</p><p>Burger restaurant in 1020 E 6th St, Little Rock, AR 72202 · Since 2023. Indoor seating, plus takeout.</p></div></div></section>
+<section class="block" id="gallery"><div class="wrap"><h2>Gallery</h2><p class="sec-sub">A look at the kind of food on offer. Photos shown are illustrative stock images, not photos of this business.</p>
+<div class="gallery-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger and fries" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1600&auto=format&fit=crop" alt="Illustrative burger" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></div></section>
+<section class="block block-dark"><div class="wrap"><h2>Why visit</h2><p class="sec-sub">What sets this place apart, in its own words and in visitors&rsquo; words.</p>
+<div class="why-grid"><article class="why-card reveal"><h3>Signature bacon-infused crust</h3><p>The shop's signature crust on its smash burgers.</p></article><article class="why-card reveal"><h3>Sauces made in house</h3><p>House-made sauces finish each burger.</p></article><article class="why-card reveal"><h3>Build it your way</h3><p>Toppings you choose yourself, with a gluten-free bun option and vegetarian selections.</p></article></div></div></section>
+<section class="block" id="visit"><div class="wrap"><h2>Visit</h2><div class="visit-grid reveal">
+<div><h3>Find us</h3><address>1020 E 6th St, Little Rock, AR 72202</address><p><a href="https://www.google.com/maps/search/?api=1&query=Smashed+N%27+Stacked%2C+1020+E+6th+St%2C+Little+Rock%2C+AR+72202">Open in Google Maps</a></p></div>
+<div><h3>Opening hours</h3><p>Tuesday–Saturday, 11am–9pm; Sunday &amp; Monday closed</p></div>
+<div><h3>Contact</h3><p><a href="tel:+15012912353">(501) 291-2353</a><br><a href="mailto:smashednstacked@gmail.com">smashednstacked@gmail.com</a></p></div>
+</div></div></section>
+<section class="block block-cta"><div class="wrap"><h2>Contact Us</h2><p class="sec-sub">Questions about the menu or a visit? Reach the business directly.</p>
+<div class="contact-cards">
+<a class="cardlink" href="tel:+15012912353"><b>Call us</b><span>(501) 291-2353</span></a>
+<a class="cardlink" href="mailto:smashednstacked@gmail.com"><b>Email us</b><span>smashednstacked@gmail.com</span></a>
+<a class="cardlink" href="https://www.google.com/maps/search/?api=1&query=Smashed+N%27+Stacked%2C+1020+E+6th+St%2C+Little+Rock%2C+AR+72202"><b>Get Directions</b><span>1020 E 6th St, Little Rock, AR</span></a>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>Smashed N' Stacked &middot; 1020 E 6th St, Little Rock, AR 72202</span>
+<nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<span>Website concept demo — not the official website</span></div></footer>
 <script>
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.15});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
 </script>
 </body>
 </html>
