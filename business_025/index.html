@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panaderia La Estrella — North Las Vegas, NV | Website Concept</title>
+<style>
+:root{--ink:#2a2118;--paper:#fff9f0;--rose:#a34a5e;--gold:#d9a441;--cream:#f6ead2;--radius:14px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.disclaimer{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
+.hero{position:relative}
+.hero img{width:100%;height:480px;object-fit:cover;display:block}
+.hero .overlay{position:absolute;left:24px;bottom:24px;right:24px;max-width:640px;background:rgba(255,249,240,.94);border-radius:var(--radius);padding:28px}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--rose);font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:10px 0}
+.lede{font-size:clamp(1rem,2.2vw,1.25rem)}
+.wrap{max-width:1080px;margin:auto;padding:0 24px}
+section{padding:32px 0}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.cakes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cakes div{background:var(--cream);border-radius:var(--radius);padding:24px;text-align:center}
+.cakes h3{font-size:1.15rem;margin-bottom:6px}
+.cakes p{font-family:Arial,sans-serif;font-size:.95rem;color:#5c4a3a}
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--rose);color:#fff;border-radius:var(--radius);padding:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{font-family:Arial,sans-serif;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--gold);color:var(--ink)}
+.cta a.alt{background:#fff;color:var(--ink);border:2px solid #fff}
+.note{font-family:Arial,sans-serif;font-size:.85rem;color:#6b5a49;border-left:4px solid var(--gold);padding-left:12px;margin-top:18px}
+footer{padding:32px 24px;text-align:center}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.hero img{height:320px}.cakes,.bar{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<div class="hero reveal">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Bakery interior">
+<div class="overlay"><p class="eyebrow">Bakery · North Las Vegas, Nevada · Since 2017</p>
+<h1>Panaderia La Estrella</h1>
+<p class="lede">A locally owned Mexican bakery making authentic cakes and fresh bread for celebrations across North Las Vegas.</p>
+<p style="font-size:12px;color:#7a6a58;margin-top:10px">Stock photo for illustration only — not a photo of this business.</p></div>
+</div>
+<div class="wrap">
+<section class="reveal">
+<h2>Cakes for every celebration</h2>
+<div class="cakes">
+<div><h3>Wedding Cakes</h3><p>Custom cakes made for the big day.</p></div>
+<div><h3>Birthday Cakes</h3><p>Authentic Mexican-style cakes for birthdays.</p></div>
+<div><h3>Quinceañera Cakes</h3><p>Showpiece cakes for quinceañeras.</p></div>
+</div>
+<p class="note">Also on offer: fresh bread, baked daily. No prices are shown here — contact the bakery for a custom cake quote. Directory listings point only to a cakes.com directory page, not to a website run by the bakery.</p>
+</section>
+<section class="reveal">
+<div class="bar">
+<div><h2>Visit</h2><p>3100 East Lake Mead Boulevard, Suite 21<br>North Las Vegas, NV 89030</p><div class="cta"><a href="tel:+17252184784">Call (725) 218-4784</a><a class="alt" href="mailto:panaderialaestrella1@gmail.com">Email us</a><a class="alt" href="https://www.google.com/maps/search/?api=1&amp;query=Panaderia+La+Estrella%2C+3100+East+Lake+Mead+Boulevard+Suite+21%2C+North+Las+Vegas%2C+NV+89030">Get directions</a></div></div>
+<div><h2>Hours</h2><p>Monday – Sunday: 8 am – 8 pm</p><p style="margin-top:12px;font-size:.9rem">A second phone number, (702) 334-7308, is also listed in directories.</p></div>
+</div>
+</section>
+<footer><div class="disclaimer">Website concept demo — not the official website</div>
+<p style="font-family:Arial,sans-serif;font-size:.85rem;margin-top:16px">Panaderia La Estrella · 3100 East Lake Mead Boulevard, Suite 21, North Las Vegas, NV 89030 · (725) 218-4784 · panaderialaestrella1@gmail.com</p></footer>
+</div>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
