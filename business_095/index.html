@@ -1,138 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roti Rolls — Charleston, SC | Website Concept</title>
+<meta name="description" content="Roti Rolls in 384 King St, Charleston, SC 29401. Food truck.">
 <style>
-  :root{
-    --sand:#f7efe0; --card:#fffdf6; --ink:#23302b; --teal:#0f6b5c; --turmeric:#e8a317; --coral:#d95f43; --line:#e5d9bd; --r:18px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--sand);color:var(--ink);line-height:1.55}
-  .disclaimer{background:var(--ink);color:var(--sand);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em}
-  .disclaimer span{color:var(--turmeric)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  header{padding:56px 0 8px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--teal);font-weight:800}
-  h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.6rem,6.5vw,4.4rem);line-height:1.0;margin:14px 0 10px}
-  h1 span{color:var(--coral)}
-  .lede{font-size:clamp(1.02rem,2vw,1.28rem);color:#5a665f;max-width:560px}
-  .badge{background:var(--teal);color:#fff;border-radius:var(--r);padding:22px;transform:rotate(1.2deg)}
-  .badge b{font-size:15px}
-  .badge p{font-size:14px;color:#d7ece6;margin-top:6px}
-  .gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin:32px 0 8px}
-  .gallery img{width:100%;display:block;object-fit:cover;border-radius:var(--r)}
-  .gallery .main-img{aspect-ratio:16/10}
-  .gallery .side-img{aspect-ratio:1/1}
-  .caption{font-size:12px;color:#8a7a5c;padding:4px 0 24px}
-  .flag{background:#fff3d6;border:1.5px solid var(--turmeric);border-radius:var(--r);padding:20px 24px;margin-bottom:32px}
-  .flag b{color:#7a5410}
-  .flag p{font-size:14px;color:#6d5c33;margin-top:4px}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
-  .card h2{font-family:Georgia,'Times New Roman',serif;font-size:1.4rem;margin-bottom:12px}
-  .card ul{list-style:none;font-size:15px}
-  .card li{padding:8px 0;border-top:1px solid var(--line)}
-  .card li:first-child{border-top:0}
-  .menu h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:6px}
-  .menu .sub{color:#5a665f;margin-bottom:18px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-  .chip{background:var(--card);border:1.5px solid var(--teal);color:var(--teal);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px}
-  .chip.warm{border-color:var(--coral);color:var(--coral)}
-  .note{color:#5a665f;font-size:14px;margin-bottom:32px}
-  .cta{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:48px}
-  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:14px 22px;border-radius:var(--r)}
-  .btn-primary{background:var(--teal);color:#fff}
-  .btn-dark{background:var(--ink);color:#fff}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-  footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#8a7a5c;font-size:13px}
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-  @media (max-width:760px){header{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.cols{grid-template-columns:1fr}}
-</style>
+:root{--color-primary:#78866B;--color-secondary:#F2EBDD;--color-accent:#B86F50;--paper:var(--color-secondary);--card:#FFFFFF;--ink:#000000;--muted:#000000;--accent:var(--color-accent);--accent2:var(--color-primary);--line:rgba(0,0,0,.12);--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;font-size:clamp(1rem,1.2vw,1.1rem)}
+img{max-width:100%;height:auto;display:block}a{color:inherit}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px}}
+.disclaimer{background:var(--ink);color:var(--paper);text-align:center;font-size:.85rem;letter-spacing:.03em;padding:10px 16px}
+header.site{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 40px;flex-wrap:wrap}
+.brand{font-family:Georgia,'Times New Roman',serif;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+nav.mainnav{display:flex;gap:32px;flex-wrap:wrap;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+nav.mainnav a{text-decoration:none;padding:6px 2px}nav.mainnav a:hover,nav.mainnav a:focus-visible{color:var(--ink);text-decoration:underline}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:1rem;min-height:48px;line-height:1.25;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.btn.solid{background:var(--accent);color:#000000}.btn.line{border:2px solid var(--ink);color:var(--ink)}.btn.light{background:#fff;color:var(--ink)}
+.btn.small{padding:10px 18px;min-height:44px;font-size:.92rem}
+.kicker{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--ink);font-weight:800}
+.hero{padding:96px 0}.hero{background:var(--ink);color:var(--paper)}.hero .kicker,.hero .lede{color:var(--paper)}.hero h1{color:var(--paper)}.hero h1 em{color:var(--accent)}.hero .btn.line{border-color:var(--paper);color:var(--paper)}.hero-img figcaption{color:var(--paper)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,5.5vw,4.1rem);line-height:1.1;letter-spacing:-.02em;margin:16px 0 16px}
+h1 em{color:var(--ink);font-style:normal}
+.lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:56ch}
+.hero-img{border-radius:var(--r);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.14)}
+.hero-img img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;display:block;transition:transform .5s ease}
+.hero-img:hover img{transform:scale(1.04)}
+.hero-img figcaption{font-size:.8rem;color:var(--muted);padding:8px 2px 0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+section.block{padding:96px 0;border-top:1px solid var(--line)}.block-white{background:var(--card)}.block-dark{background:var(--ink);color:var(--paper)}.block-dark h2,.block-dark .sec-sub{color:var(--paper)}.block-dark .why-card{background:var(--card);color:var(--ink)}.block-dark .why-card p{color:var(--ink)}.block-cta{background:var(--ink);color:var(--paper)}.block-cta h2,.block-cta .sec-sub{color:var(--paper)}.break{margin:0}.break img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block}.break figcaption{max-width:1200px;margin:0 auto;padding:12px 40px 0;font-size:.8rem;color:var(--muted)}
+h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;margin:0 0 16px}
+.sec-sub{color:var(--muted);max-width:62ch;margin:0 0 32px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0;overflow:hidden;.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block}.dish-body{padding:24px}transition:transform .2s ease,box-shadow .2s ease}
+.dish:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.09)}
+.dish h3{margin:0 0 6px;font-size:1.12rem}.dish p{margin:0;color:var(--muted);font-size:.98rem}
+.menu-note,.note{font-size:.9rem;color:var(--muted);margin-top:24px}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}.about-grid>div p{margin:0 0 16px}
+.about-grid figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block}
+.about-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.gallery-grid figure:nth-child(2) img{aspect-ratio:1/1}.gallery-grid figure:nth-child(3) img{aspect-ratio:3/2}.gallery-grid img{object-position:center}
+.gallery-grid figure{margin:0}.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);display:block;transition:transform .4s ease}
+.gallery-grid figure:hover img{transform:scale(1.03)}
+.gallery-grid figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.why-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent2);border-radius:var(--r);padding:24px}
+.why-card h3{margin:0 0 6px;font-size:1.1rem}.why-card p{margin:0;color:var(--muted);font-size:.98rem}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.visit-grid h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin:0 0 10px}
+address{font-style:normal}.flag{background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;margin-top:32px;border-radius:0 var(--r) var(--r) 0}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.contact-cards a.cardlink{background:var(--accent);color:#000000;border-radius:var(--r);padding:24px;text-decoration:none;display:block;transition:transform .2s ease}
+.contact-cards a.cardlink:hover{transform:translateY(-3px)}.contact-cards a.cardlink b{display:block;font-size:1.05rem}.contact-cards a.cardlink span{opacity:.9;font-size:.95rem}
+footer{background:var(--ink);color:var(--paper);border-top:1px solid var(--line);padding:48px 0 32px}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--paper)}
+footer nav{display:flex;gap:32px;flex-wrap:wrap}footer nav a{text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-grid>*{animation:rise .7s ease both}.hero-grid>*:nth-child(2){animation-delay:.12s}
+@media(max-width:1024px){.wrap{padding-inline:28px}header.site .wrap{padding:16px 28px}section.block{padding:72px 0}.hero{padding:72px 0}.hero-grid,.about-grid{grid-template-columns:minmax(0,1fr)}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:repeat(2,minmax(0,1fr))}nav.mainnav{gap:32px}.break figcaption{padding-inline:28px}}@media(max-width:768px){.wrap{padding-inline:20px}header.site .wrap{padding:14px 20px}section.block{padding:56px 0}.hero{padding:56px 0}.menu-grid,.gallery-grid,.why-grid,.visit-grid,.contact-cards{grid-template-columns:minmax(0,1fr)}nav.mainnav{gap:24px}.break img{aspect-ratio:3/2}.break figcaption{padding-inline:20px}}@media(max-width:480px){.wrap{padding-inline:16px}header.site .wrap{padding:12px 16px}section.block{padding:44px 0}.hero{padding:44px 0}.break figcaption{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-grid>*{animation:none}.btn:hover{transform:none}}
+.hero-grid>*,.about-grid>*,.grid>*,.gal>*,.visit-grid>*,.menu-grid>*,.gallery-grid>*,.why-grid>*,.contact-cards>*,header .wrap>*,.foot>*{min-width:0}a{overflow-wrap:anywhere}</style>
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
-
-<div class="wrap">
-  <header class="reveal">
-    <div>
-      <p class="eyebrow">Charleston, South Carolina · Food Truck</p>
-      <h1>Roti <span>Rolls</span></h1>
-      <p class="lede">Street food built around rotis and tacos — fresh local ingredients, juicy meats, and a walk-up window in the heart of Charleston.</p>
-    </div>
-    <div class="badge">
-      <b>A truck, not a dining room</b>
-      <p>Roti Rolls is a mobile food business. The address below is its regular Charleston spot — check before you head out, as trucks move.</p>
-    </div>
-  </header>
-
-  <section class="gallery reveal">
-    <img class="main-img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Street food snacks on a plate">
-    <img class="side-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Wrapped street food">
-  </section>
-  <p class="caption">Stock photos, illustrative only — not photos of this business.</p>
-
-  <div class="flag reveal">
-    <b>Please note — hours differ by source.</b>
-    <p>ThreeBestRated and Birdeye list Monday–Friday 9am–6pm, Saturday &amp; Sunday closed. Restaurantji lists Monday–Friday 9am–5pm, Saturday &amp; Sunday closed. We show both listings here rather than picking one — call ahead to confirm.</p>
-  </div>
-
-  <section class="cols">
-    <div class="card reveal">
-      <h2>Find the truck</h2>
-      <ul>
-        <li>384 King St, Charleston, SC 29401</li>
-        <li>Phone: (843) 822-5070</li>
-        <li>Email: eatrotirolls@gmail.com</li>
-        <li>Takeout from the walk-up window</li>
-      </ul>
-    </div>
-    <div class="card reveal">
-      <h2>Catering &amp; pop-ups</h2>
-      <ul>
-        <li>Weddings, birthdays, company events</li>
-        <li>Pop-ups in Charleston and Atlanta</li>
-        <li>Fresh local ingredients, juicy meats</li>
-        <li>Original tacos on corn or flour tortillas</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="menu reveal">
-    <h2>On the menu</h2>
-    <p class="sub">Names from the truck's published menu descriptions. No prices shown here.</p>
-    <div class="chips">
-      <span class="chip">Original Tacos</span>
-      <span class="chip warm">Thuman Murman Roti</span>
-      <span class="chip">Mother Clucker Roti</span>
-      <span class="chip warm">Buddha Bowls</span>
-      <span class="chip">Dirty Water Dogs</span>
-      <span class="chip warm">Hog Tied</span>
-    </div>
-  </section>
-
-  <p class="note">Original tacos come on corn or flour tortillas with cilantro, onions, and your choice of meat.</p>
-
-  <section class="cta reveal">
-    <a class="btn btn-primary" href="tel:+18438225070">Call (843) 822-5070</a>
-    <a class="btn btn-dark" href="mailto:eatrotirolls@gmail.com">Email the truck</a>
-    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Roti+Rolls%2C+384+King+St%2C+Charleston%2C+SC+29401">Get directions</a>
-  </section>
-</div>
-
-<footer>
-  <p>Website concept demo — not the official website</p>
-  <p>Photos are stock images, shown for illustration only, and are not photos of this business.</p>
-</footer>
-
+<header class="site"><div class="wrap"><a class="brand" href="#home">Roti Rolls</a>
+<nav class="mainnav" aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<a class="btn solid small" href="tel:+18438225070">Call the truck</a></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<p class="kicker">Charleston, South Carolina · Food Truck</p><h1>Rotis and tacos, <em>fresh off the truck in Charleston.</em></h1><p class="lede">Street food built around rotis and tacos — fresh local ingredients, juicy meats, and a walk-up window in the heart of Charleston.</p>
+<div class="cta-row"><a class="btn solid" href="#menu">Explore Our Menu</a><a class="btn line" href="#visit">Find Us</a></div></div>
+<figure class="hero-img"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Illustrative street food snacks on a plate" fetchpriority="high"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure>
+</div></section>
+<section class="block" id="menu"><div class="wrap"><h2>On the menu</h2><p class="sec-sub">Names from the truck's published menu descriptions. No prices shown here.</p>
+<div class="menu-grid"><article class="dish reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1600&auto=format&fit=crop" alt="Illustrative tacos" loading="lazy"><div class="dish-body"><h3>Original Tacos</h3><p>On corn or flour tortillas with cilantro, onions, and your choice of meat.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative wrapped street food" loading="lazy"><div class="dish-body"><h3>Thuman Murman Roti</h3><p>From the truck's published menu descriptions.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=1600&auto=format&fit=crop" alt="Illustrative wrapped street food" loading="lazy"><div class="dish-body"><h3>Mother Clucker Roti</h3><p>From the truck's published menu descriptions.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1625398407796-82650a8c135f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative street food bowl" loading="lazy"><div class="dish-body"><h3>Buddha Bowls</h3><p>From the truck's published menu descriptions.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1600&auto=format&fit=crop" alt="Illustrative street food" loading="lazy"><div class="dish-body"><h3>Dirty Water Dogs</h3><p>From the truck's published menu descriptions.</p></div></article><article class="dish reveal"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Illustrative street food snacks on a plate" loading="lazy"><div class="dish-body"><h3>Hog Tied</h3><p>From the truck's published menu descriptions.</p></div></article></div>
+<p class="menu-note">Original tacos come on corn or flour tortillas with cilantro, onions, and your choice of meat.</p></div></section>
+<figure class="break reveal"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative wrapped street food close-up" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure><section class="block block-white" id="about"><div class="wrap about-grid"><div class="reveal"><h2>About</h2><p>Roti Rolls is a mobile food business. The address below is its regular Charleston spot — check before you head out, as trucks move. Takeout is from the walk-up window.</p><p>Street food built around rotis and tacos, with fresh local ingredients and juicy meats.</p></div>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative wrapped street food" loading="lazy"><figcaption>Photos shown are illustrative stock images, not photos of this business.</figcaption></figure></div></section>
+<section class="block" id="gallery"><div class="wrap"><h2>Gallery</h2><p class="sec-sub">A look at the kind of food on offer. Photos shown are illustrative stock images, not photos of this business.</p>
+<div class="gallery-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop" alt="Illustrative street food" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative wrapped street food" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure class="reveal"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1600&auto=format&fit=crop" alt="Illustrative tacos" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></div></section>
+<section class="block block-dark"><div class="wrap"><h2>Why visit</h2><p class="sec-sub">What sets this place apart, in its own words and in visitors&rsquo; words.</p>
+<div class="why-grid"><article class="why-card reveal"><h3>Fresh local ingredients, juicy meats</h3><p>Street food built around rotis and tacos, with fresh local ingredients and juicy meats.</p></article><article class="why-card reveal"><h3>Catering &amp; pop-ups</h3><p>Weddings, birthdays, company events, and pop-ups in Charleston and Atlanta.</p></article><article class="why-card reveal"><h3>A walk-up window</h3><p>Takeout from the walk-up window in the heart of Charleston.</p></article></div></div></section>
+<section class="block" id="visit"><div class="wrap"><h2>Visit</h2><div class="visit-grid reveal">
+<div><h3>Find us</h3><address>384 King St, Charleston, SC 29401</address><p><a href="https://www.google.com/maps/search/?api=1&query=Roti+Rolls%2C+384+King+St%2C+Charleston%2C+SC+29401">Open in Google Maps</a></p></div>
+<div><h3>Opening hours</h3><p>See the note below — hours differ by source; call ahead to confirm.</p></div>
+<div><h3>Contact</h3><p><a href="tel:+18438225070">(843) 822-5070</a><br><a href="mailto:eatrotirolls@gmail.com">eatrotirolls@gmail.com</a></p></div>
+</div><div class="flag reveal"><strong>Good to know before you visit:</strong> Please note — hours differ by source. ThreeBestRated and Birdeye list Monday–Friday 9am–6pm, Saturday &amp; Sunday closed. Restaurantji lists Monday–Friday 9am–5pm, Saturday &amp; Sunday closed. We show both listings here rather than picking one — call ahead to confirm.</div></div></section>
+<section class="block block-cta"><div class="wrap"><h2>Contact Us</h2><p class="sec-sub">Questions about the menu or a visit? Reach the business directly.</p>
+<div class="contact-cards">
+<a class="cardlink" href="tel:+18438225070"><b>Call us</b><span>(843) 822-5070</span></a>
+<a class="cardlink" href="mailto:eatrotirolls@gmail.com"><b>Email us</b><span>eatrotirolls@gmail.com</span></a>
+<a class="cardlink" href="https://www.google.com/maps/search/?api=1&query=Roti+Rolls%2C+384+King+St%2C+Charleston%2C+SC+29401"><b>Get Directions</b><span>384 King St, Charleston, SC</span></a>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>Roti Rolls &middot; 384 King St, Charleston, SC 29401</span>
+<nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Contact</a></nav>
+<span>Website concept demo — not the official website</span></div></footer>
 <script>
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.15});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});})();
 </script>
 </body>
 </html>
